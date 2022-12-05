@@ -1,4 +1,5 @@
-﻿// ViewModel KnockOut
+﻿// ViewModel KnockOut 
+
 var vm = function () {
     console.log('ViewModel initiated...');
     //---Variáveis locais
@@ -16,6 +17,7 @@ var vm = function () {
     self.Season = ko.observable('');
     self.Year = ko.observableArray('');
     self.Url = ko.observable('');
+    var name='o';
 
     //--- Page Events
     self.activate = function (id) {
@@ -31,10 +33,22 @@ var vm = function () {
             self.Photo(data.Photo);
             self.Season(data.Season);
             self.Year(data.Year);
-        });
+            name=data.Name
+       
+            console.log(name)
+
+            
+        }
+       
+        )
+         
+        
     };
+    console.log('deded',name)
+    
 
     //--- Internal functions
+    
     function ajaxHelper(uri, method, data) {
         self.error(''); // Clear error message
         return $.ajax({
@@ -50,6 +64,8 @@ var vm = function () {
             }
         });
     }
+   
+    
 
     function showLoading() {
         $('#myModal').modal('show', {
@@ -87,14 +103,28 @@ var vm = function () {
     else {
         self.activate(pg);
     }
+    var s =JSON.stringify(self.Name);
     console.log("VM initialized!");
+    ko.bindingHandlers.safeSrc = {
+        update: function(element, valueAccessor) {
+          var options = valueAccessor();
+          var src = ko.unwrap(options.src);
+          $('<img />').attr('src', src).on('load', function() {
+            $(element).attr('src', src);
+          }).on('error', function() {
+            $(element).attr('src', "images/OlympicLogos/"+name+".jpg");
+          });
+        }
+    }
 };
 
 $(document).ready(function () {
     console.log("document.ready!");
     ko.applyBindings(new vm());
+    
+    
 });
-
 $(document).ajaxComplete(function (event, xhr, options) {
     $("#myModal").modal('hide');
+    
 })

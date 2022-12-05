@@ -30,7 +30,6 @@ h4,h5{color:rgb(4, 58, 17)}
 .header img{
     height: 140px;
     width:200px;
-    
     border-radius:1.5rem;
    
     
@@ -40,7 +39,7 @@ h4,h5{color:rgb(4, 58, 17)}
     margin:100px auto;
     height:360px;
     border-radius: 0.75rem;
-    background-color: rgb(210, 227, 241);
+    background-color: rgb(219, 239, 255);
     box-shadow:0 8px 16px 0 rgba(0, 0, 0, 0), 0 rgba(0,0,0,0);
 }
 .card-body{
@@ -70,8 +69,23 @@ h4,h5{color:rgb(4, 58, 17)}
     margin:0 auto;
     width:95%;
     box-shadow:0 4px 8px 0 rgba(0,0,0,0), 0 rgba(0,0,0,0);
-    background-image:linear-gradient(to left,#35989a,#62269a);
+    background-image:linear-gradient(to left,#62269a,#35989a);
 }
 .text-sm-center{
     margin:20px auto;
+}
+h4,h5{
+    text-align: center;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 0.5rem;
+    color:#000000;
+    background: rgba(72, 40, 146, 0.316);
+}
+.card-body img{
+    height: 240px;
+    width:3600px;
+    border-radius:1.5rem;
+   
+    
 }
