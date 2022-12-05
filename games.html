@@ -68,16 +68,18 @@
             <div class="row" data-bind="foreach: records">
                 <div class="col-md-4" >
                     <div class="card text-start">
-                        <div class="header">
+                        <div class="header game">
                             <img class="card-img-top" data-bind="attr:{src: 'images/Flags/'+CountryName+'.png'}" >
                         </div>
                         
-                        <div class="card-body">
-                          <div class="CountryName"><h4 data-bind="text:CountryName"></h4></div>
-                          <div class="CityName"><h5 data-bind="text:CityName"></h5></div>
-                          <div class="Name"><h4 data-bind="text:Name"></h4></div>
+                        <div class="card-body game">
+                            <div>
+                                <div class="CountryName"><h4 data-bind="text:CountryName"></h4></div>
+                                <div class="CityName"><h5 data-bind="text:CityName"></h5></div>
+                                <div class="Name"><h4 data-bind="text:Name"></h4></div>
+                            </div>
                         </div>
-                        <div class="footer">
+                        <div class="footer gane">
                           <div class="text-sm-center">
                               <a class="btn btn-default btn-light btn-xs" data-bind="attr: { href:'./gameDetails.html?id=' + Id }">
                                   <i class="fa fa-eye" title="Selecione para ver detalhes"></i>

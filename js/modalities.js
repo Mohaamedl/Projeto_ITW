@@ -2,7 +2,7 @@ var vm = function () {
     console.log('ViewModel initiated...');
     //---Variáveis locais
     var self = this;
-    self.baseUri = ko.observable('http://192.168.160.58/Olympics/api/Modalities');
+    self.baseUri = ko.observable('http://192.168.160.58/Olympics/api/Modalities/');
     //self.baseUri = ko.observable('http://localhost:62595/api/drivers');
     self.displayName = 'Olympic Modalities List';
     self.error = ko.observable('');
