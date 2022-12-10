@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -31,48 +31,70 @@
         </div>
     </nav>
     <!-- Work Area--> 
-    <!-- ko if:Name().length > 0 -->
+   
     <div class="container nice">
                 <div class="row">
                     <div class="col-md-4 texto">
-                    <h5>País onde se realizou</h5>
-                    <h5 data-bind="text: CountryName"></h5>
+                    <h5></h5>
+                    <h5 data-bind="text: Name"></h5>
 
 
                 </div>
                 <div class="col-md-4 texto">
-                    <h5>Nome do Jogo</h5>
-                    <h5 data-bind="text:Name"></h5>
+                    <h5></h5>
+                    <h5 data-bind="text :IOC"></h5>
                 </div>
                 <div class="col-sm-0 col-md-4 text-end">
-                    <img class="logoid" data-bind="attr:{src: Logo}" >
+                    <img class="logoid" data-bind="attr:{src: Flag}" >
 
                 </div>
             </div>
                 <div class="row">
                     <div class="col-md-4 texto">
-                    <h5>Temporada</h5>
-                    <h5 data-bind="text:Season"></h5>
+                    <h5></h5>
+                    <h5 data-bind=></h5>
                 </div>
                 <div class="col-md-4 texto">
-                    <h5>Ano quando se realizou</h5>
-                    <h5 data-bind="text:Year"></h5>
+                    <h5></h5>
+                    <h5 data-bind="text:"></h5>
                 </div>
-                <div class="col-md-4 texto" data-bind="foreach: Medals">
+                <div class="col-md-4 texto" data-bind="">
     
-                    <h5 data-bind="text: MedalName"></h5> <h5> : </h5><h5 data-bind="text: Counter"></h5>
+                
                     
                 </div>
            <div class="row">
+            <div class="col-md-6">
+                <table class="table table-striped">
+                    <tbody  data-bind="foreach: Eventss">
+                        <tr>
+                            <td>
+                                <h6 data-bind="text: Name"></h6>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
-           </div>       
-                <img class="photoid"  data-bind="attr:{src: Photo}" alt="">  
+            </div>
+            <div class="col-md-6">
+                  <table class="table table-striped">
+                    <tbody  data-bind="foreach: Participant">
+                        <tr>
+                            <td>
+                                <h6 data-bind="text: Name"></h6>
+                            </td>
+                            <td>
+                                <h6 data-bind="text:CityName"></h6>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             
-        </div>
+            </div>
        
       
-        <!-- /ko -->
+       
         <a href="./games.html" class="btn btn-default btn-sm small"><i class="fa fa-list"></i> Back to List</a>
         <a data-bind="attr: { href:'./gameFull.html?id=' + Id() }" class="btn btn-default btn-sm small"><i class="fa fa-th"></i> Full Details</a>
     </div>
@@ -104,6 +126,6 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
-    <script src="js/gameDetails.js"></script>
+    <script src="js/countryDetails.js"></script>
 </body>
 </html>
