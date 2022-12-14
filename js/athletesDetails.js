@@ -4,7 +4,7 @@ var vm = function () {
     console.log('ViewModel initiated...');
     //---Variáveis locais
     var self = this;
-    self.baseUri = ko.observable('http://192.168.160.58/Olympics/api/Athletes');
+    self.baseUri = ko.observable('http://192.168.160.58/Olympics/api/Athletes/FullDetails?id=');
     self.displayName = 'Olympic Games edition Details';
     self.error = ko.observable('');
     self.passingMessage = ko.observable('');
@@ -16,10 +16,14 @@ var vm = function () {
     self.Weight = ko.observable('');
     self.BornDate = ko.observable('');
     self.BornPlace = ko.observableArray('');
-    self.DiedDate = ko.observableArray('');
-    self.Photo = ko.observableArray('');
+    self.DiedDate = ko.observable('');
+    self.DiedPlace = ko.observable('');
+    self.Photo = ko.observable('');
     self.OlympediaLink = ko.observableArray('');
-    self.Url = ko.observable('');
+    self.Medals = ko.observableArray('');
+    self.Games = ko.observableArray('');
+    self.Modalities = ko.observableArray('');
+    self.Competitions = ko.observableArray('');
     var name='o';
 
     //--- Page Events
@@ -33,26 +37,23 @@ var vm = function () {
             self.Name(data.Name);
             self.Sex(data.Sex);
             self.Height(data.Height);
-            self.Weight(data.weight);
+            self.Weight(data.Weight);
             self.BornDate(data.BornDate);
             self.BornPlace(data.BornPlace);
             self.DiedDate(data.DiedDate);
             self.DiedPlace(data.DiedPlace);
             self.Photo(data.Photo);
             self.OlympediaLink(data.OlympediaLink);
+            self.Medals(data.Medals);
+            self.Games(data.Games);
+            self.Modalities(data.Modalities);
+            self.Competitions(data.Competitions);
+
             name=data.Name
        
             console.log(name)
-
-            
-        }
-       
-        )
-         
-        
+        });
     };
-    console.log('deded',name)
-    
 
     //--- Internal functions
     
@@ -114,7 +115,6 @@ var vm = function () {
     console.log("VM initialized!");
     ko.bindingHandlers.safeSrc = {
         update: function(element, valueAccessor) {
-            console.log('algo')
           var options = valueAccessor();
           var src = ko.unwrap(options.src);
           if (src==null){

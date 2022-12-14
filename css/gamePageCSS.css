@@ -78,8 +78,5 @@ h4,h5{
     color:#000000;
     background: rgba(144, 110, 224, 0.17);
 }
-.card-body img{
-    height:160px;
-    width:160px;
-    border-radius:1rem;
-}
+
+
