@@ -1,23 +1,18 @@
-﻿// ViewModel KnockOut 
+// ViewModel KnockOut 
 
 var vm = function () {
     console.log('ViewModel initiated...');
     //---Variáveis locais
     var self = this;
-    self.baseUri = ko.observable('http://192.168.160.58/Olympics/api/Games/FullDetails?id=');
+    self.baseUri = ko.observable('http://192.168.160.58/Olympics/api/Modalities/');
     self.displayName = 'Olympic Games edition Details';
     self.error = ko.observable('');
     self.passingMessage = ko.observable('');
     //--- Data Record
     self.Id = ko.observable('');
-    self.CountryName = ko.observable('');
-    self.Logo = ko.observable('');
-    self.Name = ko.observable('');
     self.Photo = ko.observable('');
-    self.Season = ko.observable('');
-    self.Year = ko.observableArray('');
-    self.Url = ko.observable('');
-    self.Medals=ko.observable('');
+    self.Name = ko.observable('');
+    self.Modalities= ko.observableArray('');
     //--- Page Events
     self.activate = function (id) {
         console.log('CALL: getGame...');
@@ -26,22 +21,16 @@ var vm = function () {
             console.log(data);
             hideLoading();
             self.Id(data.Id);
-            self.CountryName(data.CountryName);
-            self.Logo(data.Logo);
-            self.Name(data.Name);
             self.Photo(data.Photo);
-            self.Season(data.Season);
-            self.Year(data.Year);
-            self.Medals(data.Medals)
-
-            
+            self.Name(data.Name);
+            self.Modalities(data.Modalities);
         }
        
         )
          
         
     };
-    console.log('deded',name)
+
     
 
     //--- Internal functions
@@ -102,22 +91,7 @@ var vm = function () {
     }
     
     console.log("VM initialized!");
-    ko.bindingHandlers.safeSrc = {
-        update: function(element, valueAccessor) {
-            console.log('algo')
-          var options = valueAccessor();
-          var src = ko.unwrap(options.src);
-          if (src==null){
-            $(element).attr('src', ko.unwrap(options.fallback))
-          }
-          $('<img />').attr('src', src).on('load', function() {
-            $(element).attr('src', src);
-          }).on('error', function() {
-            $(element).attr('src', ko.unwrap(options.fallback));
-          });
-          
-        }
-    }
+    
 };
 
 $(document).ready(function () {

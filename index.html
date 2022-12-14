@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css\homeCSS.css" />
 
 </head>
@@ -31,57 +31,46 @@
             </div>
         </div>
     </nav>
-    <!-- Working Area -->
-    <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
-
-            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-
-            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="6000" >
-                <div class="images" style="background-image:url(https://images.unsplash.com/photo-1437623889155-075d40e2e59f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)" >
-
-                </div>
-                <div class="container1">
-                    <h1>Eos sunt repellendus eum corrupti facere. </h1><p>Aut dicta omnis sit quibusdam aperiam qui voluptatem ipsum in voluptatem voluptas nam porro iusto aut adipisci deleniti. 33 fuga sint sit adipisci unde ut tempore quas sit  voluptas et quia vitae. </p>
-
-                </div>
+    <div class="slider-container">
+        <div class="left-slide">
+            <div id="act" style="background-color: #f40a23;">
+                <h1>mas batata cozida e assada</h1>
+                <p>é perfeita e sem discussao uwu</p>
             </div>
-            <div class="carousel-item" data-bs-interval="7000" >
-                <div class="images" style="background-image:url(https://images.unsplash.com/photo-1461088945293-0c17689e48ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80)">
-
-                </div>
-                <div class="container1">
-                    <h1>Et asperiores sint qui ullam sunt aut nobis minus. </h1><p>Sed dignissimos maxime quo tempora voluptas et quas repellendus in cumque obcaecati. Ut provident velit ut quam voluptatem est placeat rerum. Quo earum eveniet qui impedit nisi 33 dolorum dolorem. Qui repellat recusandae vel harum aspernatur ut perferendis enim  iure placeat. </p>
-
-                </div>
+            <div style="background-color: #2A86BA;">
+                <h1>batata cozida </h1>
+                <p>é gostosa</p>
             </div>
-            <div class="carousel-item" data-bs-interval="5000">
-                <div class="images" style="background-image:url(https://images.unsplash.com/photo-1497381446305-7445b7d4d5cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80)">
-                </div>
-
-                <div class="container1" >
-                    <h1>Et voluptas fugiat ad corporis optio ut laborum nisi. </h1><p>Qui blanditiis dolore ab velit impedit est alias reprehenderit et eaque corrupti non esse laborum. Ex reiciendis numquam hic suscipit omnis rem magnam soluta. </p>
-
-                </div>
+            <div style="background-color: #252E33;">
+                
+                <h1>batata em pure</h1>
+                <p>tmb é muito boa</p>
             </div>
-        
+            <div style="background-color: #a82f02;">
+                
+                <h1>Batata assada</h1>
+                <p>eh muito boa ate</p>
+            </div>
         </div>
-        <a href="#myCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
-            <span class="sr-only">previous</span>
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </a>
-        <a href="#myCarousel" class="carousel-control-next" role="button" data-bs-slide="next">
-            <span class="sr-only">previus</span>
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </a>
+        <div class="right-slide">
+            <div style="background-image: url('images/Flags/Russia.png');"></div>
+            <div style="background-image: url('images/Flags/Japan.png');"></div>
+            <div style="background-image: url('images/Flags/Australia.png');"></div>
+            <div style="background-image: url('images/Flags/Greece.png');"></div>
+        </div>
+        <div class="action-buttons">
+            <button class="down-button">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+            <button class="up-button">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
     </div>
+    <!-- Working Area -->
+    
     <!-- End of Working Area -->
-    <nav class="navbar navbar-light bg-light fixed-bottom">
+    <nav class="navbar navbar-light bg-light ">
         <div class="container small">
             <div class="navbar-text">&copy;  Introdução as Tecnologias Web - 2022/23</div>
             <div class="navbar-text">Made with <i class="fa fa-heart-o text-danger"></i> for U by <a href="mailto:jsp@ua.pt" class="text-decoration-none text-muted">jsp@ua.pt</a>.</div>
@@ -94,6 +83,6 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
-    <script src="/js/homeJSs.js"></script>
+    <script src="/js/homeJS.js"></script>
 </body>
 </html>

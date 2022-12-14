@@ -61,6 +61,7 @@ var vm = function () {
             //self.SetFavourites();
         });
     };
+    
 
     //--- Internal functions
     function ajaxHelper(uri, method, data) {
