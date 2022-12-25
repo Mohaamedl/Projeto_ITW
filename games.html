@@ -9,34 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css\gamePageCSS.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css\games.css" />
     <style>
-        body{
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            margin: 60px 0 60px 0;
-            background:#ccf8ff;
-            background:-webkit-linear-gradient(to right#ddfafe,#c4ffe5);
-            background: linear-gradient(to right,#ddfafe,#c4ffe5);
-        }
-        .header{
-            background-image:linear-gradient(to right,#669c33,#0b6000);
-        }
-        .footer{
-            background-image:linear-gradient(to left,#669c33,#0b6000);
-        }
-        .card{
-            background-color: #ecffec;
-        }
-        .in-line{
-            display:flex;
-        }
-        hr{
-            padding:2px
-        }
-        h4:nth-child(1){
-            font-size: 20px;
-        }
+       
+        
     </style>
 </head>
 <body>
@@ -90,44 +67,36 @@
             </div>
         </div>
         <!-- /ko -->
-
-        <div class="container" >
-            <div class="row" data-bind="foreach: records">
-                <div class="col-md-4" >
-                    <div class="card text-start">
-                        <div class="header game">
-                            <img class="card-img-top" data-bind="attr:{src: 'images/Flags/'+CountryName+'.png'}" >
-                        </div>
-                        
-                        <div class="card-body game">
-                            <div>
-                                <div class="text-center"><h4 data-bind="text:CountryName"></h4></div>
-                                <hr>
-                                <div class="CityName in-line"><h4>City Name :&nbsp</h4> <h4 data-bind="text:CityName"></h4></div>
-                                <hr>
-                                <div class="Name in-line"> <h4>Year :&nbsp</h4> <h4 data-bind="text:Name.substr(0,4)"></h4></div>
-                                <hr>
-                                <div class="Name in-line"> <h4>Season :&nbsp</h4> <h4 data-bind="text:Name.substr(5,)"></h4></div>
-
+        
+            
+              
+                
+                
+    
+            
+                <div class="container" >
+                    <div class="row card-group" data-bind="foreach:records">
+                      <div class="underlay">
+                        <div class="card col-md-4">
+                            <div class="multi-button">
+                                <button class="fas fa-heart"></button>
+                                <a data-bind="attr: { href:'./gameDetails.html?id='+Id}"><button class="fas fa-clipboard"></button></a>
                             </div>
+                                <img  data-bind="attr:{src:'images/Flags/'+CountryName+'.png'}" class="card-img-top"alt="">
+                                <div class="card-block" >
+                                <h5 class="card-title" data-bind="texName" style="font-family: 'Anton', sans-serif">Canon Unveils New Lens<hr></h5>
+                                <p class="card-text" >Canon will have a full slate of new and updated products to show attendees at this year’s NAB Show. The company has announced its new Compact-Servo 70-200mm telephoto zoom lens<a  data-bind="attr: { href:'./gameDetails.html?id='+Id}"><u>Read More...</u></a></p>
+                                
+                                </div>
                         </div>
-                        <div class="footer gane">
-                          <div class="text-sm-center">
-                              <a class="btn btn-default btn-light btn-xs" data-bind="attr: { href:'./gameDetails.html?id=' + Id }">
-                                  <i class="fa fa-eye" title="Selecione para ver detalhes"></i>
-                              </a>
-                              <button class="btn btn-default btn-xs">
-                                  <i class="fa fa-heart-o" data-bind="attr : { 'id': 'favourite_' + Id }" title="Selecione para adicionar aos favoritos"></i>
-                              </button>
-                          </div>
-                        </div>
-                      
+                      </div>
                     </div>
                 </div>
-            </div>
+            
+   
+                
         
         
-        </div>
 
     </div>
     <div class="row small">
@@ -172,15 +141,7 @@
     </div>
     
     <!-- End of Working Area -->
-    <nav class="navbar navbar-light bg-light fixed-bottom">
-        <div class="container small">
-            <div class="navbar-text">&copy;  Introdução as Tecnologias Web - 2022/23</div>
-            <div class="navbar-text">Made with <i class="fa fa-heart-o text-danger"></i> for U</div>
-            <div class="navbar-nav">
-                <div class="nav-item text-end"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></div>
-            </div>
-        </div>
-    </nav>
+
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>

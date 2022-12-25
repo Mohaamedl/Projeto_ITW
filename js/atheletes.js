@@ -13,6 +13,7 @@ const tags = [];
         self.athletes = ko.observableArray([]);
         self.currentPage = ko.observable(1);
         self.pagesize = ko.observable(21);
+        self.pagesizes = ko.observable(135571);
         self.totalRecords = ko.observable(50);
         self.hasPrevious = ko.observable(false);
         self.hasNext = ko.observable(false);
@@ -54,12 +55,6 @@ const tags = [];
                 console.log(data);
                 hideLoading();
                 self.records(data.Records);
-                const listInfo = data.Records;
-                for (var element in data.Records){
-                    tags.push(listInfo[element].Name);
-                    
-                }
-                console.log(tags)
                 self.currentPage(data.CurrentPage);
                 self.hasNext(data.HasNext);
                 self.hasPrevious(data.HasPrevious);
@@ -67,6 +62,7 @@ const tags = [];
                 self.totalPages(data.TotalPages);
                 self.totalRecords(data.TotalRecords);
             });
+            
             
             
             
@@ -156,11 +152,13 @@ $(document).ready(function () {
 $(document).ajaxComplete(function (event, xhr, options) {
     $("#myModal").modal('hide');
     $(".material-card > .mc-btn-action").click(function () {
-        var card = $(this).parent(".material-card");
-        var icon = $(this).children("i");
+        var self = this;
+        var card = $(self).parent(".material-card");
+        var icon = $(self).children("i");
         icon.addClass("fa-spin-fast");
     
         if (card.hasClass("mc-active")) {
+            console.log("here")
           card.removeClass("mc-active");
     
           window.setTimeout(function () {
@@ -173,6 +171,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
           card.addClass("mc-active");
     
           window.setTimeout(function () {
+            console.log("hehe2")
             icon
               .removeClass("fa-bars")
               .removeClass("fa-spin-fast")
@@ -180,9 +179,32 @@ $(document).ajaxComplete(function (event, xhr, options) {
           }, 800);
         }
       });
-      
-      $("#formInput").autocomplete({source: tags})
-                    
-
+      $("#SearchText").autocomplete({
+        minLength: 4,
+        source: function (request, response) {
+            var lista = new Array();
+            $.ajax({
+                type: "get",
+                contentType: "application/json; charset=utf-8",
+                url: "http://192.168.160.58/Olympics/api/Athletes"+ "?page=" + 1+ "&pagesize="+135571,
+                data: {'Name':$('#SearchText').val()},
+                dataType: "json",
+            success: function (data) {
+                data = data.Records.filter(x=> x.Name.toLowerCase().includes($('#SearchText').val()))
+                console.log(data)
+                for (i=0;i<data.length;i++){
+                    lista.push(data[i].Name)
+                }
+                console.log(lista)
+            response(lista);
+            
+            console.log(data)
+            },
+            error: function (result) {
+            alert(result.statusText);
+            }
+        });
+        }
+        });
 })
 
