@@ -11,7 +11,7 @@ var vm = function () {
     self.records = ko.observableArray([]);
     self.country=ko.observableArray([]);
     self.currentPage = ko.observable(1);
-    self.pagesize = ko.observable(21);
+    self.pagesize = ko.observable(24);
     self.totalRecords = ko.observable(50);
     self.hasPrevious = ko.observable(false);
     self.hasNext = ko.observable(false);
@@ -132,6 +132,7 @@ $(document).ready(function () {
 $(document).ajaxComplete(function (event, xhr, options) {
     $("#myModal").modal('hide');
     var main = function () {
+
         $('.push-bar').on('click', function(event){
           if (!isClicked){
             event.preventDefault();
@@ -206,6 +207,6 @@ $(document).ajaxComplete(function (event, xhr, options) {
          });
     };
     
-    $(document).ready(main);
+    $().ready(main);
     
 })

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css\games.css" />
     <style>
@@ -17,23 +17,64 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html" tabindex="Olympics"><img src="images/Olympics-Emblem.png" height="24" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="athletes.html"><i class="fa fa-user-o text-warning"></i> Athletes</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="competitions.html"><i class="fa fa-trophy"></i> Competitions</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="countries.html"><i class=" fa fa-flag-o text-danger"></i> Countries</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="games.html"><i class="fa fa-map-marker text-success"></i> Games</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="modalities.html"><i class="fa fa-soccer-ball-o text-primary"></i> Modalities</a></li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Olympics Cards</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavLightDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Athletes
+                      </a>
+
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Games
+                      </a>
+
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Modalities
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Competitions</a></li>
+                    <li><a class="dropdown-item" href="#">...</a></li>
+                    <li><a class="dropdown-item" href="#">...</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Countries
+                      </a>
+
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Favorites
+                      </a>
+
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        about us
+                      </a>
+
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Contact us
+                      </a>
+
+                </li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
     <!-- Working Area -->
     <div class="container">
         <div class="border-bottom py-2 mb-2">
@@ -67,25 +108,20 @@
             </div>
         </div>
         <!-- /ko -->
-        
-            
-              
-                
-                
-    
-            
-                <div class="container" >
+
+                <div class="container" > 
                     <div class="row card-group" data-bind="foreach:records">
-                      <div class="underlay">
-                        <div class="card col-md-4">
+                      <div class="underlay col-md-4">
+                        <div class="card ">
                             <div class="multi-button">
                                 <button class="fas fa-heart"></button>
                                 <a data-bind="attr: { href:'./gameDetails.html?id='+Id}"><button class="fas fa-clipboard"></button></a>
                             </div>
                                 <img  data-bind="attr:{src:'images/Flags/'+CountryName+'.png'}" class="card-img-top"alt="">
                                 <div class="card-block" >
-                                <h5 class="card-title" data-bind="texName" style="font-family: 'Anton', sans-serif">Canon Unveils New Lens<hr></h5>
-                                <p class="card-text" >Canon will have a full slate of new and updated products to show attendees at this year’s NAB Show. The company has announced its new Compact-Servo 70-200mm telephoto zoom lens<a  data-bind="attr: { href:'./gameDetails.html?id='+Id}"><u>Read More...</u></a></p>
+                                <h5 class="card-title text-md-center"><i class="fa fa-id-card"> &nbsp; </i><span data-bind="text:Id"></span> <h6 class=" text-md-center" data-bind="text:Name.substring(5,) +'  '+ Name.substring(0,4)"></h6></h5><hr>
+                                <p class="card-text">In <span data-bind="text:Year"></span>, during the <span data-bind="text:Name.substring(5,)"></span> season, <span data-bind="text:CountryName"></span> hosted the Olympic Games in <span data-bind="text:CityName"></span>.
+                                     <a  data-bind="attr: { href:'./gameDetails.html?id='+Id}"><u>For more information...</u></a></p>
                                 
                                 </div>
                         </div>
@@ -141,10 +177,48 @@
     </div>
     
     <!-- End of Working Area -->
+    <footer class="footer-distributed">
 
+        <div class="footer-left">
+
+            <p class="footer-links">
+                <a href="index.html">Home</a><br>
+                <a href="countries.html">Countries</a> <br>
+                <a href="modalities.html">Modalities</a> | 
+                <a href="competitions.html">Competitions</a><br>
+                <a href="athletes.html">Athletes</a>
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="https://www.facebook.com/olympics/"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/olympics/"><i class="fa fab fa-instagram"></i></a>
+                <a href="https://twitter.com/olympics"><i class="fa fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/@Olympics"><i class="fa fab fa-youtube"></i></a>
+
+            </div>
+            <p class="footer-company-name">&copy;  Introdução as Tecnologias Web - 2022/23</p>
+            <p class="footer-company-name"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></p>
+        </div>
+
+        <div class="footer-right">
+
+            <p>Contact Us</p>
+
+            <form action="#" method="post">
+
+                <input type="text" name="email" placeholder="Email">
+                <textarea name="message" placeholder="Message"></textarea>
+                <button>Send</button>
+
+            </form>
+
+        </div>
+
+    </footer>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script src="\js\games.js"></script>
 </body>
 </html>

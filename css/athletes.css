@@ -49,6 +49,14 @@
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
+
+.input-group input{
+  width:180px !important;
+  transition: 0.9s !important;
+}
+.input-group:hover input{
+  width: 360px !important;
+}
 .material-card h2 span {
   display: block;
 }

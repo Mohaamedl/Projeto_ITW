@@ -38,25 +38,26 @@
             <h2 data-bind="text:displayName"></h2>
         </div>
         <!-- ko if:records().length > 0 -->
-        <div class="row small">
-            <p class=" col-8 mr-auto pt-2">
+        <div class="row">
+            <p class=" col-6 mr-auto pt-2">
                 <span data-bind="html: 'Page: ' + currentPage() + ' of ' + totalPages()"></span><br />
                 <span data-bind="html: 'Athletes: '+ fromRecord() + '-' + toRecord() + ' of ' + totalRecords()"></span>
             </p>
-                <div class=" col-md-4">
+                <div class="col-md-6" style="display:flex; align-items:center; justify-content:right">
                     <form>
-                        <input type="hidden" name="page" value="1">
+                       
                         <div class="input-group input-group-sm">
-                            <input id="SearchText" class="form-control form-control-sm" type="text" name="q" placeholder="Insert the Athlete's name or part of the name">
+                            <input id="SearchText" class="form-control form-control" type="text" name="q" placeholder="Insert the Athlete's name or part of the name">
                             <div class="input-group-append">
-                                <button type="submit" class="btn btn-default btn-sm" title="Filter"><i class="fa fa-search small"></i></button>
+                                <button type="submit" class="btn btn-default btn-sm" id="SearchNow" title="Filter"><i class="fa fa-search small"></i></button>
                                 <a href="/athletes.html" class="btn btn-default btn-sm" title="Clear"><i class="fa fa-times"></i></a>
                             </div>
                         </div>
                     </form>
                 </div>
-        
-            <div class="col-8 my-0 pt-3">
+        </div>
+        <div class="row">
+          <div class="col-12 my-0 pt-3">
                 <ul class="pagination float-end">
                     <!-- ko if: currentPage() > 5 && totalPages() > 10 -->
                     <li class="page-item float-end"><a class="page-link" title="First Page" data-bind="attr: { href: './athletes.html?page=' + '1',  rel:'prev'}">⇤</a></li>
@@ -75,8 +76,9 @@
                     <li class="page-item"><a class="page-link" title="Last Page" data-bind="attr: { href: './athletes.html?page=' + totalPages() }">⇥</a></li>
                     <!-- /ko -->
                 </ul>
-            </div>
+            </div>  
         </div>
+
         
             
         <!-- /ko -->
@@ -121,7 +123,7 @@
             </div>
         </div>
         
-    <div class="row small">
+    <div class="row ">
         <p class=" col-4 mr-auto pt-2">
             
         </p>

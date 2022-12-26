@@ -1,9 +1,14 @@
 .navbar{
   backdrop-filter: blur(5rem) !important;
-  background-color: rgba(231, 225, 225, 0.102) !important;
+  background-color: rgba(231, 225, 225, 0.203) !important;
   border-radius: 1rem !important;
-  left:20px !important;
-  right:20px !important;
+  left:20px ;
+  right:20px ;
+  top: 20px;
+  height: 80px;
+}
+.container{
+  margin-top: 100px;
 }
 body .card .multi-button {
   z-index: -1;
@@ -100,11 +105,19 @@ html {
 }
 
 body {
-  background-color: transparent;
-  background: url("https://i.imgur.com/ApQKtQZ.jpeg") fixed no-repeat;
+  background: linear-gradient(
+    to bottom right,
+    rgba(211, 216, 246, 0.75) 10%,
+    rgba(201, 227, 244, 0.75) 10%,
+    rgba(198, 195, 195, 0.75) 16.6%,
+    rgb(173, 215, 245) 37.8%,
+    rgb(194, 223, 244) 48.8%,
+    rgb(190, 236, 255) 53.1%,
+    rgba(181, 183, 184, 0.75) 79.4%,
+    rgba(104, 124, 130, 0.75) 84.3%
+  ) !important;;
   background-size: cover;
   max-height: 300rem;
-  
   -o-border-image: linear-gradient(
     to bottom right,
     rgba(255, 255, 255, 0.75) 0%,
@@ -131,7 +144,7 @@ body {
   ) !important;
   border-image: linear-gradient(
     to bottom right,
-    rgba(255, 255, 255, 0.75) 0%,
+    rgba(243, 234, 234, 0.75) 0%,
     rgba(245, 245, 245, 0.75) 0%,
     rgba(245, 245, 245, 0.75) 16.6%,
     rgb(245, 245, 245) 37.8%,
@@ -152,7 +165,7 @@ a {
 
 a:hover {
   opacity: 1;
-  color: black;
+  color: rgb(156, 27, 27);
 }
 /*----------------
 Push Bar
@@ -330,40 +343,14 @@ Cards
 }
 
 .card {
-  
   --background:#8a8484;
   --text:black;
   box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, 0.05);
   margin:0 ;
   width: 300px;
+  height:400px;
+  border-color: transparent;
   background-color: transparent;
-  -o-border-image: linear-gradient(
-    to bottom right,
-    rgba(255, 255, 255, 0.75) 0%,
-    rgba(245, 245, 245, 0.75) 0%,
-    rgba(245, 245, 245, 0.75) 16.6%,
-    rgba(245, 245, 245, 0.75) 79.4%,
-    rgba(245, 245, 245, 0.75) 84.3%
-  ) !important;
-  border-image: -webkit-gradient(
-    linear,
-    left top,
-    right bottom,
-    from(rgba(255, 255, 255, 0.75)),
-    color-stop(0%, rgba(245, 245, 245, 0.75)),
-    color-stop(16.6%, rgba(245, 245, 245, 0.75)),
-    color-stop(79.4%, rgba(245, 245, 245, 0.75)),
-    color-stop(84.3%, rgba(245, 245, 245, 0.75))
-  ) !important;
-  border-image: linear-gradient(
-    to bottom right,
-    rgba(255, 255, 255, 0.75) 0%,
-    rgba(245, 245, 245, 0.75) 0%,
-    rgba(245, 245, 245, 0.75) 16.6%,
-    rgba(245, 245, 245, 0.75) 79.4%,
-    rgba(245, 245, 245, 0.75) 84.3%
-  ) !important;
-  border-image-slice: 1 !important;
   -webkit-transition: -webkit-transform 0.6s ease;
   transition: -webkit-transform 0.6s ease;
   transition: transform 0.6s ease;
@@ -374,71 +361,14 @@ Cards
   animation-duration: 1.5s;
 }
 
-@-webkit-keyframes blockAppear {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-  }
-  40% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-    -webkit-box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15),
-      0 1px 0 rgba(0, 0, 0, 0.15);
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(0, 0, 0, 0.15);
-  }
-   80% {
-    opacity: 1;
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-  }
-   100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-}
 
-@keyframes blockAppear {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-  }
-  40% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-    -webkit-box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15),
-      0 1px 0 rgba(0, 0, 0, 0.15);
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(0, 0, 0, 0.15);
-  }
-  80% {
-    opacity: 1;
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-}
 
 .card:hover {
   z-index: 999;
-  max-height: 800px;
+  max-height: 400px;
   width: 400px;
   max-width: 400px;
   border: none !important;
-  border-right: 60px solid transparent !important;
-  border-bottom: 20px solid transparent !important;
-  margin-right: -20px;
   -webkit-transform: translate(-30px, -50px);
   transform: translate(-30px, -50px);
 }
@@ -457,11 +387,13 @@ Cards
   transition: -webkit-box-shadow 0.6s ease;
   transition: box-shadow 0.6s ease;
   transition: box-shadow 0.6s ease, -webkit-box-shadow 0.6s ease;
+  
 }
 
 .card:hover:before {
   border-radius:0 0 1rem 1rem;
-  max-width: 300px;
+  width: 300px;
+  height:400px;
   -webkit-box-shadow: 60px 60px 20px RGBA(142, 142, 142, 0.6);
   box-shadow: 60px 60px 20px RGBA(142, 142, 142, 0.6);
 }
@@ -474,6 +406,7 @@ Cards
 
 .card:hover .card-block {
   width:300px;
+  height: 400px;
   border-radius:0 0 1rem 1rem;
   background-image: -webkit-gradient(
     linear,
@@ -498,12 +431,13 @@ Cards
 }
 
 .card:hover .card-text {
-  margin: 1rem ;
+  margin: 0.75rem ;
   border-radius: 1rem;
   color: rgb(0, 0, 0);
 }
 
 .card-block {
+  border-radius: 0 0 1rem 1rem;
   background-color: transparent;
   background-image: -webkit-gradient(
     linear,
@@ -537,14 +471,14 @@ Cards
 }
 
 .card-img-top {
-  border-radius: 1rem ;
+  border-radius: 1rem 1rem 0 0;
   width: 300px;
-  height: 250px;
+  height: 200px;
   background-color: #fff;
   -webkit-transition: height 0.8s ease;
   transition: height 0.8s ease;
 }
-
+/*
 @media (max-width: 1120px) {
   .bar-cont {
     width: 100%;
@@ -584,9 +518,8 @@ Cards
     max-width: 380px;
   }
 }
-/*-----------------
-Pixel Grid
-------------------*/
+
+
 .pixel-grid {
   position: fixed;
   top: 0;
@@ -606,13 +539,13 @@ Pixel Grid
   z-index: 16;
   color: white;
   display: inline-block;
-  /*border: 2px ridge white;*/
+  border: 2px ridge white;
   font-size: 1.8em;
   width: 1.8em;
   text-align: center;
   line-height: 1.85em;
   background: #666;
-  border-radius: 50%; /* or 50% width & line-height */
+  border-radius: 50%; /* or 50% width & line-height 
   opacity: 0.3;
   -webkit-transition: background 1s ease-out;
   transition: background 1s ease-out;
@@ -637,4 +570,209 @@ Pixel Grid
   -webkit-box-shadow: 2px 2px 3px #888;
   box-shadow: 2px 2px 3px #888;
   opacity: 1 !important;
+} */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+* {
+  font-family: Roboto;
+}
+
+.footer-distributed{
+	background: rgb(57, 68, 79);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+	padding: 50px 60px 40px;
+	overflow: hidden;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #ccc;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	float: left;
+}
+
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 20px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 30px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	float: right;
+}
+
+.footer-distributed .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 3px;
+	background-color:  #33383b;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-distributed form input,
+	.footer-distributed form textarea{
+		width: 250px;
+	}
+
+	.footer-distributed form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-distributed .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-distributed form{
+		margin-top: 30px;
+	}
+
+	.footer-distributed form{
+		display: block;
+	}
+
+	.footer-distributed form button{
+		float: none;
+	}
 }

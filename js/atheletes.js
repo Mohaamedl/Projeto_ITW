@@ -179,26 +179,19 @@ $(document).ajaxComplete(function (event, xhr, options) {
           }, 800);
         }
       });
-      $("#SearchText").autocomplete({
-        minLength: 4,
+      /*$("#SearchText").autocomplete({
+        minLength: 5,
         source: function (request, response) {
-            var lista = new Array();
             $.ajax({
-                type: "get",
+                type: "GET",
                 contentType: "application/json; charset=utf-8",
-                url: "http://192.168.160.58/Olympics/api/Athletes"+ "?page=" + 1+ "&pagesize="+135571,
-                data: {'Name':$('#SearchText').val()},
+                url: "http://192.168.160.58/Olympics/api/Athletes/SearchByName?"+request,
+                data: {'q':$('#SearchText').val()},
                 dataType: "json",
             success: function (data) {
-                data = data.Records.filter(x=> x.Name.toLowerCase().includes($('#SearchText').val()))
                 console.log(data)
-                for (i=0;i<data.length;i++){
-                    lista.push(data[i].Name)
-                }
-                console.log(lista)
-            response(lista);
-            
-            console.log(data)
+            response(data.slice(0,10));
+           
             },
             error: function (result) {
             alert(result.statusText);
@@ -206,5 +199,12 @@ $(document).ajaxComplete(function (event, xhr, options) {
         });
         }
         });
+        */
+      
+
+     
+      
+                    
+
 })
 
