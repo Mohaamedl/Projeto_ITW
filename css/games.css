@@ -2,13 +2,30 @@
   backdrop-filter: blur(5rem) !important;
   background-color: rgba(231, 225, 225, 0.203) !important;
   border-radius: 1rem !important;
+  border: 0ch;
   left:20px ;
   right:20px ;
   top: 20px;
   height: 80px;
 }
+.dropdown-menu-light{
+  backdrop-filter: blur(3rem);
+  background-color: rgba(102, 98, 98, 0.482) !important;
+  border-radius: 1rem !important;
+  width: 800px;
+  z-index:999;
+}
+.dropdown:hover > .dropdown-menu{
+  display: block !important;
+  margin:0;
+  
+}
 .container{
   margin-top: 100px;
+}
+#map{
+  height: 400px;
+  width:400px;
 }
 body .card .multi-button {
   z-index: -1;
@@ -722,57 +739,4 @@ section {
 	padding: 15px 50px;
 	font-weight: bold;
 	float: right;
-}
-
-/* If you don't want the footer to be responsive, remove these media queries */
-
-@media (max-width: 1000px) {
-
-	.footer-distributed {
-		font: bold 14px sans-serif;
-	}
-
-	.footer-distributed .footer-company-name{
-		font-size: 12px;
-	}
-
-	.footer-distributed form input,
-	.footer-distributed form textarea{
-		width: 250px;
-	}
-
-	.footer-distributed form button{
-		padding: 10px 35px;
-	}
-
-}
-
-@media (max-width: 800px) {
-
-	.footer-distributed{
-		padding: 30px;
-	}
-
-	.footer-distributed .footer-left,
-	.footer-distributed .footer-right{
-		float: none;
-		max-width: 300px;
-		margin: 0 auto;
-	}
-
-	.footer-distributed .footer-left{
-		margin-bottom: 40px;
-	}
-
-	.footer-distributed form{
-		margin-top: 30px;
-	}
-
-	.footer-distributed form{
-		display: block;
-	}
-
-	.footer-distributed form button{
-		float: none;
-	}
 }
