@@ -83,15 +83,15 @@
       </nav>
     <!-- Working Area -->
     <div class="container">
-        <div class="row"><div class="border-bottom">
-            <!-- ko if: records().length>0 -->
+        <div class="row">
+            <div class="col-md-6"><!-- ko if: records().length>0 -->
             <h2 style="float: left" data-bind="html:displayName"></h2>
             <!-- /ko -->
             <!-- ko ifnot: records().length>0 -->
             <h2 style="float: left"><b>No Results Found</b></h2>
-            <!-- /ko -->
-            <form class="form-check form-check-inline" id="forms1" style="float: right" role="search">
-                <input id="searchbarall" class="form-control" type="search" placeholder="Enter the year and/or season" aria-label="Search" style="
+            <!-- /ko --></div>
+            <div class="col-md-6"> <form class="form-check form-check-inline" id="forms1" style="float: right" role="search">
+                <input id="searchbarall" class="form-control" type="search" placeholder="Enter the year and season" aria-label="Search" style="
             border-style: solid;
             border-width: 1px;
             background-color: rgb(53, 53, 53);
@@ -104,6 +104,7 @@
           <i class="fa fa-search" style="color: black"></i>
         </button>
             </form>
+           
         </div></div>
         
         <!-- ko if:records().length > 0 -->
@@ -136,21 +137,21 @@
         <!-- /ko -->
 
         <div class="container" > 
-            <div class="row card-group" data-bind="foreach:records">
-                <div class="underlay col-md-4">
-                <div class="card ">
-                    <div class="multi-button">
-                        <button class="fas fa-heart"></button>
-                        <a data-bind="attr: { href:'./gameDetails.html?id='+Id}"><button class="fas fa-clipboard"></button></a>
-                    </div>
-                        <img  data-bind="attr:{src:Photo}" class="card-img-top"alt="">
-                        <div class="card-block" >
-                        <h5 class="card-title text-md-center"><i class="fa fa-id-card"> &nbsp; </i><span data-bind="text:Id"></span> <h6 class=" text-md-center" data-bind="text:Name.substring(5,) +'  '+ Name.substring(0,4)"></h6></h5><hr>
-                        <p class="card-text">In <span data-bind="text:Year"></span>, during the <span data-bind="text:Name.substring(5,)"></span> season, <span data-bind="text:CountryName"></span> hosted the Olympic Games in <span data-bind="text:CityName"></span>.
-                                <a  data-bind="attr: { href:'./gameDetails.html?id='+Id}"><u>For more information...</u></a></p>
-                        
+            <div class="row " data-bind="foreach:records">
+                <div class="underlay col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card ">
+                        <div class="multi-button">
+                            <button class="fas fa-heart"></button>
+                            <a data-bind="attr: { href:'./gameDetails.html?id='+Id}"><button class="fas fa-clipboard"></button></a>
                         </div>
-                </div>
+                            <img  data-bind="attr:{src:Photo}" class="card-img-top"alt="">
+                            <div class="card-block" >
+                            <h5 class="card-title text-md-center"><i class="fa fa-id-card"> &nbsp; </i><span data-bind="text:Id"></span> <h6 class=" text-md-center" data-bind="text:Name.substring(5,) +'  '+ Name.substring(0,4)"></h6></h5><hr>
+                            <p class="card-text">In <span data-bind="text:Year"></span>, during the <span data-bind="text:Name.substring(5,)"></span> season, <span data-bind="text:CountryName"></span> hosted the Olympic Games in <span data-bind="text:CityName"></span>.
+                                    <a  data-bind="attr: { href:'./gameDetails.html?id='+Id}"><u>For more information...</u></a></p>
+                            
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>

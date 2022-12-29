@@ -155,11 +155,11 @@ var vm = function () {
     if (undefined == undefined) {
         if (self.pesquisado() == undefined) {
             if (pg == undefined) {
-                if ('j'!=undefined) self.activate(1,self.sortfield());
+                if ('j'!=undefined) self.activate(1);
                 else self.activate(1)
             }
             else {
-                if ('j'!=undefined) self.activate(pg,self.sortfield());
+                if ('j'!=undefined) self.activate(pg);
                 else self.activate(pg)
             }
         } else {
