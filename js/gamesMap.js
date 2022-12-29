@@ -8,7 +8,7 @@ function activate() {
     var baseUri="http://192.168.160.58/Olympics/api/games"
     console.log("Loading Map")
     var map= L.map('map',{zoomSnap: 0.5}).on("click", function(e){var coord= e.latlng;console.log(coord)}).setView([15,12],2);
-    var bounds = L.latLngBounds([[140, 60], [-35, -170.5]]);
+    var bounds = L.latLngBounds([[81.5, 192], [-75.5, -170.5]]);
     map.dragging.disable()
     map.setMaxBounds(bounds);
     // Set up the OSM layer
@@ -36,7 +36,7 @@ function activate() {
                 popupAnchor: [1, -34],
                 shadowSize: [41, 41]
             });
-            L.marker([Lat,Lng],{icon: myIcon}).on("click", showLocation).bindPopup("<a style='text-decoration:none;color:red 'href='./gameDetails.html?id=" + GameId+ "'"+ "'" + "'><b>" + Name + "</b></a><br>" + City + ", "+ Country).addTo(map);
+            L.marker([Lat,Lng],{icon: myIcon}).on("click", showLocation).bindPopup("<a style='text-decoration:none; 'href='./gameDetails.html?id=" + GameId+ "'"+ "'" + "'><b>" + Name + "</b></a><br>" + City + ", "+ Country).addTo(map);
         }
         
     });

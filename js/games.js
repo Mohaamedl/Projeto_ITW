@@ -13,7 +13,7 @@ var vm = function () {
     self.totalRecords = ko.observable(50);
     self.hasPrevious = ko.observable(false);
     self.hasNext = ko.observable(false);
-
+    self.gamesName = ko.observableArray([]);
     
     self.previousPage = ko.computed(function () {
         return self.currentPage() * 1 - 1;
@@ -88,6 +88,21 @@ var vm = function () {
         });
 
     };
+    self.activeautocom = function(id){
+        console.log('Getting data to autocomplete...');
+        var composedUri = self.baseUri() + "?page=" + id + "&pageSize=" + self.pagesize();
+        ajaxHelper(composedUri, 'GET').done(function (data) {
+            console.log(data);
+            hideLoading();
+            self.records(data.Records);
+            self.currentPage(data.CurrentPage);
+            self.hasNext(data.HasNext);
+            self.hasPrevious(data.HasPrevious);
+            self.pagesize(data.PageSize)
+            self.totalPages(data.TotalPages);
+            self.totalRecords(data.TotalRecords);
+        });
+    };
     
 
     //--- Internal functions
@@ -140,14 +155,14 @@ var vm = function () {
     };
 
     self.pesquisa = function() {
-        self.pesquisado($("#searchbarall").val().toLowerCase());
+        self.pesquisado($("#SearchBar").val().toLowerCase());
         if (self.pesquisado().length > 0) {
             window.location.href = "games.html?search=" + self.pesquisado();
         }
     }
     //--- start ....
     showLoading();
-    $("#searchbarall").val(undefined);
+    $("#SearchBar").val(undefined);
     self.pesquisado = ko.observable(getUrlParameter('search'));
 
     var pg = getUrlParameter('page');
@@ -256,7 +271,41 @@ $(document).ajaxComplete(function (event, xhr, options) {
            });
          });
     };
-    
+    $("#SearchBar").autocomplete({
+           minLength: 2,
+           source: function (request, response) {
+               $.ajax({
+                   type: "GET",
+                   contentType: "application/json; charset=utf-8",
+                   url: "http://192.168.160.58/Olympics/api/games/SearchByName?q="+$('#SearchBar').val(),
+                   data: {q:$('#SearchBar').val()},
+                   dataType: "json",
+               success: function (data) {
+                var tags = new Array;
+                for (id=0;id<data.length;id++){
+                    tags.push(data[id].Name)
+                }
+               response(tags.slice(0,10));
+               },
+               error: function (result) {
+               alert(result.statusText);
+               }
+           });
+           }
+    });
     $().ready(main);
+    function searchToggle(obj, evt){
+        var container = $(obj).closest('.search-wrapper');
+        console.log("hey")
+            if(!container.hasClass('active')){
+                container.addClass('active');
+                evt.preventDefault();
+            }
+            else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+                container.removeClass('active');
+                // clear input
+                container.find('.search-input').val('');
+            }
+    }
     
 })

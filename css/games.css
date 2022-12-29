@@ -1,31 +1,15 @@
-.navbar{
-  backdrop-filter: blur(5rem) !important;
-  background-color: rgba(231, 225, 225, 0.203) !important;
-  border-radius: 1rem !important;
-  border: 0ch;
-  left:20px ;
-  right:20px ;
-  top: 20px;
-  height: 80px;
-}
-.dropdown-menu-light{
-  backdrop-filter: blur(3rem);
-  background-color: rgba(102, 98, 98, 0.482) !important;
-  border-radius: 1rem !important;
-  width: 800px;
-  z-index:999;
-}
-.dropdown:hover > .dropdown-menu{
-  display: block !important;
-  margin:0;
-  
-}
+
 .container{
   margin-top: 100px;
 }
-#map{
-  height: 400px;
-  width:400px;
+.form-control:focus {
+  box-shadow: none;
+}
+.notFound{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 body .card .multi-button {
   z-index: -1;
