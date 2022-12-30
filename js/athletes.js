@@ -162,14 +162,14 @@ var vm = function () {
         }
     };
     self.pesquisa = function() {
-        self.pesquisado($("#searchbarall").val().toLowerCase());
+        self.pesquisado($("#SearchBar").val().toLowerCase());
         if (self.pesquisado().length > 0) {
             window.location.href = "athletes.html?search=" + self.pesquisado();
         }
     }
     //--- start ....
     showLoading();
-    $("#searchbarall").val(undefined);
+    $("#SearchBar").val(undefined);
     self.pesquisado = ko.observable(getUrlParameter('search'));
 
     var pg = getUrlParameter('page');

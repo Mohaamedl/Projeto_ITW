@@ -17,8 +17,7 @@ var vm = function () {
     self.Season = ko.observable('');
     self.Year = ko.observableArray('');
     self.Url = ko.observable('');
-    var name='o';
-
+    self.Medals=ko.observable('');
     //--- Page Events
     self.activate = function (id) {
         console.log('CALL: getGame...');
@@ -33,9 +32,7 @@ var vm = function () {
             self.Photo(data.Photo);
             self.Season(data.Season);
             self.Year(data.Year);
-            name=data.Name
-       
-            console.log(name)
+            self.Medals(data.Medals)
 
             
         }
@@ -103,17 +100,22 @@ var vm = function () {
     else {
         self.activate(pg);
     }
-    var s =JSON.stringify(self.Name);
+    
     console.log("VM initialized!");
     ko.bindingHandlers.safeSrc = {
         update: function(element, valueAccessor) {
+            console.log('algo')
           var options = valueAccessor();
           var src = ko.unwrap(options.src);
+          if (src==null){
+            $(element).attr('src', ko.unwrap(options.fallback))
+          }
           $('<img />').attr('src', src).on('load', function() {
             $(element).attr('src', src);
           }).on('error', function() {
-            $(element).attr('src', "images/OlympicLogos/"+name+".jpg");
+            $(element).attr('src', ko.unwrap(options.fallback));
           });
+          
         }
     }
 };

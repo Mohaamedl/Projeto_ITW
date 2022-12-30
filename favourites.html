@@ -10,28 +10,87 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css\homeCSS.css" />
+    <link rel="stylesheet" href="css/main.css" />
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html" tabindex="Olympics"><img src="/images/Olympics-Emblem.png" height="24" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="athletes.html"><i class="fa fa-user-o text-warning"></i> Athletes</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="competitions.html"><i class="fa fa-trophy"></i> Competitions</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="countries.html"><i class=" fa fa-flag-o text-danger"></i> Countries</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="games.html"><i class="fa fa-map-marker text-success"></i> Games</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="modalities.html"><i class="fa fa-soccer-ball-o text-primary"></i> Modalities</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light p-3 bg-danger fixed-top" id="headerNav">
+        <div class="container-fluid">
+          <a class="navbar-brand d-block d-lg-none" href="index.html">
+            <img src="images/c01c24d54a5747e58772f62679401713.png" height="80" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+       
+          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto ">
+              <li class="nav-item ">
+                <a class="nav-link mx-2 active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-2" href="athletes.html">Athletes</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="games.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Game
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="gamesMap.html">Map</a></li>
                 </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="modalities.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Modalities
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="competitions.html">Competitions</a></li>
+                </ul>
+              </li>
+              <li class="nav-item d-none d-lg-block">
+                <a class="nav-link mx-2" href="index.html">
+                  <img src="images\c01c24d54a5747e58772f62679401713.png"  style="height:80px;border-radius: 0.75rem;" />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="countries.html">Countries</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Statistics
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="statisticsCountriesMedals.html">Statistic 1</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesAthletes.html">Statistic 2</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesCompetitions.html">Statistic 3</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesCountries.html">Statistic 4</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesModalities.html">Statistic 5</a></li>
+                </ul>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-2" href="about.html">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="contact.html">Contacts</a>
+              </li>
+              <div class="nav-item">
+                <form class="form-check" id="forms1"  role="search">
+                    <div class="p-2 bg-light rounded rounded-pill shadow ">
+                        <div class="input-group">
+                          <input type="search" id="SearchBar" placeholder="Search athlete" aria-label="Search" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+                          <div class="input-group-append">
+                            <button id="button-addon1" type="submit" data-bind="click:pesquisa" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                          </div>
+                        </div>
+                        
+                    </div>
+                </form>
             </div>
+            </ul>
+          </div>
         </div>
-    </nav>
-    <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
+      </nav>
+    <div class="container" style="margin-top: 150px; margin-bottom: 100px;">
 
         <div class="py-2 mb-3">
             <h2 style="color:rgb(33, 104, 154)"><strong> Athletes</strong></h2>
@@ -134,122 +193,41 @@
         <hr>
     </div> 
  </div>  
-   
  </div>  
- <div class="container" style="margin-top: 25px;">
-    <div class="row">
-        <i class="d-grid d-sm-flex justify-content-sm-end"><a onClick="history.go(-1)" class="btn btn-secondary btn-danger col-lg-1 col-md-2 col-sm-12" align="center" tabindex="-1" role="button" aria-disabled="true">Voltar</a></i>
-    </div>
-</div>
-<nav class="navbar navbar-light bg-light fixed-bottom">
-    <div class="container small">
-        <div class="navbar-text">&copy;  Introdução as Tecnologias Web - 2022/23</div>
-        <div class="navbar-text">Made with <i class="fa fa-heart-o text-danger"></i> for U</div>
-        <div class="navbar-nav">
-            <div class="nav-item text-end"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></div>
+
+<!-- End of Working Area -->
+
+<footer class="footer-distributed">
+    <div class="footer-left">
+        <p class="footer-links">
+            <a href="index.html">Home</a><br>
+            <a href="countries.html" >Countries</a> <br>
+            <a href="modalities.html">Modalities</a> | 
+            <a href="competitions.html">Competitions</a><br>
+            <a href="athletes.html">Athletes</a>
+        </p>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com/olympics/"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/olympics/"><i class="fa fab fa-instagram"></i></a>
+            <a href="https://twitter.com/olympics"><i class="fa fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@Olympics"><i class="fa fab fa-youtube"></i></a>
         </div>
+        <p class="footer-company-name">&copy;  Introdução as Tecnologias Web - 2022/23</p>
+        <p class="footer-company-name"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></p>
     </div>
-</nav>
+    <div class="footer-right">
+        <p>Report</p>
+        <form action="#" method="post">
+            <input type="text" name="email" placeholder="Email">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button>Send</button>
+        </form>
+    </div>
+</footer>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
     <script src="js/favourites.js"></script>
-    <script>
-//      $(document).ready(function () {
-//   
-//    const api_url = "";
-//
-//    $("#searchbar").autocomplete({
-//        minLength: 2,
-//        source: function (request, response) {
-//            $.ajax({
-//                type: "GET",
-//                url: api_url,
-//                data: {
-//                    q: $('#searchbar').val().toLowerCase()
-//                },
-//                success: function (data) {
-//                    if (!data.length) {
-//                        var result = [{
-//                            label: 'Sem resultados',
-//                            value: response.term,
-//                            source: ""
-//                        }];
-//                        response(result);
-//                    } else {
-//
-//                        var nData = $.map(data, function (value, key) {
-//                            return {
-//                                label: value.Text,
-//                                value: value.Id,
-//                                source: value.Source
-//                            }
-//                        });
-//                        results = $.ui.autocomplete.filter(nData, request.term);
-//                        response(results);
-//                    }
-//                },
-//                error: function () {
-//                    alert("error!");
-//                }
-//            })
-//        },
-//        select: function (event, ui) {
-//            event.preventDefault();
-//            $("#searchbar").val(ui.item.label);
-//            
-//            switch (ui.item.source) {
-//                case "Athlete":
-//                    window.location.href = "./athletesDetails.html?id="+ui.item.value;
-//                    break;
-//                case "Game":
-//                    window.location.href = "./gameDetails.html?id="+ui.item.value;
-//                    break;
-//            }
-//           // h.loadTitleModal(ui.item.value)
-//        },
-//        focus: function (event, ui) {
-//            $("#searchbar").val(ui.item.label);
-//        }
-//    });
-//});
-
-// function Favorites() {
-//     self = this
-//     self.driversData = ko.observableArray([])
-//     self.loadDrivers = () => {
-//         let data = JSON.parse(localStorage.getItem("driverFavorites"))
-//         let temp = []
-//         if (data != null) {
-//             data.forEach(e => {
-//                 $.ajax({
-//                     type: "GET",
-//                     url: "http://192.168.160.58/formula1/api/drivers/driver",
-//                     async: false,
-//                     data : {
-//                         id : e
-//                     },
-//                     dataType: "json",
-//                     contentType: 'application/json',
-//                     success: function (response) {
-//                         temp.push(response)
-//                     },
-//                     error: function(e) {
-//                         console.log(e);
-//                     }
-//                 });
-//             });
-//         } else {
-//             temp = []
-//         }
-//         return temp;
-//     }
-//     self.driversData(self.loadDrivers())
-// }
-// const f = new Favorites
-// ko.applyBindings(f);
-
-    </script>
 </body>
 </html>

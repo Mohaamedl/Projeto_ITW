@@ -1,81 +1,44 @@
 .navbar{
-    backdrop-filter: blur(5rem) !important;
-    background-color: rgba(231, 225, 225, 0.203) !important;
-    border-radius: 1rem !important;
-    border: 0ch;
-    left:20px ;
-    right:20px ;
-    top: 20px;
-    height: 80px;
+  border-radius: 2rem;
+  top: 1rem;
+  margin: 0 5px 0 5px;
+  background-color: rgba(130, 126, 122, 0.306) !important;
+  backdrop-filter: blur(8rem);
+}
+.dropdown-menu {
+  background-color: rgba(45, 55, 55, 0.615);
+}
+
+.dropdown-item:hover{
+  background-color:rgba(106, 112, 112, 0.614) ;
+}
+
+.form-control-underlined {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    padding-left: 0;
   }
-  .dropdown-menu-light{
-    backdrop-filter: blur(3rem);
-    background-color: rgba(102, 98, 98, 0.482) !important;
-    border-radius: 1rem !important;
-    width: 800px;
-    z-index:999;
+  .form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
   }
-  .dropdown:hover > .dropdown-menu{
-    display: block !important;
-    margin:0;
-    
+  .notFound{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   }
-  .container{
-    margin-top: 150px;
+  #forms1{
+    width:120px;
+    padding:0 auto;
+    margin:0 auto;
+    transition: 1s;
+
   }
-  html {
-    overflow-y: scroll;
-  }
-  body {
-    background: linear-gradient(
-      to bottom right,
-      rgba(211, 216, 246, 0.75) 10%,
-      rgba(201, 227, 244, 0.75) 10%,
-      rgba(198, 195, 195, 0.75) 16.6%,
-      rgb(173, 215, 245) 37.8%,
-      rgb(194, 223, 244) 48.8%,
-      rgb(190, 236, 255) 53.1%,
-      rgba(181, 183, 184, 0.75) 79.4%,
-      rgba(104, 124, 130, 0.75) 84.3%
-    ) !important;;
-    background-size: cover;
-    max-height: 300rem;
-    -o-border-image: linear-gradient(
-      to bottom right,
-      rgba(255, 255, 255, 0.75) 0%,
-      rgba(245, 245, 245, 0.75) 0%,
-      rgba(245, 245, 245, 0.75) 16.6%,
-      rgb(245, 245, 245) 37.8%,
-      rgb(245, 245, 245) 48.8%,
-      rgb(254, 254, 254) 53.1%,
-      rgba(245, 245, 245, 0.75) 79.4%,
-      rgba(245, 245, 245, 0.75) 84.3%
-    ) !important;
-    border-image: -webkit-gradient(
-      linear,
-      left top,
-      right bottom,
-      from(rgba(255, 255, 255, 0.75)),
-      color-stop(0%, rgba(245, 245, 245, 0.75)),
-      color-stop(16.6%, rgba(245, 245, 245, 0.75)),
-      color-stop(37.8%, rgb(245, 245, 245)),
-      color-stop(48.8%, rgb(245, 245, 245)),
-      color-stop(53.1%, rgb(254, 254, 254)),
-      color-stop(79.4%, rgba(245, 245, 245, 0.75)),
-      color-stop(84.3%, rgba(245, 245, 245, 0.75))
-    ) !important;
-    border-image: linear-gradient(
-      to bottom right,
-      rgba(243, 234, 234, 0.75) 0%,
-      rgba(245, 245, 245, 0.75) 0%,
-      rgba(245, 245, 245, 0.75) 16.6%,
-      rgb(245, 245, 245) 37.8%,
-      rgb(245, 245, 245) 48.8%,
-      rgb(254, 254, 254) 53.1%,
-      rgba(245, 245, 245, 0.75) 79.4%,
-      rgba(245, 245, 245, 0.75) 84.3%
-    ) !important;
-    border-image-slice: 1 !important;
+  #forms1:hover{
+    width: 100%;
   }
 
 
@@ -230,4 +193,9 @@ section {
 	padding: 15px 50px;
 	font-weight: bold;
 	float: right;
+}
+
+.container{
+  margin-top: 150px;
+  margin-bottom: 100px;
 }
