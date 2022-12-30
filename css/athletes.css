@@ -203,7 +203,7 @@
   z-index: 20;
 }
 .material-card.mc-active .mc-content {
-  padding-top: 5.6em;
+  padding-top: 5rem;
 }
 @media screen and (max-width: 767px) {
   .material-card.mc-active .mc-content {
@@ -435,6 +435,7 @@ body {
 	text-align: left;
 	padding: 50px 60px 40px;
 	overflow: hidden;
+  margin-top: 100px;
 }
 
 section {
