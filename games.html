@@ -17,95 +17,90 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" onscroll="style:">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse row" >
-            <ul class="navbar-nav col-md-4 ">
-                <li class="nav-item ">
-                    <a class="nav-link" href="athletes.html"  role="button">
-                        Athletes
-                      </a>
-
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="games.html"  role="button" aria-expanded="false">
-                        Games
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a class="dropdown-item" href="gamesMap.html">Map</a></li>
-                        
-                      </ul>
-
-
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="modalities.html" role="button"  aria-expanded="false">
-                    Modalities
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li><a class="dropdown-item" href="competitions.html">Competitions</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="statistics.html"  role="button">
-                        Statistics
-                      </a>
-
-                </li>
+  <nav class="navbar navbar-expand-lg navbar-light p-3 bg-danger fixed-top" id="headerNav">
+    <div class="container-fluid" style="height: 100px;">
+      <a class="navbar-brand d-block d-lg-none" href="index.html">
+        <img src="images/c01c24d54a5747e58772f62679401713.png" style="height: 70px;border-radius: 0.75rem;" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+   
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto ">
+         
+          <li class="nav-item ">
+            <a class="nav-link mx-2" href="athletes.html">Athletes</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link mx-2 dropdown-toggle" href="games.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Game
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="games.html">Games</a></li>
+              <li><a class="dropdown-item" href="gamesMap.html">Map</a></li>
             </ul>
-            <div class="adj center  col-md-4  c">
-                <a class="navbar-brand" href="index.html">Olympics Cards</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-controls="navbarNavLightDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <ul class="navbar-nav right  col-md-4   " >
-                <li class="nav-item ">
-                    <a class="nav-link" href="countries.html"  role="button"  aria-expanded="false">
-                        Countries
-                      </a>
-
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="favorites.html"  role="button"  aria-expanded="false">
-                        Favorites
-                      </a>
-
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="about.html" id="navbarDarkDropdownMenuLink" role="button"  aria-expanded="false">
-                        about us
-                      </a>
-
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link external-" href="contact.html" id="navbarDarkDropdownMenuLink" role="button"  aria-expanded="false">
-                        Contact us
-                      </a>
-
-                </li>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link mx-2 dropdown-toggle" href="modalities.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Modalities
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="modalities.html">Modalities</a></li>
+                <li><a class="dropdown-item" href="competitions.html">Competitions</a></li>
             </ul>
-          </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="countries.html">Countries</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link mx-2 dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Statistics
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="statisticsCountyMedals.html">Country Medals</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesAthletes.html">Games Athletes</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesCompetitions.html">Games Competitions</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesCountries.html">Games Countries</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesModalities.html">Games Modalities</a></li>
+            </ul>
+          </li>
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link mx-2" href="index.html">
+              <img src="images\c01c24d54a5747e58772f62679401713.png"  style="height:80px;border-radius: 0.75rem;" />
+            </a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link mx-2" href="favorites.html">Fav<i class="fa fa-heart" style="color: brown;"></i>rites</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link mx-2" href="about.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="contact.html">Contacts</a>
+          </li>
+          <div class="nav-item">
+            <form class="form-check" id="forms1"  role="search">
+                <div class="p-2 bg-light rounded rounded-pill shadow ">
+                    <div class="input-group">
+                      <input type="search" id="SearchBar" placeholder="Enter the year and/or season" aria-label="Search" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+                      <div class="input-group-append">
+                        <button id="button-addon1" type="submit" data-bind="click:pesquisa" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                      </div>
+                    </div>
+                    
+                </div>
+            </form>
         </div>
-      </nav>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <!-- Working Area -->
 
     <div class="container">
-        <div class="row">
-            <div class="col-12 inEnd">
-                <form class="form-check" id="forms1"  role="search">
-                    <div class="p-2 bg-light rounded rounded-pill shadow ">
-                        <div class="input-group">
-                          <input type="search" id="SearchBar" placeholder="Enter the year and/or season" aria-label="Search" aria-describedby="button-addon1" class="form-control border-0 bg-light">
-                          <div class="input-group-append">
-                            <button id="button-addon1" type="submit" data-bind="click:pesquisa" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
-                          </div>
-                        </div>
-                        
-                    </div>
-                </form>
-            </div>
-        </div>
+    
         <div class="row">
             <div class="col-12"><!-- ko if: records().length>0 -->
             <h2 style="float: left" data-bind="html:displayName"></h2>

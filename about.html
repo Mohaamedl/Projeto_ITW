@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/BaseStyle.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light p-3 bg-danger fixed-top" id="headerNav">
+        <div class="container-fluid">
+          <a class="navbar-brand d-block d-lg-none" href="index.html">
+            <img src="images/c01c24d54a5747e58772f62679401713.png" height="80" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+       
+          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto ">
+              <li class="nav-item ">
+                <a class="nav-link mx-2 active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-2" href="athletes.html">Athletes</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="games.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Game
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="games.html">Games</a></li>
+                  <li><a class="dropdown-item" href="gamesMap.html">Map</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="modalities.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Modalities
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="modalities.html">Modalities</a></li>
+                    <li><a class="dropdown-item" href="competitions.html">Competitions</a></li>
+                </ul>
+              </li>
+              <li class="nav-item d-none d-lg-block">
+                <a class="nav-link mx-2" href="index.html">
+                  <img src="images\c01c24d54a5747e58772f62679401713.png"  style="height:80px;border-radius: 0.75rem;" />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="countries.html">Countries</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Statistics
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="statisticsCountyMedals.html">Country Medals</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesAthletes.html">Games Athletes</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesCompetitions.html">Games Competitions</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesCountries.html">Games Countries</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesModalities.html">Games Modalities</a></li>
+                </ul>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-2" href="about.html">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="contact.html">Contacts</a>
+              </li>
+              <div class="nav-item">
+                <form class="form-check" id="forms1"  role="search">
+                    <div class="p-2 bg-light rounded rounded-pill shadow ">
+                        <div class="input-group">
+                          <input type="search" id="SearchBar" placeholder="Enter the year and/or season" aria-label="Search" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+                          <div class="input-group-append">
+                            <button id="button-addon1" type="submit" data-bind="click:pesquisa" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                          </div>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    
+</body>
+</html>

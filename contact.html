@@ -8,9 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css\homeCSS.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+   
+    <link rel="stylesheet" href="css/BaseStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700" rel="stylesheet" type="text/css">
 </head>
 <style>
@@ -18,150 +19,291 @@
             font-family: 'Open Sans', sans-serif;
             padding: 56px 0px 53px 0px;
         }
-    .header {
-        align-content: center;
-        display:flex;
-        justify-content:center;
-        margin:10px;
-    }
-    .card-img-top {
-        /* width:100%;
-        height:100%; */
-        display: flex;
-        max-width: 6rem;
-    }
 </style>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html" tabindex="Olympics"><img src="../images/Olympic_rings.svg" height="24" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="athletes.html"><i class="fa fa-user-o text-warning"></i> Athletes</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="competitions.html"><i class="fa fa-trophy"></i> Competitions</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="countries.html"><i class=" fa fa-flag-o text-danger"></i> Countries</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="games.html"><i class="fa fa-map-marker text-success"></i> Games</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="modalities.html"><i class="fa fa-soccer-ball-o text-primary"></i> Modalities</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light p-3 bg-danger fixed-top" id="headerNav">
+        <div class="container-fluid">
+          <a class="navbar-brand d-block d-lg-none" href="index.html">
+            <img src="images/c01c24d54a5747e58772f62679401713.png" style="height:80px;border-radius: 0.75rem;" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+       
+          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto ">
+              <li class="nav-item ">
+                <a class="nav-link mx-2" href="athletes.html">Athletes</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="games.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Game
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="games.html">Games</a></li>
+                  <li><a class="dropdown-item" href="gamesMap.html">Map</a></li>
                 </ul>
-            </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="modalities.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Modalities
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="modalities.html">Modalities</a></li>
+                    <li><a class="dropdown-item" href="competitions.html">competitions</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="countries.html">Countries</a>
+              </li>
+              <li class="nav-item d-none d-lg-block">
+                <a class="nav-link mx-2" href="index.html">
+                  <img src="images\c01c24d54a5747e58772f62679401713.png"  style="height:80px;border-radius: 0.75rem;" />
+                </a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Statistics
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="statisticsCountyMedals.html">Statistic 1</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesAthletes.html">Statistic 2</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesCompetitions.html">Statistic 3</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesCountries.html">Statistic 4</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesModalities.html">Statistic 5</a></li>
+                </ul>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-2 active" aria-current="page" href="favorites.html"><img src="images/favorite.png" alt=""></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-2 ab" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 ct" href="contact.html">Contacts</a>
+              </li>
+              <div class="nav-item">
+                <form class="form-check" id="forms1"  role="search">
+                    <div class="p-2 bg-light rounded rounded-pill shadow ">
+                        <div class="input-group">
+                          <input type="search" id="SearchBar" placeholder="Enter the year and/or season" aria-label="Search" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+                          <div class="input-group-append">
+                            <button id="button-addon1" type="submit" data-bind="click:pesquisa" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                          </div>
+                        </div>
+                        
+                    </div>
+                </form>
+               </div>
+            </ul>
+          </div>
         </div>
-    </nav>
-    </hr>
-    <div class="row" style="height:25px">
-    <div class='jumbotron'>
-    <div class='container' style="text-align:center">
-        <h1>Official Social Media</h1>
-        <div class="row" style="height:50px"></div>
-        <div class="row">
-            <div class="col-md-3" >
-                <div class="card text-start">
-                    <div class="header">
-                        <a href="https://www.facebook.com/olympics/"><img class="card-img-top" src="data:image/png;base64,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"></a> 
-                    </div>
-                    <div class="card-body">
-                        <div class="socialName" style="text-align:center"><h3>Facebook</h3></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3" >
-                <div class="card text-start">
-                    <div class="header">
-                        <a href="https://www.instagram.com/olympics/"><img class="card-img-top" src="https://imagepng.org/wp-content/uploads/2017/08/instagram-icone-icon-2.png"></a>
-                    </div>
-                    <div class="card-body">
-                        <div class="socialName" style="text-align:center"><h3>Instagram</h3></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3" >
-                <div class="card text-start">
-                    <div class="header">
-                        <a href="https://twitter.com/olympics"><img class="card-img-top" src="https://th.bing.com/th/id/R.9a3a06f78cc0a8d79fce59e2de6da146?rik=dPpebIZS75XeLg&riu=http%3a%2f%2fdownload.seaicons.com%2ficons%2fiynque%2fios7-style%2f1024%2fTwitter-icon.png&ehk=9uxMZF8lPTQeq29dorwdNNTmLgAbWnyRVjid%2fbw0M4k%3d&risl=&pid=ImgRaw&r=0"></a>
-                    </div>
-                    <div class="card-body">
-                        <div class="socialName" style="text-align:center"><h3>Twitter</h3></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3" >
-                <div class="card text-start">
-                    <div class="header">
-                        <a href="https://www.tiktok.com/@olympics"><img class="card-img-top" src="https://cdn2.downdetector.com/static/uploads/logo/tictok_LkHtO3J.png"></a>
-                    </div>
-                    <div class="card-body">
-                        <div class="socialName" style="text-align:center"><h3>Tiktok</h3></div>
-                    </div>
-                </div>
-            </div>
-        </div>     
-    <div class="jumbotron">
-        <hr>
+      </nav>
+    <section class="ftco-section">
         <div class="container">
-            <h1>Contact us</h1>
-            <div class="row" style="height: 25px"></div>
             <div class="row justify-content-center">
-                <div class="col-lg-8 mb-5">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="dbox w-100 text-center">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="fa fa-map-marker"></span>
-                                </div>
-                                <div class="text">
-                                    <p>
-                                        <span>Adress:</span>
-                                        Localização da sede dos Jogos Olímpicos
-                                    </p>
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">Contacts </h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="wrapper">
+                        <div class="row no-gutters mb-5">
+                            <div class="col-md-7">
+                                <div class="contact-wrap w-100 p-md-5 p-4">
+                                    <h3 class="mb-4">Contact Us</h3>
+                                    <div id="form-message-warning" class="mb-4"></div>
+                                    <div id="form-message-success" class="mb-4">
+                                        Your message was sent, thank you!
+                                    </div>
+                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm"
+                                        novalidate="novalidate">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="name">Full Name</label>
+                                                    <input type="text" class="form-control" name="name" id="name"
+                                                        placeholder="Name" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="email">Email Address</label>
+                                                    <input type="email" class="form-control" name="email" id="email"
+                                                        placeholder="Email" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label" for="subject">Subject</label>
+                                                    <input type="text" class="form-control" name="subject" id="subject"
+                                                        placeholder="Subject" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label" for="#">Message</label>
+                                                    <textarea name="message" class="form-control" id="message" cols="30"
+                                                        rows="4" placeholder="Message" required></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="submit" value="Send Message" class="btn btn-primary">
+                                                    <div class="submitting"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="dbox w-100 text-center">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="fa fa-phone">
-                                    </span>
+                            <iframe class="col-md-5 d-flex align-items-stretch"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3028.005132248156!2d-8.658792184152782!3d40.62976878561992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23a2aa4e1bda2b%3A0xd70b976749475485!2sUniversidade%20de%20Aveiro!5e0!3m2!1spt-PT!2spt!4v1672406671208!5m2!1spt-PT!2spt"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="row" >
+                                <div class="col-md-3">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-map-marker"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Address:</span> Universidade de Aveiro, 3810-193 Aveiro</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <p>
-                                        <span>Phone:</span>
-                                        <a href="">Nº telemovel</a>
-                                    </p>
+                                <div class="col-md-3">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-phone"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Phone:</span> <a href="tel://1234567920">234370200</a></p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="dbox w-100 text-center">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="fa far fa-envelope">
-                                    </span>
+                                <div class="col-md-3">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-paper-plane"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Email:</span> <a href="mailto:info@yoursite.com">geral@ua.pt</a>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <p>
-                                        <span>Mail</span>
-                                        <a href="">inserir mail</a>
-                                    </p>
+                                <div class="col-md-3">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-globe"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Website</span> <a href="https://www.ua.pt/">ua.pt</a></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div clas="row" style="height:50px"></div>
                 </div>
             </div>
-        </div>
-    </div>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        (function($) {
 
-        </div>
-    <nav class="navbar navbar-light bg-light fixed-bottom">
-        <div class="container small">
-            <div class="navbar-text">&copy;  Introdução as Tecnologias Web - 2022/23</div>
-            <div class="navbar-text">Made with <i class="fa fa-heart-o text-danger"></i> for U by <a href="mailto:jsp@ua.pt" class="text-decoration-none text-muted">jsp@ua.pt</a>.</div>
-            <div class="navbar-nav">
-                <div class="nav-item text-end"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></div>
-            </div>
-        </div>
-    </nav>
+"use strict";
+
+
+// Form
+var contactForm = function() {
+    if ($('#contactForm').length > 0 ) {
+        $( "#contactForm" ).validate( {
+            rules: {
+                name: "required",
+                subject: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                message: {
+                    required: true,
+                    minlength: 5
+                }
+            },
+            messages: {
+                name: "Please enter your name",
+                subject: "Please enter your subject",
+                email: "Please enter a valid email address",
+                message: "Please enter a message"
+            },
+            /* submit via ajax */
+            
+            submitHandler: function(form) {		
+                var $submit = $('.submitting'),
+                    waitText = 'Submitting...';
+
+                $.ajax({   	
+                  type: "POST",
+                  url: "php/sendEmail.php",
+                  data: $(form).serialize(),
+
+                  beforeSend: function() { 
+                      $submit.css('display', 'block').text(waitText);
+                  },
+                  success: function(msg) {
+                   if (msg == 'OK') {
+                       $('#form-message-warning').hide();
+                        setTimeout(function(){
+                           $('#contactForm').fadeIn();
+                       }, 1000);
+                        setTimeout(function(){
+                           $('#form-message-success').fadeIn();   
+                       }, 1400);
+
+                       setTimeout(function(){
+                           $('#form-message-success').fadeOut();   
+                       }, 8000);
+
+                       setTimeout(function(){
+                           $submit.css('display', 'none').text(waitText);  
+                       }, 1400);
+
+                       setTimeout(function(){
+                           $( '#contactForm' ).each(function(){
+                                            this.reset();
+                                        });
+                       }, 1400);
+                       
+                    } else {
+                       $('#form-message-warning').html(msg);
+                        $('#form-message-warning').fadeIn();
+                        $submit.css('display', 'none');
+                    }
+                  },
+                  error: function() {
+                      $('#form-message-warning').html("Something went wrong. Please try again.");
+                     $('#form-message-warning').fadeIn();
+                     $submit.css('display', 'none');
+                  }
+              });    		
+              } // end submitHandler
+
+        });
+    }
+};
+contactForm();
+
+})(jQuery);
+
+    </script>
 </body>
 </html>
