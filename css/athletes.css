@@ -573,3 +573,12 @@ section {
 	font-weight: bold;
 	float: right;
 }
+
+.form-select {
+  margin-bottom: 15px;
+  color:#5c666b;
+  outline-color: #00BCD4;
+  border: 1px solid #00BCD4;
+  width:400px
+  
+}

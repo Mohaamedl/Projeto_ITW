@@ -244,6 +244,7 @@ function medal(BestPosition){
         return "img/silverMedal.png";
     else if (BestPosition == 3)
         return "img/bronzeMedal.png";
+    else return "img/noMedal.png"
 };
 
 $(document).ready(function () {

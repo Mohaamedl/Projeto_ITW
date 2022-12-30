@@ -87,6 +87,10 @@ section {
 	padding: 0;
 }
 
+.footer-distributed .footer-links :hover {
+	color:deepskyblue;
+}
+
 .footer-distributed .footer-links a{
 	display:inline-block;
 	line-height: 1.8;
@@ -105,6 +109,11 @@ section {
 
 .footer-distributed .footer-icons{
 	margin-top: 20px;
+}
+
+.footer-distributed .footer-icons :hover{
+	color:black;
+	background-color: deepskyblue;
 }
 
 .footer-distributed .footer-icons a{
@@ -195,6 +204,8 @@ section {
 	font-weight: bold;
 	float: right;
 }
+
+.footer-distributed form-select{}
 
 .container{
   margin-top: 150px;
