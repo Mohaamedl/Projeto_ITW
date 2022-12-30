@@ -11,10 +11,14 @@ var vm = function () {
     //--- Data Record
     self.Id = ko.observable('');
     self.CountryName = ko.observable('');
+    self.Name = ko.observable('')
     self.Logo = ko.observable('');
-    self.Name = ko.observable('');
+    self.City = ko.observable('')
     self.Photo = ko.observable('');
     self.Season = ko.observable('');
+    self.Athletes = ko.observableArray([]);
+    self.Modalities = ko.observableArray([]);
+    self.Competitions = ko.observableArray([]);
     self.Year = ko.observableArray('');
     self.Url = ko.observable('');
     self.Medals=ko.observable('');
@@ -28,11 +32,16 @@ var vm = function () {
             self.Id(data.Id);
             self.CountryName(data.CountryName);
             self.Logo(data.Logo);
-            self.Name(data.Name);
+            self.Name(data.Name)
+            self.City(data.City);
             self.Photo(data.Photo);
             self.Season(data.Season);
             self.Year(data.Year);
             self.Medals(data.Medals)
+            self.Athletes(data.Athletes);
+            self.Modalities(data.Modalities);
+            
+
 
             
         }

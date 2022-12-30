@@ -1,0 +1,37 @@
+.details{
+    margin-top: 160px;
+    height: 600px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text-center img{
+    margin: 2rem;
+    border-radius: 0.5rem;
+}
+.textDetails{
+    background-color: rgba(26, 30, 33, 0.631);
+    color:aliceblue;
+    border-radius: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    
+}
+.text-details p{ 
+    padding: 1rem;
+    
+   
+}
+.Grad{
+    border-radius:2rem;
+    background: linear-gradient(
+        to bottom right,
+        rgba(201, 133, 133, 0.75) 0%,
+        rgba(251, 212, 212, 0.75) 0%,
+        rgba(143, 115, 115, 0.75) 16.6%,
+        rgba(224, 178, 178, 0.471) 37.8%,
+        rgba(245, 245, 245, 0.397) 48.8%,
+        rgba(228, 188, 188, 0.441) 53.1%,
+        rgba(245, 245, 245, 0.75) 79.4%,
+        rgba(173, 124, 124, 0.75) 84.3%);
+}

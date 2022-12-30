@@ -18,6 +18,11 @@
     justify-content: center;
   
   }
+
+  .dropdown:hover > .dropdown-menu{
+    display: block !important;
+    margin:0;
+  }
   /*
 @media (min-width:992px){
   .dropdown:hover > .dropdown-menu{
