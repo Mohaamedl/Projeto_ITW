@@ -148,7 +148,9 @@
                 <div class="underlay col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card ">
                         <div class="multi-button">
-                            <button class="fas fa-heart"></button>
+                          <button class="btn btn-default btn-outline-danger btn-sm btn-favourite" data-bind="click: () => $parent.toggleFavourite(Id), attr : { 'id': 'favourite_' + Id }">
+                            <i data-bind="attr: {'class': $parent.favourites().includes(Id)? 'fa fa-heart' : 'fa fa-heart-o'}" class="fa fa-heart-o" title="Selecione para adicionar aos favoritos"></i>
+                        </button>
                             <a data-bind="attr: { href:'./gameDetails.html?id='+Id}"><button class="fas fa-clipboard"></button></a>
                         </div>
                             <img  data-bind="attr:{src:Photo}" class="card-img-top"alt="">

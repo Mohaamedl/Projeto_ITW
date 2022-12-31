@@ -4,20 +4,16 @@ var vm = function () {
     console.log('ViewModel initiated...');
     //---Variáveis locais
     var self = this;
-    self.baseUri = ko.observable('http://192.168.160.58/Olympics/api/countries/');
+    self.baseUri = ko.observable('http://192.168.160.58/Olympics/api/competitions/');
     self.displayName = 'Olympic Games edition Details';
     self.error = ko.observable('');
     self.passingMessage = ko.observable('');
     //--- Data Record
     self.Id = ko.observable('');
-    self.Flag = ko.observable('');
-    self.Events = ko.observableArray('');
+    self.Photo = ko.observable('');
     self.Name = ko.observable('');
-    self.Participant= ko.observableArray('');
-    self.Organizer = ko.observableArray('');
-    self.IOC= ko.observable('');
-    self.Url = ko.observable('');
-    self.Medals=ko.observableArray('');
+    self.Modality= ko.observable('');
+    self.Participant = ko.observableArray([])
     //--- Page Events
     self.activate = function (id) {
         console.log('CALL: getGame...');
@@ -26,26 +22,13 @@ var vm = function () {
             console.log(data);
             hideLoading();
             self.Id(data.Id);
-            self.Events(data.Events);
-            self.Flag(data.Flag);
+            self.Photo(data.Photo);
             self.Name(data.Name);
-            self.Participant(data.Participant);
-            self.Organizer(data.Organizer);
-            self.IOC(data.IOC);
-            //self.Medals(data.Medals)
-
-            
-        }
-       
-        )
-         
-        
+            self.Modality(data.Modality);
+            self.Participant(data.Participant)
+        })
     };
-    console.log('deded',name)
-    
-
     //--- Internal functions
-    
     function ajaxHelper(uri, method, data) {
         self.error(''); // Clear error message
         return $.ajax({
@@ -61,9 +44,6 @@ var vm = function () {
             }
         });
     }
-   
-    
-
     function showLoading() {
         $('#myModal').modal('show', {
             backdrop: 'static',
@@ -100,19 +80,9 @@ var vm = function () {
     else {
         self.activate(pg);
     }
-    var s =JSON.stringify(self.Name);
+    
     console.log("VM initialized!");
-    ko.bindingHandlers.safeSrc = {
-        update: function(element, valueAccessor) {
-          var options = valueAccessor();
-          var src = ko.unwrap(options.src);
-          $('<img />').attr('src', src).on('load', function() {
-            $(element).attr('src', src);
-          }).on('error', function() {
-            $(element).attr('src', "images/OlympicLogos/"+name+".jpg");
-          });
-        }
-    }
+    
 };
 
 $(document).ready(function () {

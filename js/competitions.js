@@ -14,7 +14,7 @@ var vm = function () {
     self.hasPrevious = ko.observable(false);
     self.hasNext = ko.observable(false);
     self.gamesName = ko.observableArray([]);
-    
+    self.favourites=ko.observableArray([])
     self.previousPage = ko.computed(function () {
         return self.currentPage() * 1 - 1;
     }, self);
@@ -43,6 +43,27 @@ var vm = function () {
             list.push(i + step);
         return list;
     };
+    self.toggleFavourite = function (id) {
+        if (self. favourites.indexOf(id) == -1){
+            self.favourites.push(id);
+        }
+        else {
+            self.favourites.remove(id);
+        }
+        localStorage.setItem("fav4",JSON.stringify(self.favourites()));
+    };
+    self.SetFavourites = function () {
+        let storage;
+        try{
+            storage = JSON.parse(localStorage.getItem("fav4"));
+        } 
+        catch (e) {
+            ;
+        }
+        if (Array.isArray(storage)){
+        self.favourites(storage);
+        }
+    }
 
     //--- Page Events
     self.activate = function (id) {
@@ -58,6 +79,7 @@ var vm = function () {
             self.pagesize(data.PageSize)
             self.totalPages(data.TotalPages);
             self.totalRecords(data.TotalRecords);
+            self.SetFavourites();
         });
     };
     self.activate2 = function(search, page) {
@@ -328,10 +350,6 @@ $(document).ajaxComplete(function (event, xhr, options) {
            });
            }
     });
-    document.querySelector('.first-button').addEventListener('click', function () {
-
-        document.querySelector('.animated-icon').classList.toggle('open');
-        });
     $().ready(main);
     
     

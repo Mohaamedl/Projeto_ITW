@@ -10,81 +10,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
-   <link rel="stylesheet" href="css/BaseStyle.css">
-    <link rel="stylesheet" href="css\games.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/games.css" />
     <style>
        
 
-.animated-icon{
-width: 30px;
-height: 20px;
-position: relative;
-margin: 0px;
--webkit-transform: rotate(0deg);
--moz-transform: rotate(0deg);
--o-transform: rotate(0deg);
-transform: rotate(0deg);
--webkit-transition: .5s ease-in-out;
--moz-transition: .5s ease-in-out;
--o-transition: .5s ease-in-out;
-transition: .5s ease-in-out;
-cursor: pointer;
-}
 
-.animated-icon span {
-display: block;
-position: absolute;
-height: 3px;
-width: 100%;
-border-radius: 9px;
-opacity: 1;
-left: 0;
--webkit-transform: rotate(0deg);
--moz-transform: rotate(0deg);
--o-transform: rotate(0deg);
-transform: rotate(0deg);
--webkit-transition: .5s ease-in-out;
--moz-transition: .5s ease-in-out;
--o-transition: .5s ease-in-out;
-transition: .5s ease-in-out;
-}
-
-.animated-icon span {
-background: #000000;
-}
-
-.animated-icon span:nth-child(1) {
-top: 0px;
-}
-
-.animated-icon span:nth-child(2) {
-top: 10px;
-}
-
-.animated-icon span:nth-child(3) {
-top: 20px;
-}
-
-.animated-icon.open span:nth-child(1) {
-top: 11px;
--webkit-transform: rotate(135deg);
--moz-transform: rotate(135deg);
--o-transform: rotate(135deg);
-transform: rotate(135deg);
-}
-
-.animated-icon.open span:nth-child(2) {
-opacity: 0;
-left: -60px;
-}
-
-.animated-icon.open span:nth-child(3) {
-top: 11px;
--webkit-transform: rotate(-135deg);
--moz-transform: rotate(-135deg);
--o-transform: rotate(-135deg);
-transform: rotate(-135deg);
-}
 
 
     </style>
@@ -95,7 +26,7 @@ transform: rotate(-135deg);
           <a class="navbar-brand d-block d-lg-none" href="index.html">
             <img src="images/c01c24d54a5747e58772f62679401713.png" style="height:80px;border-radius: 0.75rem;" />
           </a>
-          <button class="navbar-toggler first-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler activate-animation" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <div class="animated-icon"><span></span><span></span><span></span></div>
           </button>
        
@@ -220,11 +151,16 @@ transform: rotate(-135deg);
                 <div class="underlay col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card ">
                         <div class="multi-button">
-                            <button class="fas fa-heart"></button>
+
+                           <button class="btn btn-default btn-outline-danger btn-sm btn-favourite" data-bind="click: () => $parent.toggleFavourite(Id), attr : { 'id': 'favourite_' + Id }">
+                                <i data-bind="attr: {'class': $parent.favourites().includes(Id)? 'fa fa-heart' : 'fa fa-heart-o'}" class="fa fa-heart-o" title="Selecione para adicionar aos favoritos"></i>
+                            </button>
+
                             <a data-bind="attr: { href:'./competitionsDetails.html?id='+Id}"><button class="fas fa-clipboard"></button></a>
                         </div>
                             <img  data-bind="safeSrc:{src:Photo , fallback: 'images/ImageNotFound.png'}"  class="card-img-top"alt="">
                             <div class="card-block" >
+                             
                             <h5 class="card-title text-md-center"><i class="fa fa-id-card"> &nbsp; </i><span data-bind="text:Id"></span> <h6 class=" text-md-center" data-bind="text:Name"></h6></h5><hr style="border-top: 8px double black">
                             <p class="card-text"> Results : <span data-bind="text:Results"></span>, Modality: <span data-bind="text:Modality"></span>
                                </p>
@@ -327,27 +263,7 @@ transform: rotate(-135deg);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-    <script>
-        function addDarkmodeWidget() {
-            const options = {
-                bottom: '32px', // default: '32px'
-                right: '32px', // default: '32px'
-                left: 'unset', // default: 'unset'
-                time: '0.8s', // default: '0.3s'
-                mixColor: '#E2B89C', // default: '#fff'
-                backgroundColor: '#fff',  // default: '#fff'
-                buttonColorDark: '#100f2c',  // default: '#100f2c'
-                buttonColorLight: '#fff', // default: '#fff'
-                saveInCookies: true, // default: true,
-                label: '🌓', // default: ''
-                autoMatchOsTheme: false // default: true
-            }
-
-            const darkmode = new Darkmode(options);
-            darkmode.showWidget();
-        }
-        window.addEventListener('load', addDarkmodeWidget);
-      </script>
     <script src="/js/competitions.js"></script>
+    <script src="js/BaseScript.js"></script>
 </body>
 </html>
