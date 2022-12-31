@@ -40,6 +40,7 @@ var vm = function () {
             self.Medals(data.Medals)
             self.Athletes(data.Athletes);
             self.Modalities(data.Modalities);
+            self.Competitions(data.Competitions)
             
 
 

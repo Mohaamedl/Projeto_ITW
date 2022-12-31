@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ITW 2022/23 - Olympic Games editions List</title><link rel="icon" href="images\Olympics-Emblem.png" type="image/jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="css/BaseStyle.css">
+    <link rel="stylesheet" href="css\games.css" />
+    <style>
+       
+
+.animated-icon{
+width: 30px;
+height: 20px;
+position: relative;
+margin: 0px;
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-o-transform: rotate(0deg);
+transform: rotate(0deg);
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+cursor: pointer;
+}
+
+.animated-icon span {
+display: block;
+position: absolute;
+height: 3px;
+width: 100%;
+border-radius: 9px;
+opacity: 1;
+left: 0;
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-o-transform: rotate(0deg);
+transform: rotate(0deg);
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+.animated-icon span {
+background: #000000;
+}
+
+.animated-icon span:nth-child(1) {
+top: 0px;
+}
+
+.animated-icon span:nth-child(2) {
+top: 10px;
+}
+
+.animated-icon span:nth-child(3) {
+top: 20px;
+}
+
+.animated-icon.open span:nth-child(1) {
+top: 11px;
+-webkit-transform: rotate(135deg);
+-moz-transform: rotate(135deg);
+-o-transform: rotate(135deg);
+transform: rotate(135deg);
+}
+
+.animated-icon.open span:nth-child(2) {
+opacity: 0;
+left: -60px;
+}
+
+.animated-icon.open span:nth-child(3) {
+top: 11px;
+-webkit-transform: rotate(-135deg);
+-moz-transform: rotate(-135deg);
+-o-transform: rotate(-135deg);
+transform: rotate(-135deg);
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light p-3 bg-danger fixed-top" id="headerNav">
+        <div class="container-fluid">
+          <a class="navbar-brand d-block d-lg-none" href="index.html">
+            <img src="images/c01c24d54a5747e58772f62679401713.png" style="height:80px;border-radius: 0.75rem;" />
+          </a>
+          <button class="navbar-toggler first-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="animated-icon"><span></span><span></span><span></span></div>
+          </button>
+       
+          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto ">
+              <li class="nav-item ">
+                <a class="nav-link mx-2" href="athletes.html">Athletes</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="games.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Game
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="games.html">Games</a></li>
+                  <li><a class="dropdown-item" href="gamesMap.html">Map</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="modalities.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Modalities
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="modalities.html">Modalities</a></li>
+                    <li><a class="dropdown-item" href="competitions.html">competitions</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="countries.html">Countries</a>
+              </li>
+              <li class="nav-item d-none d-lg-block">
+                <a class="nav-link mx-2" href="index.html">
+                  <img src="images\c01c24d54a5747e58772f62679401713.png"  style="height:80px;border-radius: 0.75rem;" />
+                </a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Statistics
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="statisticsCountyMedals.html">Statistic 1</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesAthletes.html">Statistic 2</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesCompetitions.html">Statistic 3</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesCountries.html">Statistic 4</a></li>
+                  <li><a class="dropdown-item" href="statisticsGamesModalities.html">Statistic 5</a></li>
+                </ul>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-2 active" aria-current="page" href="favorites.html"><img src="images/favorite.png" alt=""></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link mx-2 ab" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 ct" href="contact.html">Contacts</a>
+              </li>
+              <div class="nav-item">
+                <form class="form-check" id="forms1"  role="search">
+                    <div class="p-2 bg-light rounded rounded-pill shadow ">
+                        <div class="input-group">
+                          <input type="search" id="SearchBar" placeholder="Enter the year and/or season" aria-label="Search" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+                          <div class="input-group-append">
+                            <button id="button-addon1" type="submit" data-bind="click:pesquisa" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                          </div>
+                        </div>
+                        
+                    </div>
+                </form>
+               </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- Working Area -->
+
+    <div class="container">
+    
+        <div class="row">
+            <div class="col-12"><!-- ko if: records().length>0 -->
+            <h2 style="float: left" data-bind="html:displayName"></h2>
+            <!-- /ko -->
+            <!-- ko ifnot: records().length>0 -->
+            <h2 style="float: left"><b>No Results Found</b></h2>
+            
+            <!-- /ko --></div>
+        </div>
+        
+        <!-- ko if: records().length<=0 --> 
+        <div class="col-12 notFound " style="height: 800px;"><img src="https://www.eduboon.com/uploads/score_branding/717688_1580712300.png" style="height: 50%;width:50%; border-radius: 2rem;" alt="No results found"></div>
+        <!-- /ko -->
+        <!-- ko if:records().length > 0 -->
+        <div class="row small">
+            <p class=" col-4 mr-auto pt-2">
+                <span data-bind="html: 'Page: ' + currentPage() + ' of ' + totalPages()"></span><br />
+                <span data-bind="html: 'Competitions: '+ fromRecord() + '-' + toRecord() + ' of ' + totalRecords()"></span>
+            </p>
+            <div class="col-8 my-0 pt-3">
+                <ul class="pagination float-end">
+                    <!-- ko if: currentPage() > 5 && totalPages() > 10 -->
+                    <li class="page-item float-end"><a class="page-link" title="First Page" data-bind="attr: { href: './competitions.html?page=' + '1',  rel:'prev'}">⇤</a></li>
+                    <li class="page-item float-end"><a class="page-link" title="Previous Page" data-bind="attr: { href: './competitions.html?page=' + previousPage(),  rel:'prev'}">←</a></li>
+                    <!-- /ko -->
+                    <!-- ko foreach: pageArray()-->
+                    <!-- ko if:$data == $parent.currentPage() -->
+                    <li class="active page-item"><a class="page-link" data-bind="attr: { title:'Current Page ' + $data }, text: $data"></a></li>
+                    <!-- /ko -->
+                    <!-- ko if:$data != $parent.currentPage() -->
+                    <li class="page-item"><a class="page-link" data-bind="attr: { href: './competitions.html?page=' + $data, title:'Goto Page ' + $data }, text:$data"></a></li>
+                    <!-- /ko -->
+                    <!-- /ko -->
+                    <!-- ko if: currentPage() < totalPages() - 4 && totalPages() > 9 -->
+                    <li class="page-item"><a class="page-link" title="Next Page" data-bind="attr: { href: './competitions.html?page=' + nextPage(), rel:'next' }">→</a></li>
+                    <li class="page-item"><a class="page-link" title="Last Page" data-bind="attr: { href: './competitions.html?page=' + totalPages() }">⇥</a></li>
+                    <!-- /ko -->
+                </ul>
+            </div>
+        </div>
+        <!-- /ko -->
+
+        <div class="container" > 
+            <div class="row " data-bind="foreach:records">
+                <div class="underlay col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card ">
+                        <div class="multi-button">
+                            <button class="fas fa-heart"></button>
+                            <a data-bind="attr: { href:'./competitionsDetails.html?id='+Id}"><button class="fas fa-clipboard"></button></a>
+                        </div>
+                            <img  data-bind="safeSrc:{src:Photo , fallback: 'images/ImageNotFound.png'}"  class="card-img-top"alt="">
+                            <div class="card-block" >
+                            <h5 class="card-title text-md-center"><i class="fa fa-id-card"> &nbsp; </i><span data-bind="text:Id"></span> <h6 class=" text-md-center" data-bind="text:Name"></h6></h5><hr style="border-top: 8px double black">
+                            <p class="card-text"> Results : <span data-bind="text:Results"></span>, Modality: <span data-bind="text:Modality"></span>
+                               </p>
+                            
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+   
+                
+        
+        
+
+    </div>
+    
+    <div class="row small">
+        
+        <div class="col-8 my-0 pt-3">
+            <ul class="pagination float-end">
+                <!-- ko if: currentPage() > 5 && totalPages() > 10 -->
+                <li class="page-item float-end"><a class="page-link" title="First Page" data-bind="attr: { href: './competitions.html?page=' + '1',  rel:'prev'}">⇤</a></li>
+                <li class="page-item float-end"><a class="page-link" title="Previous Page" data-bind="attr: { href: './competitions.html?page=' + previousPage(),  rel:'prev'}">←</a></li>
+                <!-- /ko -->
+                <!-- ko foreach: pageArray()-->
+                <!-- ko if:$data == $parent.currentPage() -->
+                <li class="active page-item"><a class="page-link" data-bind="attr: { title:'Current Page ' + $data }, text: $data"></a></li>
+                <!-- /ko -->
+                <!-- ko if:$data != $parent.currentPage() -->
+                <li class="page-item"><a class="page-link" data-bind="attr: { href: './competitions.html?page=' + $data, title:'Goto Page ' + $data }, text:$data"></a></li>
+                <!-- /ko -->
+                <!-- /ko -->
+                <!-- ko if: currentPage() < totalPages() - 4 && totalPages() > 9 -->
+                <li class="page-item"><a class="page-link" title="Next Page" data-bind="attr: { href: './competitions.html?page=' + nextPage(), rel:'next' }">→</a></li>
+                <li class="page-item"><a class="page-link" title="Last Page" data-bind="attr: { href: './competitions.html?page=' + totalPages() }">⇥</a></li>
+                <!-- /ko -->
+            </ul>
+        </div>
+    </div>
+    <div id="map"></div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <img src="images/Olympics-Emblem.png" height="30" /> Loading data...
+                    </h5>
+                </div>
+                <div class="modal-body text-center">
+                    <i class="fa fa-spin fa-2x fa-refresh"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- End of Working Area -->
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <p class="footer-links">
+                <a href="index.html">Home</a><br>
+                <a href="countries.html">Countries</a> <br>
+                <a href="modalities.html">Modalities</a> | 
+                <a href="competitions.html">Competitions</a><br>
+                <a href="athletes.html">Athletes</a>
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="https://www.facebook.com/olympics/"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/olympics/"><i class="fa fab fa-instagram"></i></a>
+                <a href="https://twitter.com/olympics"><i class="fa fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/@Olympics"><i class="fa fab fa-youtube"></i></a>
+
+            </div>
+            <p class="footer-company-name">&copy;  Introdução as Tecnologias Web - 2022/23</p>
+            <p class="footer-company-name"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></p>
+        </div>
+
+        <div class="footer-right">
+
+            <p>Contact Us</p>
+
+            <form action="#" method="post">
+
+                <input type="text" name="email" placeholder="Email">
+                <textarea name="message" placeholder="Message"></textarea>
+                <button>Send</button>
+
+            </form>
+
+        </div>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+            const options = {
+                bottom: '32px', // default: '32px'
+                right: '32px', // default: '32px'
+                left: 'unset', // default: 'unset'
+                time: '0.8s', // default: '0.3s'
+                mixColor: '#E2B89C', // default: '#fff'
+                backgroundColor: '#fff',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: false // default: true
+            }
+
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+      </script>
+    <script src="/js/competitions.js"></script>
+</body>
+</html>

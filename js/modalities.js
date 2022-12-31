@@ -60,8 +60,43 @@ var vm = function () {
             //self.SetFavourites();
         });
     };
+    self.activate2 = function(search, page) {
+        console.log('CALL: searchGames...');
+        var composedUri = "http://192.168.160.58/Olympics/api/Modalities/SearchByName?q=" + search;
+        ajaxHelper(composedUri, 'GET').done(function(data) {
+            console.log("search Games", data);
+            hideLoading();
+            self.records(data.slice(0 + 21 * (page - 1), 21 * page));
+            console.log(self.records())
+            self.totalRecords(data.length);
+            self.currentPage(page);
+            if (page == 1) {
+                self.hasPrevious(false)
+            } else {
+                self.hasPrevious(true)
+            }
+            if (self.records() - 21 > 0) {
+                self.hasNext(true)
+            } else {
+                self.hasNext(false)
+            }
+            if (Math.floor(self.totalRecords() / 21) == 0) {
+                self.totalPages(1);
+            } else {
+                self.totalPages(Math.ceil(self.totalRecords() / 21));
+            }  
+        });
+
+    };
+
 
     //--- Internal functions
+    self.pesquisa = function() {
+        self.pesquisado($("#SearchBar").val().toLowerCase());
+        if (self.pesquisado().length > 0) {
+            window.location.href = "modalities.html?search=" + self.pesquisado();
+        }
+    }
     function ajaxHelper(uri, method, data) {
         self.error(''); // Clear error message
         return $.ajax({
@@ -112,15 +147,33 @@ var vm = function () {
 
     //--- start ....
     showLoading();
+    $("#SearchBar").val(undefined);
+    self.pesquisado = ko.observable(getUrlParameter('search'));
+
     var pg = getUrlParameter('page');
     console.log(pg);
-    if (pg == undefined)
-        self.activate(1);
-    else {
-        self.activate(pg);
+    if (undefined == undefined) {
+        if (self.pesquisado() == undefined) {
+            if (pg == undefined) {
+                if ('j'!=undefined) self.activate(1);
+                else self.activate(1)
+            }
+            else {
+                if ('j'!=undefined) self.activate(pg);
+                else self.activate(pg)
+            }
+        } else {
+            if (pg == undefined) self.activate2(self.pesquisado(), 1);
+            else self.activate2(self.pesquisado(), pg)
+            self.displayName = 'Founded results for {' + self.pesquisado() + '}';
+        }
+    } else {
+       
     }
+
     console.log("VM initialized!");
-};
+};;
+
 
 $(document).ready(function () {
     console.log("ready!");

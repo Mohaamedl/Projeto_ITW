@@ -1,4 +1,5 @@
 body {
+    padding-top: 140px;
     font-family: Georgia, 'Times New Roman', Times, serif;
    
 }
@@ -43,7 +44,7 @@ h4,h5{color:rgb(4, 58, 17)}
     justify-content: center;
     align-items: center;
     position:absolute;
-    height:126px;
+    height:140px;
     left:5px;
     right:5px;
     top:32%;

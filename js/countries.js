@@ -4,14 +4,14 @@ var vm = function () {
     //---Variáveis locais
     var self = this;
     self.baseUri = ko.observable('http://192.168.160.58/Olympics/api/countries');
-    //self.baseUri = ko.observable('http://localhost:62595/api/drivers');
+
     self.displayName = 'countries editions List';
     self.error = ko.observable('');
     self.passingMessage = ko.observable('');
     self.records = ko.observableArray([]);
     self.country=ko.observableArray([]);
     self.currentPage = ko.observable(1);
-    self.pagesize = ko.observable(21);
+    self.pagesize = ko.observable(24);
     self.totalRecords = ko.observable(50);
     self.hasPrevious = ko.observable(false);
     self.hasNext = ko.observable(false);
@@ -58,7 +58,7 @@ var vm = function () {
             self.pagesize(data.PageSize)
             self.totalPages(data.TotalPages);
             self.totalRecords(data.TotalRecords);
-            //self.SetFavourites();
+            
         });
     };
 
@@ -108,6 +108,21 @@ var vm = function () {
             if (sParameterName[0] === sParam) {
                 return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
             }
+        }
+    };
+    ko.bindingHandlers.safeSrc = {
+        update: function (element, valueAccessor) {
+            var options = valueAccessor();
+            var src = ko.unwrap(options.src);
+            if (src == null) {
+                $(element).attr('src', ko.unwrap(options.fallback));
+            }
+            $('<img />').attr('src', src).on('load', function () {
+                $(element).attr('src', src);
+            }).on('error', function () {
+                $(element).attr('src', ko.unwrap(options.fallback));
+            });
+
         }
     };
 

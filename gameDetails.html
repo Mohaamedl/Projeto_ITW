@@ -113,6 +113,58 @@
             </div>
         </div>
     </div>
+    <div class="container p-2">
+        <div class="row ">
+            <hr size="8px">
+            <div class="col-md-6 text-center">
+                <h1>Modalities</h1>
+                <hr size="8px">
+                <table  class="table table-striped" border="6">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Photo</th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach:Modalities">
+                        <tr>
+                            <th data-bind="text:Id"></th>
+                            <th data-bind="text:Name"></th>
+                            <th> <img data-bind="safeSrc:{src:Photo , fallback: 'images/default.png'}" height="50px"></th>
+                        </tr>
+    
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6 text-center">
+                <h1>Competitions</h1>
+                <hr size="8px">
+                <table class="table table-striped"  border="6">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Id</th>
+                            <th>Modality</th>
+                            <th>Name</th>
+                            <th>Photo</th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: Competitions">
+                        <tr>
+                            <th data-bind="text:Id"></th>
+                            <th data-bind="text:Modality"></th>
+                            <th data-bind="text:Name"></th>
+                            <th><img data-bind="safeSrc:{src:Photo , fallback: 'images/ImageNotFound.png'}" height="50px"></th>
+                        </tr>
+    
+                    </tbody>
+                </table>
+            </div>
+            <hr size="8px">
+        </div>
+    
+    </div>
+    <hr size="8px">
         <!-- /ko -->
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

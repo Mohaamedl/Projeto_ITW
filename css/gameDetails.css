@@ -1,9 +1,14 @@
+th{
+    height: 20px;
+    width:40px
+}
 .details{
     margin-top: 160px;
     height: 600px;
     box-sizing: border-box;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 1rem;
 }
 .text-center img{
     margin: 2rem;
@@ -23,7 +28,7 @@
    
 }
 .Grad{
-    border-radius:2rem;
+    border-radius:1rem;
     background: linear-gradient(
         to bottom right,
         rgba(201, 133, 133, 0.75) 0%,

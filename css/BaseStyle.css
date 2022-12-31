@@ -19,17 +19,16 @@
   
   }
 
-  .dropdown:hover > .dropdown-menu{
-    display: block !important;
-    margin:0;
-  }
-  /*
+.pagination a{
+  color: blueviolet;
+}
 @media (min-width:992px){
   .dropdown:hover > .dropdown-menu{
     display: block !important;
     margin:0;
   }
 }
+/*
 @media (max-width:1115px){
   .ab, .ct{
     display: none;
