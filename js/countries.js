@@ -5,13 +5,13 @@ var vm = function () {
     var self = this;
     self.baseUri = ko.observable('http://192.168.160.58/Olympics/api/countries');
 
-    self.displayName = 'countries editions List';
+    self.displayName = 'Countries List';
     self.error = ko.observable('');
     self.passingMessage = ko.observable('');
     self.records = ko.observableArray([]);
     self.country=ko.observableArray([]);
     self.currentPage = ko.observable(1);
-    self.pagesize = ko.observable(24);
+    self.pagesize = ko.observable(20);
     self.totalRecords = ko.observable(50);
     self.hasPrevious = ko.observable(false);
     self.hasNext = ko.observable(false);
@@ -61,8 +61,52 @@ var vm = function () {
             
         });
     };
+    self.activate2 = function(search, page) {
+        console.log('CALL: searchGames...');
+        var composedUri = "http://192.168.160.58/Olympics/api/Countries/SearchByName?q=" + search;
+        ajaxHelper(composedUri, 'GET').done(function(data) {
+            console.log("search Games", data);
+            hideLoading();
+            self.records(data.slice(0 + 24 * (page - 1), 24 * page));
+            console.log(self.records())
+            self.totalRecords(data.length);
+            self.currentPage(page);
+            if (page == 1) {
+                self.hasPrevious(false)
+            } else {
+                self.hasPrevious(true)
+            }
+            if (self.records() - 24 > 0) {
+                self.hasNext(true)
+            } else {
+                self.hasNext(false)
+            }
+            if (Math.floor(self.totalRecords() / 24) == 0) {
+                self.totalPages(1);
+            } else {
+                self.totalPages(Math.ceil(self.totalRecords() / 24));
+            }  
+        });
+
+    };
+    
 
     //--- Internal functions
+    self.activeautocom = function(id){
+        console.log('Getting data to autocomplete...');
+        var composedUri = self.baseUri() + "?page=" + id + "&pageSize=" + self.pagesize();
+        ajaxHelper(composedUri, 'GET').done(function (data) {
+            console.log(data);
+            hideLoading();
+            self.records(data.Records);
+            self.currentPage(data.CurrentPage);
+            self.hasNext(data.HasNext);
+            self.hasPrevious(data.HasPrevious);
+            self.pagesize(data.PageSize)
+            self.totalPages(data.TotalPages);
+            self.totalRecords(data.TotalRecords);
+        });
+    };
     function ajaxHelper(uri, method, data) {
         self.error(''); // Clear error message
         return $.ajax({
@@ -125,17 +169,35 @@ var vm = function () {
 
         }
     };
-
-    //--- start ....
-    showLoading();
-    var pg = getUrlParameter('page');
-    console.log(pg);
-    if (pg == undefined)
-        self.activate(1);
-    else {
-        self.activate(pg);
+    self.pesquisa = function() {
+        self.pesquisado($("#SearchBar").val().toLowerCase());
+        if (self.pesquisado().length > 2) {
+            window.location.href = "countries.html?search=" + self.pesquisado();
+        }
     }
-    console.log("VM initialized!");
+//--- start ....
+showLoading();
+$("#SearchBar").val(undefined);
+self.pesquisado = ko.observable(getUrlParameter('search'));
+
+var pg = getUrlParameter('page');
+console.log(pg);
+
+    if (self.pesquisado() == undefined) {
+        if (pg == undefined) {
+             self.activate(1)
+        }
+        else {
+             self.activate(pg)
+        }
+    } else {
+        if (pg == undefined) {self.activate2(self.pesquisado(), 1);}
+        else{} self.activate2(self.pesquisado(), pg) 
+        self.displayName = 'Founded results for {' + self.pesquisado() + '}';}
+    
+
+
+console.log("VM initialized!");
 };
 
 $(document).ready(function () {
@@ -145,4 +207,27 @@ $(document).ready(function () {
 
 $(document).ajaxComplete(function (event, xhr, options) {
     $("#myModal").modal('hide');
+    $("#SearchBar").autocomplete({
+        minLength: 2,
+        autoFocus:true,
+        source: function (request, response) {
+            $.ajax({
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                url: "http://192.168.160.58/Olympics/api/Countries/SearchByName?q="+$('#SearchBar').val(),
+                data: {q:$('#SearchBar').val()},
+                dataType: "json",
+            success: function (data) {
+             var tags = new Array;
+             for (id=0;id<data.length;id++){
+                 tags.push(data[id].Name)
+             }
+            response(tags);
+            },
+            error: function (result) {
+            alert(result.statusText);
+            }
+        });
+        }
+ });
 })

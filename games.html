@@ -18,9 +18,9 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light p-3 bg-danger fixed-top" id="headerNav">
-    <div class="container-fluid" style="height: 100px;">
+    <div class="container-fluid">
       <a class="navbar-brand d-block d-lg-none" href="index.html">
-        <img src="images/c01c24d54a5747e58772f62679401713.png" style="height: 70px;border-radius: 0.75rem;" />
+        <img src="images/c01c24d54a5747e58772f62679401713.png" style="height:80px;border-radius: 0.75rem;" />
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,16 +28,15 @@
    
       <div class=" collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav mx-auto ">
-         
           <li class="nav-item ">
-            <a class="nav-link mx-2" href="athletes.html">Athletes</a>
+            <a class="nav-link mx-2" href="athletes.html">athletes</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link mx-2 dropdown-toggle" href="games.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Game
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="games.html">Games</a></li>
+              <li><a class="dropdown-item" href="games.html">Games</a></li>
               <li><a class="dropdown-item" href="gamesMap.html">Map</a></li>
             </ul>
           </li>
@@ -47,23 +46,11 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" href="modalities.html">Modalities</a></li>
-                <li><a class="dropdown-item" href="competitions.html">Competitions</a></li>
+                <li><a class="dropdown-item" href="competitions.html">competitions</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link mx-2" href="countries.html">Countries</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link mx-2 dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Statistics
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="statisticsCountyMedals.html">Country Medals</a></li>
-              <li><a class="dropdown-item" href="statisticsGamesAthletes.html">Games Athletes</a></li>
-              <li><a class="dropdown-item" href="statisticsGamesCompetitions.html">Games Competitions</a></li>
-              <li><a class="dropdown-item" href="statisticsGamesCountries.html">Games Countries</a></li>
-              <li><a class="dropdown-item" href="statisticsGamesModalities.html">Games Modalities</a></li>
-            </ul>
           </li>
           <li class="nav-item d-none d-lg-block">
             <a class="nav-link mx-2" href="index.html">
@@ -71,14 +58,26 @@
             </a>
           </li>
           
-          <li class="nav-item ">
-            <a class="nav-link mx-2" href="favorites.html">Fav<i class="fa fa-heart" style="color: brown;"></i>rites</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link mx-2 dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Statistics
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="statisticsCountyMedals.html">Statistic 1</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesAthletes.html">Statistic 2</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesCompetitions.html">Statistic 3</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesCountries.html">Statistic 4</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesModalities.html">Statistic 5</a></li>
+            </ul>
           </li>
           <li class="nav-item ">
-            <a class="nav-link mx-2" href="about.html">About us</a>
+            <a class="nav-link mx-2 active" aria-current="page" href="index.html">fav <i class="fa fa-heart"></i></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link mx-2" href="about.html">about us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2" href="contact.html">Contacts</a>
+            <a class="nav-link mx-2" href="contact.html">contacts</a>
           </li>
           <div class="nav-item">
             <form class="form-check" id="forms1"  role="search">
@@ -92,11 +91,12 @@
                     
                 </div>
             </form>
-        </div>
+           </div>
         </ul>
       </div>
     </div>
   </nav>
+  
     <!-- Working Area -->
 
     <div class="container">
@@ -253,6 +253,7 @@
 
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> 

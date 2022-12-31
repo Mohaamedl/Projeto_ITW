@@ -19,8 +19,23 @@
   
   }
 
+.pagination a:hover{
+  background-color: rgb(188, 191, 196);
+  color:rgb(25, 44, 61)
+}
 .pagination a{
-  color: blueviolet;
+  background-color: rgb(96, 93, 93) ;
+  color:aliceblue;
+}
+.pagination .active a{
+  background-color: rgb(31, 33, 35);
+  color:aliceblue;
+
+}
+.pagination .active a:hover{
+  background-color:  rgb(188, 191, 196);
+  color:rgb(25, 44, 61);
+
 }
 @media (min-width:992px){
   .dropdown:hover > .dropdown-menu{
@@ -43,4 +58,5 @@
   padding: 0;
   margin:0;
 }
+
   
