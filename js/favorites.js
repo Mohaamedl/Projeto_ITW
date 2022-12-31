@@ -125,7 +125,7 @@ $(document).ready(function () {
 })
 let fav3 = JSON.parse(localStorage.fav3 || '[]');
 
-console.log(fav4);
+console.log(fav3);
 
 
 for (const i of fav3) {
@@ -138,11 +138,11 @@ for (const i of fav3) {
             $('#noadd').hide();
             $('#nofav').hide();
             $("#table-favourites3").append(
-                `<tr id="fav2-${i}">
+                `<tr id="fav3-${i}">
                         <td class="align-middle">${i}</td>
                         <td class="align-middle">${data.Name}</td>
                         <td class="text-end">
-                            <a class="btn btn-default btn-outline-danger btn-sm btn-favourite" onclick="removeFav2(${i})"><i class="fa fa-heart" title="Selecione para remover dos favoritos"></i></a>
+                            <a class="btn btn-default btn-outline-danger btn-sm btn-favourite" onclick="removeFav3(${i})"><i class="fa fa-heart" title="Selecione para remover dos favoritos"></i></a>
                         </td>
                     </tr>`
             )
@@ -166,12 +166,12 @@ console.log(fav4);
                 $('#noadd').hide();
                 $('#nofav').hide();
                 $("#table-favourites4").append(
-                    `<tr id="fav3-${i}">
+                    `<tr id="fav4-${i}">
                             <td class="align-middle">${i}</td>
                             <td class="align-middle">${data.Name}</td>
                             <td class="align-middle">${data.Modality}</td>
                             <td class="text-end">
-                                <a class="btn btn-default btn-outline-danger btn-sm btn-favourite" onclick="removeFav3(${i})"><i class="fa fa-heart" title="Selecione para remover dos favoritos"></i></a>
+                                <a class="btn btn-default btn-outline-danger btn-sm btn-favourite" onclick="removeFav4(${i})"><i class="fa fa-heart" title="Selecione para remover dos favoritos"></i></a>
                             </td>
                         </tr>`
                 )
@@ -203,7 +203,7 @@ for (const i of fav2) {
                         <td class="align-middle">${data.City}</td>
                         <td class="align-middle">${data.CountryName}</td>
                         <td class="text-end">
-                            <a class="btn btn-default btn-outline-danger btn-sm btn-favourite" onclick="removeFav4(${i})"><i class="fa fa-heart" title="Selecione para remover dos favoritos"></i></a>
+                            <a class="btn btn-default btn-outline-danger btn-sm btn-favourite" onclick="removeFav2(${i})"><i class="fa fa-heart" title="Selecione para remover dos favoritos"></i></a>
                         </td>
                     </tr>`
             )

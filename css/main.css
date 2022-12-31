@@ -113,7 +113,7 @@ section {
 
 .footer-distributed .footer-icons :hover{
 	color:black;
-	background-color: deepskyblue;
+	background-color: #047ef8;
 }
 
 .footer-distributed .footer-icons a{
@@ -196,7 +196,7 @@ section {
 }
 
 .footer-distributed form button{
-	border-radius: 3px;
+	border-radius: 10px;
 	background-color:  #33383b;
 	color: #ffffff;
 	border: 0;
@@ -204,8 +204,19 @@ section {
 	font-weight: bold;
 	float: right;
 }
+.footer-distributed form button:hover {
+	background-color: #1547c6;
+	color: #ffffff;
+  }
 
-.footer-distributed form-select{}
+  .form-select {
+	margin-bottom: 15px;
+	color:#5c666b;
+	outline-color: #00BCD4;
+	border: 1px solid #00BCD4;
+	width:400px;
+	margin-left: 12px;
+  }
 
 .container{
   margin-top: 150px;

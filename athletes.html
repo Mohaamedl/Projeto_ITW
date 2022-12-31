@@ -102,34 +102,61 @@
             <h2 style="float: left"><b>No Results Found</b></h2>
             <!-- /ko -->
         </div>
-        <!-- ko if:records().length > 0 -->
-        <div class="row small">
-            <p class=" col-4 mr-auto pt-2">
-                <span data-bind="html: 'Page: ' + currentPage() + ' of ' + totalPages()"></span><br />
-                <span data-bind="html: 'Games: '+ fromRecord() + '-' + toRecord() + ' of ' + totalRecords()"></span>
-            </p>
-            <div class="col-8 my-0 pt-3">
-                <ul class="pagination float-end">
-                    <!-- ko if: currentPage() > 5 && totalPages() > 10 -->
-                    <li class="page-item float-end"><a class="page-link" title="First Page" data-bind="attr: { href: './athletes.html?page=' + '1',  rel:'prev'}">⇤</a></li>
-                    <li class="page-item float-end"><a class="page-link" title="Previous Page" data-bind="attr: { href: './athletes.html?page=' + previousPage(),  rel:'prev'}">←</a></li>
-                    <!-- /ko -->
-                    <!-- ko foreach: pageArray()-->
-                    <!-- ko if:$data == $parent.currentPage() -->
-                    <li class="active page-item"><a class="page-link" data-bind="attr: { title:'Current Page ' + $data }, text: $data"></a></li>
-                    <!-- /ko -->
-                    <!-- ko if:$data != $parent.currentPage() -->
-                    <li class="page-item"><a class="page-link" data-bind="attr: { href: './athletes.html?page=' + $data, title:'Goto Page ' + $data }, text:$data"></a></li>
-                    <!-- /ko -->
-                    <!-- /ko -->
-                    <!-- ko if: currentPage() < totalPages() - 4 && totalPages() > 9 -->
-                    <li class="page-item"><a class="page-link" title="Next Page" data-bind="attr: { href: './athletes.html?page=' + nextPage(), rel:'next' }">→</a></li>
-                    <li class="page-item"><a class="page-link" title="Last Page" data-bind="attr: { href: './athletes.html?page=' + totalPages() }">⇥</a></li>
-                    <!-- /ko -->
-                </ul>
-            </div>
-        </div>
-        <!-- /ko -->
+<!-- ko if:records().length > 0 -->
+<div class="row small">
+  <p class=" col-4 mr-auto pt-2">
+      <span data-bind="html: 'Page: ' + currentPage() + ' of ' + totalPages()"></span><br />
+      <span data-bind="html: 'Athletes: '+ fromRecord() + '-' + toRecord() + ' of ' + totalRecords()"></span>
+  </p>
+  <!-- ko ifnot: pesquisado -->
+  <div class="col-8 my-0 pt-3">
+      <ul class="pagination float-end">
+          <!-- ko if: currentPage() > 5 && totalPages() > 10 -->
+          <li class="page-item float-end"><a class="page-link" title="First Page" data-bind="attr: { href: './Athletes.html?page=' + '1',  rel:'prev'}">⇤</a></li>
+          <li class="page-item float-end"><a class="page-link" title="Previous Page" data-bind="attr: { href: './Athletes.html?page=' + previousPage(),  rel:'prev'}">←</a></li>
+          <!-- /ko -->
+          <!-- ko foreach: pageArray()-->
+          <!-- ko if:$data == $parent.currentPage() -->
+          <li class="active page-item"><a class="page-link" data-bind="attr: { title:'Current Page ' + $data }, text: $data"></a></li>
+          <!-- /ko -->
+          <!-- ko if:$data != $parent.currentPage() -->
+          <li class="page-item"><a class="page-link" data-bind="attr: { href: './Athletes.html?page=' + $data, title:'Goto Page ' + $data }, text:$data"></a></li>
+          <!-- /ko -->
+          <!-- /ko -->
+          <!-- ko if: currentPage() < totalPages() - 4 && totalPages() > 9 -->
+          <li class="page-item"><a class="page-link" title="Next Page" data-bind="attr: { href: './Athletes.html?page=' + nextPage(), rel:'next' }">→</a></li>
+          <li class="page-item"><a class="page-link" title="Last Page" data-bind="attr: { href: './Athletes.html?page=' + totalPages() }">⇥</a></li>
+          <!-- /ko -->
+      </ul>
+  </div>
+  <!-- /ko -->
+  <!-- ko if: pesquisado -->
+  <div class="col-8 my-0 pt-3">
+      <ul class="pagination float-end">
+          <!-- ko if: currentPage() > 5 && totalPages() > 10 -->
+          <li class="page-item float-end"><a class="page-link" title="First Page" data-bind="attr: { href: './Athletes.html?search='+ pesquisado() + '&page=1',  rel:'prev'}">⇤</a></li>
+          <li class="page-item float-end"><a class="page-link" title="Previous Page" data-bind="attr: { href: './Athletes.html?search='+ pesquisado() + '&page=' + previousPage(),  rel:'prev'}">←</a></li>
+          <!-- /ko -->
+          <!-- ko foreach: pageArray()-->
+          <!-- ko if:$data == $parent.currentPage() -->
+          <li class="active page-item"><a class="page-link" data-bind="attr: { title:'Current Page ' + $data }, text: $data"></a></li>
+          <!-- /ko -->
+          <!-- ko if:$data != $parent.currentPage() -->
+          <li class="page-item"><a class="page-link" data-bind="attr: { href: './Athletes.html?search='+ $parent.pesquisado() + '&page=' + $data, title:'Goto Page ' + $data }, text:$data"></a></li>
+          <!-- /ko -->
+          <!-- /ko -->
+          <!-- ko if: currentPage() < totalPages() - 4 && totalPages() > 9 -->
+          <li class="page-item"><a class="page-link" title="Next Page" data-bind="attr: { href: './Athletes.html?search='+ pesquisado() + '&page=' + nextPage(), rel:'next' }">→</a></li>
+          <li class="page-item"><a class="page-link" title="Last Page" data-bind="attr: { href: './Athletes.html?search='+ pesquisado() + '&page=' + totalPages() }">⇥</a></li>
+          <!-- /ko -->
+      </ul>
+  </div>
+  <!-- /ko -->
+</div>
+  <!-- /ko -->
+
+
+        
            
         <div class="row" data-bind="foreach:records">
             <div class="col-md-6 col-lg-4 col-xl-3">
@@ -222,7 +249,6 @@
             <a href="statisticsGamesCountries.html">Statistics 4</a> | 
             <a href="statisticsGamesModalities.html">Statistics 5</a><br>
             <a href="contact.html">Contacts</a> <br>
-            <a href="about.html">About</a> <br>
         </p>
         <div class="footer-icons">
             <a href="https://www.facebook.com/olympics/"><i class="fa fa-facebook"></i></a>
