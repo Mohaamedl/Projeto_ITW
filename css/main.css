@@ -1,5 +1,5 @@
 body{
-  padding-top: 140px ;
+  padding-top: 80px ;
 }
 
 /* menu style*/
@@ -10,12 +10,17 @@ body{
   background-color: rgba(130, 126, 122, 0.306) !important;
   backdrop-filter: blur(8rem);
 }
+.navbar a:hover{
+  color:#000000;
+  font-weight: 600;
+}
 .dropdown-menu {
   background-color: rgba(45, 55, 55, 0.615);
 }
 
 .dropdown-item:hover{
   background-color:rgba(106, 112, 112, 0.614) ;
+  color: aliceblue;
 }
 .activate-animation{
   height: 50px;
@@ -46,6 +51,16 @@ body{
     display: block !important;
     margin:0;
   }
+}
+.ui-autocomplete {
+  background-color: rgba(130, 126, 122, 0.306) !important;
+  backdrop-filter: blur(8rem);
+  border-radius: 0.5rem;
+}
+.ui-widget-content :hover {
+  background-color: rgba(22, 22, 22, 0.75) !important;
+  backdrop-filter: blur(8rem);
+  border-radius: 0.5rem;
 }
 /* search bar animation*/
 /*
@@ -244,7 +259,7 @@ section {
 }
 
 .footer-distributed form input,
-.footer-distributed form textarea{
+.footer-distributed form textarea,.footer-distributed form select{
 	display: block;
 	border-radius: 3px;
 	box-sizing: border-box;

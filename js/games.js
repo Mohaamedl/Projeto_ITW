@@ -50,12 +50,12 @@ var vm = function () {
         else {
             self.favourites.remove(id);
         }
-        localStorage.setItem("fav",JSON.stringify(self.favourites()));
+        localStorage.setItem("fav2",JSON.stringify(self.favourites()));
     };
     self.SetFavourites = function () {
         let storage;
         try{
-            storage = JSON.parse(localStorage.getItem("fav"));
+            storage = JSON.parse(localStorage.getItem("fav2"));
         } 
         catch (e) {
             ;
@@ -78,6 +78,7 @@ var vm = function () {
             self.pagesize(data.PageSize)
             self.totalPages(data.TotalPages);
             self.totalRecords(data.TotalRecords);
+            self.SetFavourites()
         });
     };
     self.activate2 = function(search, page) {

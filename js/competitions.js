@@ -44,7 +44,7 @@ var vm = function () {
         return list;
     };
     self.toggleFavourite = function (id) {
-        if (self. favourites.indexOf(id) == -1){
+        if (self.favourites.indexOf(id) == -1){
             self.favourites.push(id);
         }
         else {

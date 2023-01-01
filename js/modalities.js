@@ -50,12 +50,12 @@ var vm = function () {
         else {
             self.favourites.remove(id);
         }
-        localStorage.setItem("fav",JSON.stringify(self.favourites()));
+        localStorage.setItem("fav3",JSON.stringify(self.favourites()));
     };
     self.SetFavourites = function () {
         let storage;
         try{
-            storage = JSON.parse(localStorage.getItem("fav"));
+            storage = JSON.parse(localStorage.getItem("fav3"));
         } 
         catch (e) {
             ;

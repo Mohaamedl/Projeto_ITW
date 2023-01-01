@@ -92,14 +92,14 @@ $(document).ready(function () {
 
     let fav = JSON.parse(localStorage.fav || '[]');
 
-    console.log('fav',fav);
+    console.log(fav);
 
 
-    for (const i of fav){
+    for (const i of fav) {
         console.log(i);
 
         ajaxHelper('http://192.168.160.58/Olympics/api/Athletes?id=' + i, 'GET').done(function (data) {
-            console.log('data fav',data)
+            console.log(data)
             if (localStorage.fav.length != 0) {
                 $("#table-favourites").show();
                 $('#noadd').hide();
@@ -117,7 +117,7 @@ $(document).ready(function () {
 
             }
         });
-        sleep(50);
+        sleep(100);
     }
     
 
@@ -125,14 +125,14 @@ $(document).ready(function () {
 })
 let fav3 = JSON.parse(localStorage.fav3 || '[]');
 
-console.log('fav3',fav3);
+console.log(fav3);
 
 
 for (const i of fav3) {
     console.log(i);
 
     ajaxHelper('http://192.168.160.58/Olympics/api/Modalities?id=' + i, 'GET').done(function (data) {
-        console.log('data fav3',data)
+        console.log(data)
         if (localStorage.fav3.length != 0) {
             $("#table-favourites3").show();
             $('#noadd').hide();
@@ -149,15 +149,17 @@ for (const i of fav3) {
 
         }
     });
-    sleep(50);
+    sleep(100);
 }
 let fav4 = JSON.parse(localStorage.fav4 || '[]');
 
-console.log('fav4',fav4);
+console.log(fav4);
+
+
     for (const i of fav4) {
         console.log(i);
     
-        ajaxHelper('http://192.168.160.58/Olympics/api/competitions/' + i, 'GET').done(function (data) {
+        ajaxHelper('http://192.168.160.58/Olympics/api/competitions?id=' + i, 'GET').done(function (data) {
             console.log(data)
             if (localStorage.fav4.length != 0) {
                 $("#table-favourites4").show();
@@ -176,18 +178,18 @@ console.log('fav4',fav4);
     
             }
         });
-        sleep(50);
+        sleep(100);
     }
     
 let fav2 = JSON.parse(localStorage.fav2 || '[]');
 
-console.log('fav2',fav2);
+console.log(fav2);
 
 
 for (const i of fav2) {
     console.log(i);
 
-    ajaxHelper('http://192.168.160.58/Olympics/api/games/' + i, 'GET').done(function (data) {
+    ajaxHelper('http://192.168.160.58/Olympics/api/games?id=' + i, 'GET').done(function (data) {
         console.log(data)
         if (localStorage.fav2.length != 0) {
             $("#table-favourites2").show();
@@ -208,5 +210,5 @@ for (const i of fav2) {
 
         }
     });
-    sleep(50);
+    sleep(100);
 }

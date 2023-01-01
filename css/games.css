@@ -11,6 +11,7 @@
   justify-content: center;
 
 }
+
 body .card .multi-button {
   z-index: -1;
   position: absolute;
@@ -38,13 +39,14 @@ body .card .multi-button button {
   box-shadow: 0 0 0rem -0.25rem var(--background);
 }
 body .card .multi-button button:hover {
-  background: var(--text);
-  color: var(--background);
+  background: whitesmoke;
+  color: whitesmoke;
   box-shadow: 0 0 1rem -0.25rem var(--background);
 }
 body .card .multi-button button:first-child:nth-last-child(1) {
   left: 25%;
   top: 25%;
+  
 }
 body .card .multi-button button:first-child:nth-last-child(2):nth-child(1), body .card .multi-button button:first-child:nth-last-child(2) ~ *:nth-child(1) {
   left: 45.5%;

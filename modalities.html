@@ -147,6 +147,9 @@
                             <span>Id : <span data-bind="text: Id"></snap><span>
                             </div>
                             <div class="text-center col-6"> 
+                              <button class="btn btn-default btn-outline-danger btn-sm btn-favourite" data-bind="click: () => $parent.toggleFavourite(Id), attr : { 'id': 'favourite_' + Id }">
+                                <i data-bind="attr: {'class': $parent.favourites().includes(Id)? 'fa fa-heart' : 'fa fa-heart-o'}" class="fa fa-heart-o" title="Selecione para adicionar aos favoritos"></i>
+                            </button>
                                 <a class="btn btn-default btn-light btn-xs" data-bind="attr: { href:'./modalityDetails.html?id=' + Id }">
                             <i class="fa fa-eye" title="Selecione para ver detalhes"></i></a>
                         </div>
