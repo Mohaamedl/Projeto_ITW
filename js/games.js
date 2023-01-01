@@ -240,7 +240,7 @@ $(document).ready(function () {
                                         value: value.Id,
                                     }
                                 });
-                                results = $.ui.autocomplete.filter(newData, request.term);
+                                results = $.ui.autocomplete.filter(newData, request.term).slice(0,10);
                                 response(results);
                             }
                         },

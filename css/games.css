@@ -1,7 +1,5 @@
 
-.container{
-  margin-top: 100px;
-}
+
 .form-control:focus {
   box-shadow: none;
 }
@@ -70,12 +68,7 @@ body .card:hover .multi-button, body .card .multi-button:focus-within {
   width: 10rem;
   height: 10rem;
 }
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+
 
 html {
   overflow-y: scroll;
@@ -92,6 +85,9 @@ a {
 a:hover {
   opacity: 1;
   color: rgb(156, 27, 27);
+}
+.container:first-of-type{
+  padding-top: 80px;
 }
 /*----------------
 Push Bar
@@ -262,7 +258,7 @@ Cards
   --text:black;
   box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, 0.05);
   margin:0 ;
-  max-width: 300px;
+  max-width: 290px;
   height:400px;
   border-color: transparent;
   background-color: transparent;

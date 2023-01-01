@@ -227,26 +227,6 @@ var vm = function () {
 };
 
 $(document).ready(function () {
-    function addDarkmodeWidget() {
-        const options = {
-            bottom: '32px', // default: '32px'
-            right: '32px', // default: '32px'
-            left: 'unset', // default: 'unset'
-            time: '0.8s', // default: '0.3s'
-            mixColor: '#E2B89C', // default: '#fff'
-            backgroundColor: '#fff',  // default: '#fff'
-            buttonColorDark: '#100f2c',  // default: '#100f2c'
-            buttonColorLight: '#fff', // default: '#fff'
-            saveInCookies: true, // default: true,
-            label: '🌓', // default: ''
-            autoMatchOsTheme: false ,// default: true
-            
-        }
-
-        const darkmode = new Darkmode(options);
-        darkmode.showWidget();
-    }
-    window.addEventListener('load', addDarkmodeWidget);
     console.log("ready!");
     ko.applyBindings(new vm());
 });
@@ -328,28 +308,55 @@ $(document).ajaxComplete(function (event, xhr, options) {
            });
          });
     };
-    $("#SearchBar").autocomplete({
-           minLength: 2,
-           source: function (request, response) {
-               $.ajax({
-                   type: "GET",
-                   contentType: "application/json; charset=utf-8",
-                   url: "http://192.168.160.58/Olympics/api/Competitions/SearchByName?q="+$('#SearchBar').val(),
-                   data: {q:$('#SearchBar').val()},
-                   dataType: "json",
-               success: function (data) {
-                var tags = new Array;
-                for (id=0;id<data.length;id++){
-                    tags.push(data[id].Name)
+    const urlGames = "http://192.168.160.58/Olympics/api/competitions/SearchByName?q="
+
+            $("#SearchBar").autocomplete({
+                minLength: 2,
+                source: function (request, response) {
+                    $.ajax({
+                        type: "GET",
+                        url: urlGames+$('#SearchBar').val().toLowerCase(),
+                        data: {
+                            q: $('#SearchBar').val().toLowerCase()
+                        },
+                        success: function (data) {
+                            if (!data.length) {
+                                var result = [{
+                                    label: 'No results',
+                                    value: response.term,
+                                    source: ""
+                                }];
+                                response(result);
+                            } else {
+
+                                var newData = $.map(data, function (value, key) {
+                                    return {
+                                        label: value.Name,
+                                        value: value.Id,
+                                    }
+                                });
+                                results = $.ui.autocomplete.filter(newData, request.term).slice(0,10);
+                                response(results);
+                            }
+                        },
+                        error: function () {
+                            alert("error!");
+                        }
+                    })
+                },
+                select: function (event, ui) {
+                    event.preventDefault();
+                    $("#SearchBar").val(ui.item.label);
+
+                    window.location.href = "./competitionsDetails.html?id=" + ui.item.value;
+                        
+                    
+                    // h.loadTitleModal(ui.item.value)
+                },
+                focus: function (event, ui) {
+                    $("#searchbar").val(ui.item.label);
                 }
-               response(tags.slice(0,10));
-               },
-               error: function (result) {
-               alert(result.statusText);
-               }
-           });
-           }
-    });
+            });
     $().ready(main);
     
     

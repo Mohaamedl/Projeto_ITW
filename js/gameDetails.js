@@ -24,7 +24,7 @@ var vm = function () {
     self.Medals=ko.observable('');
     //--- Page Events
     self.activate = function (id) {
-        console.log('CALL: getGame...');
+        console.log('CALL: getGameDetails...');
         var composedUri = self.baseUri() + id;
         ajaxHelper(composedUri, 'GET').done(function (data) {
             console.log(data);
@@ -51,7 +51,7 @@ var vm = function () {
          
         
     };
-    console.log('deded',name)
+   
     
 
     //--- Internal functions
@@ -114,7 +114,7 @@ var vm = function () {
     console.log("VM initialized!");
     ko.bindingHandlers.safeSrc = {
         update: function(element, valueAccessor) {
-            console.log('algo')
+            
           var options = valueAccessor();
           var src = ko.unwrap(options.src);
           if (src==null){

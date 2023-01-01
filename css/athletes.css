@@ -324,63 +324,11 @@ h3 {
   max-width: 100%;
 }
 
-.container{
-  margin-top: 150px;
-}
+
 html {
   overflow-y: scroll;
 }
-body {
-  background: linear-gradient(
-    to bottom right,
-    rgba(211, 216, 246, 0.75) 10%,
-    rgba(201, 227, 244, 0.75) 10%,
-    rgba(198, 195, 195, 0.75) 16.6%,
-    rgb(173, 215, 245) 37.8%,
-    rgb(194, 223, 244) 48.8%,
-    rgb(190, 236, 255) 53.1%,
-    rgba(181, 183, 184, 0.75) 79.4%,
-    rgba(104, 124, 130, 0.75) 84.3%
-  ) !important;;
-  background-size: cover;
-  max-height: 300rem;
-  -o-border-image: linear-gradient(
-    to bottom right,
-    rgba(255, 255, 255, 0.75) 0%,
-    rgba(245, 245, 245, 0.75) 0%,
-    rgba(245, 245, 245, 0.75) 16.6%,
-    rgb(245, 245, 245) 37.8%,
-    rgb(245, 245, 245) 48.8%,
-    rgb(254, 254, 254) 53.1%,
-    rgba(245, 245, 245, 0.75) 79.4%,
-    rgba(245, 245, 245, 0.75) 84.3%
-  ) !important;
-  border-image: -webkit-gradient(
-    linear,
-    left top,
-    right bottom,
-    from(rgba(255, 255, 255, 0.75)),
-    color-stop(0%, rgba(245, 245, 245, 0.75)),
-    color-stop(16.6%, rgba(245, 245, 245, 0.75)),
-    color-stop(37.8%, rgb(245, 245, 245)),
-    color-stop(48.8%, rgb(245, 245, 245)),
-    color-stop(53.1%, rgb(254, 254, 254)),
-    color-stop(79.4%, rgba(245, 245, 245, 0.75)),
-    color-stop(84.3%, rgba(245, 245, 245, 0.75))
-  ) !important;
-  border-image: linear-gradient(
-    to bottom right,
-    rgba(243, 234, 234, 0.75) 0%,
-    rgba(245, 245, 245, 0.75) 0%,
-    rgba(245, 245, 245, 0.75) 16.6%,
-    rgb(245, 245, 245) 37.8%,
-    rgb(245, 245, 245) 48.8%,
-    rgb(254, 254, 254) 53.1%,
-    rgba(245, 245, 245, 0.75) 79.4%,
-    rgba(245, 245, 245, 0.75) 84.3%
-  ) !important;
-  border-image-slice: 1 !important;
-}
+
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 

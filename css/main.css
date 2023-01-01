@@ -1,9 +1,8 @@
-* {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
+
+
 
 body{
-  padding-top: 80px ;
+  padding-top: 80px;
   background: linear-gradient(
     to bottom right,
     rgba(211, 216, 246, 0.75) 10%,
@@ -16,7 +15,7 @@ body{
     rgba(104, 124, 130, 0.75) 84.3%
   ) !important;
   background-size: cover;
-  max-height: 300rem;
+
   -o-border-image: linear-gradient(
     to bottom right,
     rgba(255, 255, 255, 0.75) 0%,
@@ -118,7 +117,7 @@ body{
 .ui-widget-content :hover {
   background-color: rgba(22, 22, 22, 0.75) !important;
   backdrop-filter: blur(8rem);
-  border-radius: 0.5rem;
+  border-radius: 0.5rem;/* hg*i* j */
 }
 /* search bar animation*/
 /*
@@ -216,10 +215,10 @@ body{
 	background: rgb(57, 68, 79);
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
-	width: 100%;
+	width: 100vw;
 	font: bold 16px sans-serif;
 	text-align: left;
-	padding: 50px 60px 40px;
+	padding: 0;
 	overflow: hidden;
 	margin-top: 100px;
 }
