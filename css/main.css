@@ -110,6 +110,7 @@ body{
   }
 }
 .ui-autocomplete {
+  z-index: 3000;
   background-color: rgba(130, 126, 122, 0.306) !important;
   backdrop-filter: blur(8rem);
   border-radius: 0.5rem;
