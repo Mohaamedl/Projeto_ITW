@@ -12,15 +12,16 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/athletes.css" />
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light p-3 bg-danger fixed-top" id="headerNav">
     <div class="container-fluid">
       <a class="navbar-brand d-block d-lg-none" href="index.html">
-        <img src="images/c01c24d54a5747e58772f62679401713.png" style="height:80px;border-radius: 0.75rem;" />
+        <img src="images/siteLogo.png" style="height:80px;border-radius: 0.75rem;" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler activate-animation" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
       </button>
    
       <div class=" collapse navbar-collapse" id="navbarNavDropdown">
@@ -43,7 +44,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" href="modalities.html">Modalities</a></li>
-                <li><a class="dropdown-item" href="competitions.html">competitions</a></li>
+                <li><a class="dropdown-item" href="competitions.html">Competitions</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -51,7 +52,7 @@
           </li>
           <li class="nav-item d-none d-lg-block">
             <a class="nav-link mx-2" href="index.html">
-              <img src="images\c01c24d54a5747e58772f62679401713.png"  style="height:80px;border-radius: 0.75rem;" />
+              <img src="images/siteLogo.png"  style="height:80px;border-radius: 0.75rem;" />
             </a>
           </li>
           
@@ -60,27 +61,24 @@
               Statistics
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="statisticsCountriesMedals.html">Statistic 1</a></li>
-              <li><a class="dropdown-item" href="statisticsGamesAthletes.html">Statistic 2</a></li>
-              <li><a class="dropdown-item" href="statisticsGamesCompetitions.html">Statistic 3</a></li>
-              <li><a class="dropdown-item" href="statisticsGamesCountries.html">Statistic 4</a></li>
-              <li><a class="dropdown-item" href="statisticsGamesModalities.html">Statistic 5</a></li>
+              <li><a class="dropdown-item" href="statisticsCountyMedals.html">County Medals</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesAthletes.html">Game Atheltes</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesCompetitions.html">Game Competitions</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesCountries.html">Game Countries</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesModalities.html">Game Modalities</a></li>
             </ul>
           </li>
           <li class="nav-item ">
-            <a class="nav-link mx-2 active" aria-current="page" href="favorites.html"><img src="images/favorite.png" alt=""></a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link mx-2 ab" href="about.html">About</a>
+            <a class="nav-link mx-2 active" aria-current="page" href="favorites.html">Fav<i class="fa fa-heart fa-2xs" ></i>rites</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 ct" href="contact.html">Contacts</a>
+            <a class="nav-link mx-2" href="contact.html">Contacts</a>
           </li>
           <div class="nav-item">
             <form class="form-check" id="forms1"  role="search">
                 <div class="p-2 bg-light rounded rounded-pill shadow ">
                     <div class="input-group">
-                      <input type="search" id="SearchBar" placeholder="Search athlete..." aria-label="Search" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+                      <input type="search" id="SearchBar" placeholder="Enter the year and/or season" aria-label="Search" aria-describedby="button-addon1" class="search-wrapper form-control border-0 bg-light">
                       <div class="input-group-append">
                         <button id="button-addon1" type="submit" data-bind="click:pesquisa" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
                       </div>
@@ -217,19 +215,19 @@
     </div>
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        <img src="" height="30" /> Loading data...
-                    </h5>
-                </div>
-                <div class="modal-body text-center">
-                    <img src="https://i.pinimg.com/originals/ad/a3/c7/ada3c7b0d94c2159e156adcbd2a8f9cd.gif" height="200" />
-                </div>
-            </div>
-        </div>
-    </div>
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                      <img src="" height="30" /> Loading data...
+                  </h5>
+              </div>
+              <div class="modal-body text-center">
+                  <img src="images/gifs/loading.gif" style="height: 230px;border-radius: 1rem;"  />
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
 </div>
 <!-- End of Working Area -->

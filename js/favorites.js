@@ -178,7 +178,7 @@ console.log(fav4);
     
             }
         });
-        sleep(100);
+        sleep(150);
     }
     
 let fav2 = JSON.parse(localStorage.fav2 || '[]');

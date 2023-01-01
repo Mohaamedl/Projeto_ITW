@@ -23,7 +23,7 @@ function activate() {
     ajaxHelper(baseUri+"?page=" +1 + "&pageSize=" + 51, 'GET').done(function (data) {
         console.log(data);
         for (var id=0;id<51;id++){
-            var Lat = data.Records[id].Lat, Lng= data.Records[id].Lon;
+            var Lat = data.Records[id].Lat, Lon= data.Records[id].Lon;
             var GameId = data.Records[id].Id;
             var Name = data.Records[id].Name;
             var City = data.Records[id].CityName;
@@ -36,7 +36,7 @@ function activate() {
                 popupAnchor: [1, -34],
                 shadowSize: [41, 41]
             });
-            L.marker([Lat,Lng],{icon: myIcon}).on("click", showLocation).bindPopup("<a style='text-decoration:none; 'href='./gameDetails.html?id=" + GameId+ "'"+ "'" + "'><b>" + Name + "</b></a><br>" + City + ", "+ Country).addTo(map);
+            L.marker([Lat,Lon],{icon: myIcon}).on("click", showLocation).bindPopup("<a style='text-decoration:none; 'href='./gameDetails.html?id=" + GameId+ "'"+ "'" + "'><b>" + Name + "</b></a><br>" + City + ", "+ Country+'<br> Lat: '+Lat+', Lon: '+Lon).addTo(map);
         }
         
     });
@@ -98,11 +98,5 @@ $(document).ready(function(){
     activate();
     if (map.getZoom()==2) map.dragging.disable()
     else map.dragging.enable() 
-    // Quandose carragarno mapa, mostraas coordenadas
-     map.on('click', function(e) {
-        var coord= e.latlng;
-        console.log("("+ coord.lat+ ","+ coord.lng+ ")");
-        console.log(Zoom)
-    }); 
     
 });

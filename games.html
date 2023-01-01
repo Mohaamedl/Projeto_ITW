@@ -4,7 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Games</title><link rel="icon" href="images/siteIcon.jpg" type="image/jpg">
+    <title>Games</title>
+    <link rel="icon" href="images/siteIcon.jpg" type="image/jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
@@ -71,7 +72,7 @@
             </ul>
           </li>
           <li class="nav-item ">
-            <a class="nav-link mx-2 active" aria-current="page" href="index.html">Fav<i class="fa fa-heart"></i>rites</a>
+            <a class="nav-link mx-2 active" aria-current="page" href="favorites.html">Fav<i class="fa fa-heart fa-2xs" ></i>rites</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mx-2" href="contact.html">Contacts</a>
@@ -80,7 +81,7 @@
             <form class="form-check" id="forms1"  role="search">
                 <div class="p-2 bg-light rounded rounded-pill shadow ">
                     <div class="input-group">
-                      <input type="search" id="SearchBar" placeholder="Enter the year and/or season" aria-label="Search" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+                      <input type="search" id="SearchBar" placeholder="Enter the year and/or season" aria-label="Search" aria-describedby="button-addon1" class="search-wrapper form-control border-0 bg-light">
                       <div class="input-group-append">
                         <button id="button-addon1" type="submit" data-bind="click:pesquisa" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
                       </div>
@@ -196,23 +197,23 @@
     <div id="map"></div>
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        <img src="images/Olympics-Emblem.png" height="30" /> Loading data...
-                    </h5>
-                </div>
-                <div class="modal-body text-center">
-                    <i class="fa fa-spin fa-2x fa-refresh"></i>
-                </div>
-            </div>
-        </div>
-    </div>
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                      <img src="" height="30" /> Loading data...
+                  </h5>
+              </div>
+              <div class="modal-body text-center">
+                  <img src="images/gifs/loading.gif" style="height: 230px;border-radius: 1rem;"  />
+              </div>
+          </div>
+      </div>
+  </div>
     
     <!-- End of Working Area -->
-    <footer class="footer-distributed">
-      <div class="footer-left">
+    <footer class="footer-distributed row">
+      <div class="footer-left col-12 col-md-6">
           <p class="footer-links">
               <a href="index.html">Home</a><br>
               <a href="athletes.html">Athletes</a><br>
@@ -230,7 +231,7 @@
               <a href="contact.html">Contacts</a> <br>
           </p>
           <div class="footer-icons">
-              <a href="https://www.facebook.com/olympics/"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.facebook.com/olympics/"><i class="fa-brands fa-facebook-f"></i></i></a>
               <a href="https://www.instagram.com/olympics/"><i class="fa fab fa-instagram"></i></a>
               <a href="https://twitter.com/olympics"><i class="fa fab fa-twitter"></i></a>
               <a href="https://www.youtube.com/@Olympics"><i class="fa fab fa-youtube"></i></a>
@@ -238,21 +239,21 @@
           <p class="footer-company-name">&copy;  Introdução as Tecnologias Web - 2022/23</p>
           <p class="footer-company-name"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></p>
       </div>
-      <div class="footer-right">
+      <div class="footer-right col-12 col-md-6">
           <p>Report to us</p>
-          <form action="#" method="post">
-            <input type="text" name="name" placeholder="Name">
+          <form class="col-12 row" action="#" method="post">
+            <input  class="form-control" type="text" name="name" placeholder="Name">
             <input type="text" name="email" placeholder="Email">
-            <div class="row">
-              <select class="form-select ssd" name="report" >
-                <option value="0">Chose</option>
+            
+              <select class="form-select" name="report" >
+                <option value="0">Choose</option>
                 <option value="1">Bug</option>
                 <option value="2">Error</option>
                 <option value="3">Sugestion</option>
               </select>
-            </div>
+            
             <textarea name="message" placeholder="Message"></textarea>
-            <button>Send</button>
+            <button class="col-4">Send</button>
           </form>
       </div>
   </footer>
@@ -264,7 +265,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script src="js/games.js"></script>
     <script src="js/main.js"> </script>
 </body>

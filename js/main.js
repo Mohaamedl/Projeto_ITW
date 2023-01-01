@@ -1,6 +1,7 @@
 document.querySelector('.activate-animation').addEventListener('click', function () {
     document.querySelector('.animated-icon').classList.toggle('open');
 });
+/* dark mode
 function addDarkmodeWidget() {
     const options = {
         bottom: '32px', // default: '32px'
@@ -20,3 +21,4 @@ function addDarkmodeWidget() {
     darkmode.showWidget();
 }
 window.addEventListener('load', addDarkmodeWidget);
+*/

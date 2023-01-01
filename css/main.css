@@ -1,5 +1,58 @@
+* {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 body{
   padding-top: 80px ;
+  background: linear-gradient(
+    to bottom right,
+    rgba(211, 216, 246, 0.75) 10%,
+    rgba(201, 227, 244, 0.75) 10%,
+    rgba(198, 195, 195, 0.75) 16.6%,
+    rgb(173, 215, 245) 37.8%,
+    rgb(194, 223, 244) 48.8%,
+    rgb(190, 236, 255) 53.1%,
+    rgba(181, 183, 184, 0.75) 79.4%,
+    rgba(104, 124, 130, 0.75) 84.3%
+  ) !important;
+  background-size: cover;
+  max-height: 300rem;
+  -o-border-image: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.75) 0%,
+    rgba(245, 245, 245, 0.75) 0%,
+    rgba(245, 245, 245, 0.75) 16.6%,
+    rgb(245, 245, 245) 37.8%,
+    rgb(245, 245, 245) 48.8%,
+    rgb(254, 254, 254) 53.1%,
+    rgba(245, 245, 245, 0.75) 79.4%,
+    rgba(245, 245, 245, 0.75) 84.3%
+  ) !important;
+  border-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgba(255, 255, 255, 0.75)),
+    color-stop(0%, rgba(245, 245, 245, 0.75)),
+    color-stop(16.6%, rgba(245, 245, 245, 0.75)),
+    color-stop(37.8%, rgb(245, 245, 245)),
+    color-stop(48.8%, rgb(245, 245, 245)),
+    color-stop(53.1%, rgb(254, 254, 254)),
+    color-stop(79.4%, rgba(245, 245, 245, 0.75)),
+    color-stop(84.3%, rgba(245, 245, 245, 0.75))
+  ) !important;
+  border-image: linear-gradient(
+    to bottom right,
+    rgba(243, 234, 234, 0.75) 0%,
+    rgba(245, 245, 245, 0.75) 0%,
+    rgba(245, 245, 245, 0.75) 16.6%,
+    rgb(245, 245, 245) 37.8%,
+    rgb(245, 245, 245) 48.8%,
+    rgb(254, 254, 254) 53.1%,
+    rgba(245, 245, 245, 0.75) 79.4%,
+    rgba(245, 245, 245, 0.75) 84.3%
+  ) !important;
+  border-image-slice: 1 !important;
 }
 
 /* menu style*/
@@ -8,7 +61,7 @@ body{
   top: 1rem;
   margin: 0 5px 0 5px;
   background-color: rgba(130, 126, 122, 0.306) !important;
-  backdrop-filter: blur(8rem);
+  backdrop-filter: blur(5rem);
 }
 .navbar a:hover{
   color:#000000;
@@ -43,7 +96,11 @@ body{
   color:rgb(25, 44, 61);
 
 }
-.fa-heart{
+.fa.fa-heart.fa-2xs::before{
+  position: relative;
+  top:2px;
+  margin: 1px;
+  padding: 0;
   color:brown
 }
 @media (min-width:992px){
@@ -321,7 +378,13 @@ section {
 	outline-color: #00BCD4;
 	border: 1px solid #00BCD4;
 	width:400px;
-	margin-left: 12px;
+	
+  }
+  /* modal style*/
+  .modal-content{
+    background-color: rgba(244, 243, 242, 0.489) !important;
+    backdrop-filter: blur(5rem);
+    border-radius: 1rem;
   }
 
 

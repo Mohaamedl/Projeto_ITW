@@ -211,26 +211,6 @@ var vm = function () {
 };
 
 $(document).ready(function () {
-    function addDarkmodeWidget() {
-        const options = {
-            bottom: '32px', // default: '32px'
-            right: '32px', // default: '32px'
-            left: 'unset', // default: 'unset'
-            time: '0.8s', // default: '0.3s'
-            mixColor: '#E2B89C', // default: '#fff'
-            backgroundColor: '#fff',  // default: '#fff'
-            buttonColorDark: '#100f2c',  // default: '#100f2c'
-            buttonColorLight: '#fff', // default: '#fff'
-            saveInCookies: true, // default: true,
-            label: '🌓', // default: ''
-            autoMatchOsTheme: false ,// default: true
-            
-        }
-
-        const darkmode = new Darkmode(options);
-        darkmode.showWidget();
-    }
-    window.addEventListener('load', addDarkmodeWidget);
     console.log("ready!");
     ko.applyBindings(new vm());
 });
