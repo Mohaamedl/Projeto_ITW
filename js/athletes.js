@@ -67,9 +67,9 @@ var vm = function () {
 
 
     //--- Page Events
-    self.activate = function (id) {
+    self.activate = function (id, sortby = 'NameUp') {
         console.log('CALL: getAthletes...');
-        var composedUri = self.baseUri() + "?page=" + id + "&pageSize=" + self.pagesize();
+        var composedUri = self.baseUri() + "?page=" + id + "&pageSize=" + self.pagesize() + "&sortby=" + sortby;
         ajaxHelper(composedUri, 'GET').done(function (data) {
             console.log(data);
             hideLoading();
@@ -161,27 +161,28 @@ var vm = function () {
             }
         }
     };
+
     self.pesquisa = function() {
         self.pesquisado($("#SearchBar").val().toLowerCase());
         if (self.pesquisado().length > 0) {
-            window.location.href = "athletes.html?search=" + self.pesquisado();
+            window.location.href = "athletes.html?search=" + self.pesquisado()+'&page=' + '1';
         }
     }
+
     //--- start ....
     showLoading();
     $("#SearchBar").val(undefined);
     self.pesquisado = ko.observable(getUrlParameter('search'));
-
     var pg = getUrlParameter('page');
     console.log(pg);
-    if (undefined == undefined) {
+    self.sortby = ko.observable(getUrlParameter('sortby'));
         if (self.pesquisado() == undefined) {
             if (pg == undefined) {
-                if ('j'!=undefined) self.activate(1);
+                if (self.sortby() != undefined) self.activate(1, self.sortby());
                 else self.activate(1)
             }
             else {
-                if ('j'!=undefined) self.activate(pg);
+                if (self.sortby() != undefined) self.activate(pg, self.sortby());
                 else self.activate(pg)
             }
         } else {
@@ -189,20 +190,8 @@ var vm = function () {
             else self.activate2(self.pesquisado(), pg)
             self.displayName = 'Founded results for <b>' + self.pesquisado() + '</b>';
         }
-    } else {
-       
-    }
-
-    console.log("VM initialized!");
 
     showLoading();
-    var pg = getUrlParameter('page');
-    console.log(pg);
-    if (pg == undefined)
-        self.activate(1);
-    else {
-        self.activate(pg);
-    }
     console.log("VM initialized!");
         ko.bindingHandlers.safeSrc = {
             update: function (element, valueAccessor) {
@@ -223,15 +212,12 @@ var vm = function () {
 
 function conv(BestPosition){
     if (BestPosition == 1){
-        //document.getElementById("#medalName").style.color = rgb(255,215,0);
         return "Gold Medal";
     }
     if (BestPosition == 2){
-        //document.getElementById("#medalName").style.color = rgb(192,192,192);
         return "Silver Medal";
     }
     if (BestPosition == 3){
-        //document.getElementById("#medalName").style.color = rgb(205, 127, 50);
         return "Bronze Medal";
     }
         return "No Medal";
