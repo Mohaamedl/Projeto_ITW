@@ -1,7 +1,5 @@
-body {
-    padding-top: 140px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-   
+.container:first-of-type{
+    padding-top: 80px;
 }
 h4,h5{color:rgb(4, 58, 17)}
 .col-md-4{
@@ -39,6 +37,11 @@ h4,h5{color:rgb(4, 58, 17)}
     background-color: rgb(219, 239, 255);
     box-shadow:0 8px 16px 0 rgba(0, 0, 0, 0), 0 rgba(0,0,0,0);
 }
+.card:hover{
+    transition-duration:  0.7s;
+    transform:scale(1.15);
+    box-shadow:5px 8px 16px 5px rgba(0, 0, 0, 0.632), 0 rgba(0, 0, 0, 0.82);
+}
 .card-body{
     display: flex;
     justify-content: center;
@@ -52,7 +55,7 @@ h4,h5{color:rgb(4, 58, 17)}
     box-shadow:6px 8px 16px 6px rgba(0,0,0,0), 0 rgba(0,0,0,0);
 }
 
-.footer{
+.footer-card{
     position:absolute;
     height:80px;
     bottom:-30px;
@@ -131,22 +134,7 @@ slider-container {
 }
 
 
-button{
-    background-color: #fff;
-    border: none;
-    color: #aaa;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 15px;
-}
 
-button:hover{
-    color: #222;
-}
-
-button:focus{
-    outline: none;
-}
 
 .slider-container .action-buttons button{
     position: absolute;

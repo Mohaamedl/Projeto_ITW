@@ -3,7 +3,6 @@ var vm = function () {
     //---Variáveis locais
     var self = this;
     self.baseUri = ko.observable('http://192.168.160.58/Olympics/api/Modalities/');
-    //self.baseUri = ko.observable('http://localhost:62595/api/drivers');
     self.displayName = 'Olympic Modalities List';
     self.error = ko.observable('');
     self.passingMessage = ko.observable('');
@@ -11,7 +10,7 @@ var vm = function () {
     self.country=ko.observableArray([]);
     self.currentPage = ko.observable(1);
     self.favourites=ko.observableArray([])
-    self.pagesize = ko.observable(21);
+    self.pagesize = ko.observable(20);
     self.totalRecords = ko.observable(50);
     self.hasPrevious = ko.observable(false);
     self.hasNext = ko.observable(false);
@@ -200,6 +199,55 @@ var vm = function () {
 $(document).ready(function () {
     console.log("ready!");
     ko.applyBindings(new vm());
+    const urlGames = "http://192.168.160.58/Olympics/api/modalities/SearchByName?q="
+
+            $("#SearchBar").autocomplete({
+                minLength: 2,
+                source: function (request, response) {
+                    $.ajax({
+                        type: "GET",
+                        url: urlGames+$('#SearchBar').val().toLowerCase(),
+                        data: {
+                            q: $('#SearchBar').val().toLowerCase()
+                        },
+                        success: function (data) {
+                            if (!data.length) {
+                                var result = [{
+                                    label: 'No results',
+                                    value: response.term,
+                                    source: ""
+                                }];
+                                response(result);
+                            } else {
+
+                                var newData = $.map(data, function (value, key) {
+                                    return {
+                                        label: value.Name,
+                                        value: value.Id,
+                                    }
+                                });
+                                results = $.ui.autocomplete.filter(newData, request.term);
+                                response(results);
+                            }
+                        },
+                        error: function () {
+                            alert("error!");
+                        }
+                    })
+                },
+                select: function (event, ui) {
+                    event.preventDefault();
+                    $("#SearchBar").val(ui.item.label);
+
+                    window.location.href = "./modalityDetails.html?id=" + ui.item.value;
+                        
+                    
+                    // h.loadTitleModal(ui.item.value)
+                },
+                focus: function (event, ui) {
+                    $("#searchbar").val(ui.item.label);
+                }
+            });
 });
 
 $(document).ajaxComplete(function (event, xhr, options) {

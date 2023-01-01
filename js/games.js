@@ -227,7 +227,7 @@ $(document).ready(function () {
                         success: function (data) {
                             if (!data.length) {
                                 var result = [{
-                                    label: 'Sem resultados',
+                                    label: 'No results',
                                     value: response.term,
                                     source: ""
                                 }];

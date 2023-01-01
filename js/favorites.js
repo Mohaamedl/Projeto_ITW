@@ -72,18 +72,18 @@ function removeFav3(Id) {
     localStorage.setItem("fav3", JSON.stringify(fav3));
 }
 
-function removeFav3(Id) {
+function removeFav4(Id) {
     console.log("remove fav4")
     $("#fav4-" + Id).remove();
 
-    let fav3 = JSON.parse(localStorage.fav3 || '[]');
+    let fav4 = JSON.parse(localStorage.fav4 || '[]');
 
-    const index = fav3.indexOf(Id);
+    const index = fav4.indexOf(Id);
 
     if (index != -1)
-        fav3.splice(index, 1);
+        fav4.splice(index, 1);
 
-    localStorage.setItem("fav4", JSON.stringify(fav3));
+    localStorage.setItem("fav4", JSON.stringify(fav4));
 }
 
 
@@ -117,7 +117,7 @@ $(document).ready(function () {
 
             }
         });
-        sleep(100);
+        sleep(50);
     }
     
 
@@ -149,7 +149,7 @@ for (const i of fav3) {
 
         }
     });
-    sleep(100);
+    sleep(50);
 }
 let fav4 = JSON.parse(localStorage.fav4 || '[]');
 
@@ -178,7 +178,7 @@ console.log(fav4);
     
             }
         });
-        sleep(150);
+        sleep(50);
     }
     
 let fav2 = JSON.parse(localStorage.fav2 || '[]');
@@ -210,5 +210,5 @@ for (const i of fav2) {
 
         }
     });
-    sleep(100);
+    sleep(50);
 }
