@@ -213,6 +213,55 @@ var vm = function () {
 $(document).ready(function () {
     console.log("ready!");
     ko.applyBindings(new vm());
+    const urlGames = "http://192.168.160.58/Olympics/api/games/SearchByName?q="
+
+            $("#SearchBar").autocomplete({
+                minLength: 2,
+                source: function (request, response) {
+                    $.ajax({
+                        type: "GET",
+                        url: urlGames+$('#SearchBar').val().toLowerCase(),
+                        data: {
+                            q: $('#SearchBar').val().toLowerCase()
+                        },
+                        success: function (data) {
+                            if (!data.length) {
+                                var result = [{
+                                    label: 'Sem resultados',
+                                    value: response.term,
+                                    source: ""
+                                }];
+                                response(result);
+                            } else {
+
+                                var newData = $.map(data, function (value, key) {
+                                    return {
+                                        label: value.Name,
+                                        value: value.Id,
+                                    }
+                                });
+                                results = $.ui.autocomplete.filter(newData, request.term);
+                                response(results);
+                            }
+                        },
+                        error: function () {
+                            alert("error!");
+                        }
+                    })
+                },
+                select: function (event, ui) {
+                    event.preventDefault();
+                    $("#SearchBar").val(ui.item.label);
+
+                    window.location.href = "./gameDetails.html?id=" + ui.item.value;
+                        
+                    
+                    // h.loadTitleModal(ui.item.value)
+                },
+                focus: function (event, ui) {
+                    $("#searchbar").val(ui.item.label);
+                }
+            });
 });
 
 $(document).ajaxComplete(function (event, xhr, options) {
@@ -292,28 +341,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
            });
          });
     };
-    $("#SearchBar").autocomplete({
-           minLength: 2,
-           source: function (request, response) {
-               $.ajax({
-                   type: "GET",
-                   contentType: "application/json; charset=utf-8",
-                   url: "http://192.168.160.58/Olympics/api/games/SearchByName?q="+$('#SearchBar').val(),
-                   data: {q:$('#SearchBar').val()},
-                   dataType: "json",
-               success: function (data) {
-                var tags = new Array;
-                for (id=0;id<data.length;id++){
-                    tags.push(data[id].Name)
-                }
-               response(tags.slice(0,10));
-               },
-               error: function (result) {
-               alert(result.statusText);
-               }
-           });
-           }
-    });
+    
     
     $().ready(main);
     function searchToggle(obj, evt){
