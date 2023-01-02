@@ -2,18 +2,18 @@
 
 
 body{
-  padding-top: 80px;
+  padding-top: 90px;
   background: linear-gradient(
     to bottom right,
-    rgba(211, 216, 246, 0.75) 10%,
+    rgba(70, 80, 97, 0.75) 10%,
     rgba(201, 227, 244, 0.75) 10%,
     rgba(198, 195, 195, 0.75) 16.6%,
-    rgb(173, 215, 245) 37.8%,
-    rgb(194, 223, 244) 48.8%,
-    rgb(190, 236, 255) 53.1%,
+    rgb(156, 174, 186) 37.8%,
+    rgb(121, 130, 136) 48.8%,
+    rgb(197, 211, 217) 53.1%,
     rgba(181, 183, 184, 0.75) 79.4%,
-    rgba(104, 124, 130, 0.75) 84.3%
-  ) !important;
+    rgba(59, 80, 86, 0.75) 84.3%
+  ) ;
   background-size: cover;
 
   -o-border-image: linear-gradient(
@@ -223,16 +223,6 @@ body{
 	margin-top: 100px;
 }
 
-section {
-  width: 100%;
-  display: inline-block;
-  background: #ccc;
-  height: 60vh;
-  text-align: center;
-  font-size: 22px;
-  font-weight: 700;
-  text-decoration: underline;
-}
 
 
 /* Footer left */

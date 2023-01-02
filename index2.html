@@ -10,27 +10,78 @@
     <link rel="stylesheet" href="css/homeCSS.css">
   </head>
   <body>
-    
-	  <nav class="navbar navbar-expand-lg navbar-light  fixed-top">
-	    <div class="container-fluid">
-	      <a class="navbar-brand" href="index.html">ArcLab.</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+    <nav class="navbar navbar-expand-lg navbar-light p-3 bg-danger fixed-top" id="headerNav">
+        <div class="container-fluid">
+            <a class="navbar-brand d-block d-lg-none" href="index.html">
+                <img src="images/siteLogo.png" style="height:80px;border-radius: 0.75rem;" />
+            </a>
+            <button class="navbar-toggler activate-animation" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <div class="animated-icon"><span></span><span></span><span></span></div>
+            </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">Athlets</a></li>
-	          <li class="nav-item"><a href="agent.html" class="nav-link">Competetions</a></li>
-	          <li class="nav-item"><a href="services.html" class="nav-link">countries</a></li>
-	          <li class="nav-item"><a href="project.html" class="nav-link">Games</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Modalities</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto ">
+                    <li class="nav-item ">
+                        <a class="nav-link mx-2" href="athletes.html">Athletes</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link mx-2 dropdown-toggle" href="games.html" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Game
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="games.html">Games</a></li>
+                            <li><a class="dropdown-item" href="gamesMap.html">Map</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link mx-2 dropdown-toggle" href="modalities.html" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Modalities
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="modalities.html">Modalities</a></li>
+                            <li><a class="dropdown-item" href="competitions.html">Competitions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="countries.html">Countries</a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a class="nav-link mx-2" href="index.html">
+                            <img src="images/siteLogo.png" style="height:80px;border-radius: 0.75rem;" />
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link mx-2 dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Statistics
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="statisticsCountyMedals.html">County Medals</a></li>
+                            <li><a class="dropdown-item" href="statisticsGamesAthletes.html">Game Atheltes</a></li>
+                            <li><a class="dropdown-item" href="statisticsGamesCompetitions.html">Game Competitions</a>
+                            </li>
+                            <li><a class="dropdown-item" href="statisticsGamesCountries.html">Game Countries</a></li>
+                            <li><a class="dropdown-item" href="statisticsGamesModalities.html">Game Modalities</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mx-2 active" aria-current="page" href="favorites.html">Fav<i
+                                class="fa fa-heart fa-2xs"></i>rites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="contact.html">Contacts</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+	  
     <!-- END nav -->
     
     <section class="hero-wrap" style="background-image: url('https://c4.wallpaperflare.com/wallpaper/443/195/686/olympic-bright-circle-colorful-wallpaper-preview.jpg');" data-stellar-background-ratio="0.3">
@@ -423,8 +474,8 @@
         </div>
       </div>
     </section>		
-	<div class="accordion w-100" id="accordionExample" style="margin-bottom: 50px">
-		<div class="accordion-item">
+	<div class="accordion w-100 bg-black" id="accordionExample" style="margin-bottom: 50px">
+		<div class="accordion-item bg-black">
 			<h2 class="accordion-header" id="headingOne">
 				<button class="accordion-button collapsed btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 		  About Us

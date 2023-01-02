@@ -1,0 +1,154 @@
+.container:first-of-type{
+    padding-top: 80px;
+}
+.carousel-control-prev,.carousel-control-next{
+    width: 50px;
+}
+#carousel {
+    margin-top: 350px;
+    display: block;
+    position: relative;
+    height: 400px;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+  }
+  #carousel div {
+    position: absolute;
+    transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+    opacity: 1;
+  }
+  #carousel div img {
+    width: 600px;
+    transition: width 1s;
+    border-radius: 1rem;
+  }
+  #carousel div.hideLeft {
+    left: 0%;
+    opacity: 0;
+    transform: translateY(50%) translateX(-50%);
+  }
+  #carousel div.hideLeft img {
+    width: 300px;
+  }
+  #carousel div.hideRight {
+    left: 100%;
+    opacity: 0;
+    transform: translateY(50%) translateX(-50%);
+  }
+  #carousel div.hideRight img {
+    width: 300px;
+  }
+  #carousel div.prev {
+    z-index: 5;
+    left: 30%;
+    transform: translateY(50px) translateX(-50%);
+  }
+  #carousel div.prev img {
+    width: 400px;
+  }
+  #carousel div.prevLeftSecond {
+    z-index: 4;
+    left: 15%;
+    transform: translateY(50%) translateX(-50%);
+    opacity: 0.7;
+  }
+  #carousel div.prevLeftSecond img {
+    width: 300px;
+  }
+  #carousel div.selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    left: 50%;
+    transform: translateY(0px) translateX(-50%);
+  }
+  #carousel div.next {
+    z-index: 5;
+    left: 70%;
+    transform: translateY(50px) translateX(-50%);
+  }
+  #carousel div.next img {
+    width: 400px;
+  }
+  #carousel div.nextRightSecond {
+    z-index: 4;
+    left: 85%;
+    transform: translateY(50%) translateX(-50%);
+    opacity: 0.7;
+  }
+  #carousel div.nextRightSecond img {
+    width: 300px;
+  }
+.selected .text{
+    display: block;
+    position: absolute;
+    color: beige;
+    background-color: rgba(0, 0, 0, 0.445);
+}
+.text{
+    display: none;
+}
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+    transform: translateX(0);
+}
+.card-img-overlay{
+    color:aliceblue;
+    justify-content: center;
+}
+.img-fluid{
+    height: 160px;
+    border-radius: 2rem;
+}
+.text1{
+    color:aliceblue
+}
+.card{
+    border-radius: 2rem;
+}
+.accordion-button:not(.collapsed){
+    color:inherit;
+    background: rgb(0, 0, 0);
+    color:aliceblue;
+}
+.accordion-button{
+    color:inherit;
+    background: rgb(23, 29, 36);
+    color:aliceblue;
+}
+.accordion-collapse:not(.collapsed){
+    color:inherit;
+    background: rgb(57, 68, 79);
+    color:aliceblue;
+}
