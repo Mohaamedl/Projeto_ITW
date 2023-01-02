@@ -86,9 +86,7 @@ a:hover {
   opacity: 1;
   color: rgb(156, 27, 27);
 }
-.container:first-of-type{
-  padding-top: 80px;
-}
+
 /*----------------
 Push Bar
 ------------------*/

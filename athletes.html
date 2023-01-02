@@ -1,45 +1,42 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Games</title>
-    <link rel="icon" href="images/icons/siteIcon.jpg" type="image/jpg">
+    <title>ITW 2022/23 - Olympic Games editions List</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
-     integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" 
-     crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/athletes.css" />
-  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/athletes.css" />
+    <link rel="stylesheet" href="css/main.css"> 
 </head>
-
+<style>
+  body{
+    margin: 0;
+    padding: 0;
+  }
+</style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light p-3 bg-danger fixed-top" id="headerNav">
     <div class="container-fluid">
       <a class="navbar-brand d-block d-lg-none" href="index.html">
-        <img src="images/siteLogo.png" style="height:80px;border-radius: 0.75rem;" />
+        <img src="images/c01c24d54a5747e58772f62679401713.png" style="height:80px;border-radius: 0.75rem;" />
       </a>
-      <button class="navbar-toggler activate-animation" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <div class="animated-icon"><span></span><span></span><span></span></div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-
+   
       <div class=" collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav mx-auto ">
           <li class="nav-item ">
             <a class="nav-link mx-2" href="athletes.html">Athletes</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link mx-2 dropdown-toggle" href="games.html" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link mx-2 dropdown-toggle" href="games.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Game
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -48,13 +45,12 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link mx-2 dropdown-toggle" href="modalities.html" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link mx-2 dropdown-toggle" href="modalities.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Modalities
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="modalities.html">Modalities</a></li>
-              <li><a class="dropdown-item" href="competitions.html">Competitions</a></li>
+                <li><a class="dropdown-item" href="modalities.html">Modalities</a></li>
+                <li><a class="dropdown-item" href="competitions.html">competitions</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -62,282 +58,312 @@
           </li>
           <li class="nav-item d-none d-lg-block">
             <a class="nav-link mx-2" href="index.html">
-              <img src="images/siteLogo.png" style="height:80px;border-radius: 0.75rem;" />
+              <img src="images\c01c24d54a5747e58772f62679401713.png"  style="height:80px;border-radius: 0.75rem;" />
             </a>
           </li>
-
+          
           <li class="nav-item dropdown">
-            <a class="nav-link mx-2 dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link mx-2 dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Statistics
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="statisticsCountyMedals.html">County Medals</a></li>
-              <li><a class="dropdown-item" href="statisticsGamesAthletes.html">Game Atheltes</a></li>
-              <li><a class="dropdown-item" href="statisticsGamesCompetitions.html">Game Competitions</a></li>
-              <li><a class="dropdown-item" href="statisticsGamesCountries.html">Game Countries</a></li>
-              <li><a class="dropdown-item" href="statisticsGamesModalities.html">Game Modalities</a></li>
+              <li><a class="dropdown-item" href="statisticsCountriesMedals.html">Statistic 1</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesAthletes.html">Statistic 2</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesCompetitions.html">Statistic 3</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesCountries.html">Statistic 4</a></li>
+              <li><a class="dropdown-item" href="statisticsGamesModalities.html">Statistic 5</a></li>
             </ul>
           </li>
           <li class="nav-item ">
-            <a class="nav-link mx-2 active" aria-current="page" href="favorites.html">Fav<i
-                class="fa fa-heart fa-2xs"></i>rites</a>
+            <a class="nav-link mx-2 active" aria-current="page" href="favorites.html"><img src="images/favorite.png" alt=""></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link mx-2 ab" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2" href="contact.html">Contacts</a>
+            <a class="nav-link mx-2 ct" href="contact.html">Contacts</a>
           </li>
           <div class="nav-item">
-            <form class="form-check" id="forms1" role="search">
-              <div class="p-2 bg-light rounded rounded-pill shadow ">
-                <div class="input-group">
-                  <input type="search" id="SearchBar" placeholder="Enter the year and/or season" aria-label="Search"
-                    aria-describedby="button-addon1" class="search-wrapper form-control border-0 bg-light">
-                  <div class="input-group-append">
-                    <button id="button-addon1" type="submit" data-bind="click:pesquisa"
-                      class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
-                  </div>
+            <form class="form-check" id="forms1"  role="search">
+                <div class="p-2 bg-light rounded rounded-pill shadow ">
+                    <div class="input-group">
+                      <input type="search" id="SearchBar" placeholder="Search athlete..." aria-label="Search" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+                      <div class="input-group-append">
+                        <button id="button-addon1" type="submit" data-bind="click:pesquisa" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                      </div>
+                    </div>
                 </div>
-              </div>
             </form>
-          </div>
+           </div>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- Working Area -->
-  <div class="container">
-    <div class="row">
-      <div class="border-bottom">
-        <!-- ko if: records().length>0 -->
-        <h2 style="float: left" data-bind="html:displayName"></h2>
-        <!-- /ko -->
-        <!-- ko ifnot: records().length>0 -->
-        <h2 style="float: left"><b>No Results Found</b></h2>
-        <!-- /ko -->
-      </div>
-      <!-- ko if:records().length > 0 -->
-      <div class="row small">
-        <p class=" col-4 mr-auto pt-2">
-          <span data-bind="html: 'Page: ' + currentPage() + ' of ' + totalPages()"></span><br />
-          <span data-bind="html: 'Athletes: '+ fromRecord() + '-' + toRecord() + ' of ' + totalRecords()"></span>
-        </p>
-        <!-- ko ifnot: pesquisado -->
-        <div class="col-8 my-0 pt-3">
-          <ul class="pagination float-end">
-            <!-- ko if: currentPage() > 5 && totalPages() > 10 -->
-            <li class="page-item float-end"><a class="page-link" title="First Page"
-                data-bind="attr: { href: './Athletes.html?page=' + '1',  rel:'prev'}">⇤</a></li>
-            <li class="page-item float-end"><a class="page-link" title="Previous Page"
-                data-bind="attr: { href: './Athletes.html?page=' + previousPage(),  rel:'prev'}">←</a></li>
+    <!-- Working Area -->
+    <div class="container">
+        <div class="row"><div class="border-bottom">
+            <!-- ko if: records().length>0 -->
+            <h2 style="float: left" data-bind="html:displayName"></h2>
             <!-- /ko -->
-            <!-- ko foreach: pageArray()-->
-            <!-- ko if:$data == $parent.currentPage() -->
-            <li class="active page-item"><a class="page-link"
-                data-bind="attr: { title:'Current Page ' + $data }, text: $data"></a></li>
+            <!-- ko ifnot: records().length>0 -->
+            <h2 style="float: left"><b>No Results Found</b></h2>
             <!-- /ko -->
-            <!-- ko if:$data != $parent.currentPage() -->
-            <li class="page-item"><a class="page-link"
-                data-bind="attr: { href: './Athletes.html?page=' + $data, title:'Goto Page ' + $data }, text:$data"></a>
+        </div>
+<!-- ko if:records().length > 0 -->
+<div class="row small">
+  <p class=" col-2 pt-2">
+      <span data-bind="html: 'Page: ' + currentPage() + ' of ' + totalPages()"></span><br />
+      <span data-bind="html: 'Athletes: '+ fromRecord() + '-' + toRecord() + ' of ' + totalRecords()"></span>
+  </p>
+  <!-- ko ifnot:pesquisado -->
+  <div class="col-4 mr-auto pt-2">
+      <div class="dropdown">
+          <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Sort by:
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li data-bind="">
+                <a class="dropdown-item"
+                   data-bind="attr:{href:'./Athletes.html?sortby=id'}">Id</a>
             </li>
-            <!-- /ko -->
-            <!-- /ko -->
-            <!-- ko if: currentPage() < totalPages() - 4 && totalPages() > 9 -->
-            <li class="page-item"><a class="page-link" title="Next Page"
-                data-bind="attr: { href: './Athletes.html?page=' + nextPage(), rel:'next' }">→</a></li>
-            <li class="page-item"><a class="page-link" title="Last Page"
-                data-bind="attr: { href: './Athletes.html?page=' + totalPages() }">⇥</a></li>
-            <!-- /ko -->
+            <li data-bind="">
+                <a class="dropdown-item"
+                   data-bind="attr:{href:'./Athletes.html?sortby=NameUp'}">A - Z</a>
+            </li>
+            <li data-bind="">
+                <a class="dropdown-item"
+                   data-bind="attr:{href:'./Athletes.html?sortby=NameDn'}">Z - A</a>
+            </li>
+            <li data-bind="">
+              <a class="dropdown-item"
+                 data-bind="attr:{href:'./Athletes.html?sortby=HeightUp'}">Shorter - Taller</a>
+            </li>
           </ul>
-        </div>
-        <!-- /ko -->
-        <!-- ko if: pesquisado -->
-        <div class="col-8 my-0 pt-3">
-          <ul class="pagination float-end">
-            <!-- ko if: currentPage() > 5 && totalPages() > 10 -->
-            <li class="page-item float-end"><a class="page-link" title="First Page"
-                data-bind="attr: { href: './Athletes.html?search='+ pesquisado() + '&page=1',  rel:'prev'}">⇤</a></li>
-            <li class="page-item float-end"><a class="page-link" title="Previous Page"
-                data-bind="attr: { href: './Athletes.html?search='+ pesquisado() + '&page=' + previousPage(),  rel:'prev'}">←</a>
-            </li>
-            <!-- /ko -->
-            <!-- ko foreach: pageArray()-->
-            <!-- ko if:$data == $parent.currentPage() -->
-            <li class="active page-item"><a class="page-link"
-                data-bind="attr: { title:'Current Page ' + $data }, text: $data"></a></li>
-            <!-- /ko -->
-            <!-- ko if:$data != $parent.currentPage() -->
-            <li class="page-item"><a class="page-link"
-                data-bind="attr: { href: './Athletes.html?search='+ $parent.pesquisado() + '&page=' + $data, title:'Goto Page ' + $data }, text:$data"></a>
-            </li>
-            <!-- /ko -->
-            <!-- /ko -->
-            <!-- ko if: currentPage() < totalPages() - 4 && totalPages() > 9 -->
-            <li class="page-item"><a class="page-link" title="Next Page"
-                data-bind="attr: { href: './Athletes.html?search='+ pesquisado() + '&page=' + nextPage(), rel:'next' }">→</a>
-            </li>
-            <li class="page-item"><a class="page-link" title="Last Page"
-                data-bind="attr: { href: './Athletes.html?search='+ pesquisado() + '&page=' + totalPages() }">⇥</a></li>
-            <!-- /ko -->
-          </ul>
-        </div>
-        <!-- /ko -->
       </div>
-      <!-- /ko -->
-
-
-
-
-      <div class="row" data-bind="foreach:records">
-        <div class="col-md-6 col-lg-4 col-xl-3">
-          <div class="material-card Cyan">
-            <h2>
-              <span>
-                <h6 data-bind="text: Name"></h6>
-              </span>
-              <span class="medal-icon"> <img class="medalimg" data-bind="attr: {src:medal(BestPosition)}"></span>
-            </h2>
-            <div class="mc-content">
-              <div class="img-container">
-                <img class="img-responsive" data-bind="safeSrc:{src:Photo , fallback: 'images/default.png'}">
-              </div>
-              <div class="mc-description">
-                <div class="card-info-title">
-                  <h5>Information</h5>
-                </div>
-                <div class="card-info">
-                  <h5>Sex: <span data-bind="text: Sex"></span> </h5>
-                </div>
-                <div class="card-info">
-                  <h5 id="medalName">Best Medal: <span data-bind="text: conv(BestPosition)"></span> </h5>
-                </div>
-              </div>
-            </div>
-            <a class="mc-btn-action">
-              <i class="fa fa-bars"></i>
-            </a>
-            <div class="mc-footer">
-              <h4>
-                <a data-bind="attr: { href:'./athleteDetails.html?id=' + Id }" class="btn btn-primary">More details</a>
-                <button class="btn btn-default btn-outline-danger btn-sm btn-favourite"
-                  data-bind="click: () => $parent.toggleFavourite(Id), attr : { 'id': 'favourite_' + Id }">
-                  <i data-bind="attr: {'class': $parent.favourites().includes(Id)? 'fa fa-heart' : 'fa fa-heart-o'}"
-                    class="fa fa-heart-o" title="Selecione para adicionar aos favoritos"></i>
-                </button>
-              </h4>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row small">
-        <p class=" col-4 mr-auto pt-2">
-
-        </p>
-        <div class="col-8 my-0 pt-3">
-          <ul class="pagination float-end">
-            <!-- ko if: currentPage() > 5 && totalPages() > 10 -->
-            <li class="page-item float-end"><a class="page-link" title="First Page"
-                data-bind="attr: { href: './athletes.html?page=' + '1',  rel:'prev'}">⇤</a></li>
-            <li class="page-item float-end"><a class="page-link" title="Previous Page"
-                data-bind="attr: { href: './athletes.html?page=' + previousPage(),  rel:'prev'}">←</a></li>
-            <!-- /ko -->
-            <!-- ko foreach: pageArray()-->
-            <!-- ko if:$data == $parent.currentPage() -->
-            <li class="active page-item"><a class="page-link"
-                data-bind="attr: { title:'Current Page ' + $data }, text: $data"></a></li>
-            <!-- /ko -->
-            <!-- ko if:$data != $parent.currentPage() -->
-            <li class="page-item"><a class="page-link"
-                data-bind="attr: { href: './athletes.html?page=' + $data, title:'Goto Page ' + $data }, text:$data"></a>
-            </li>
-            <!-- /ko -->
-            <!-- /ko -->
-            <!-- ko if: currentPage() < totalPages() - 4 && totalPages() > 9 -->
-            <li class="page-item"><a class="page-link" title="Next Page"
-                data-bind="attr: { href: './athletes.html?page=' + nextPage(), rel:'next' }">→</a></li>
-            <li class="page-item"><a class="page-link" title="Last Page"
-                data-bind="attr: { href: './athletes.html?page=' + totalPages() }">⇥</a></li>
-            <!-- /ko -->
-          </ul>
-        </div>
-      </div>
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
-                <img src="" height="30" /> Loading data...
-              </h5>
-            </div>
-            <div class="modal-body text-center">
-              <img src="images/gifs/loading.gif" style="height: 230px;border-radius: 1rem;" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
-  <!-- End of Working Area -->
+  <!-- /ko -->
+  <!-- ko if: pesquisado -->
+  <div class="col-8 my-0 pt-3" style="text-align: center">
+      <ul class="pagination float-end">
+          <!-- ko if: currentPage() > 5 && totalPages() > 10 -->
+          <li class="page-item float-end"><a class="page-link" title="First Page" data-bind="attr: { href: './Athletes.html?search='+ pesquisado() + '&page=1',  rel:'prev'}">⇤</a></li>
+          <li class="page-item float-end"><a class="page-link" title="Previous Page" data-bind="attr: { href: './Athletes.html?search='+ pesquisado() + '&page=' + previousPage(),  rel:'prev'}">←</a></li>
+          <!-- /ko -->
+          <!-- ko foreach: pageArray()-->
+          <!-- ko if:$data == $parent.currentPage() -->
+          <li class="active page-item"><a class="page-link" data-bind="attr: { title:'Current Page ' + $data }, text: $data"></a></li>
+          <!-- /ko -->
+          <!-- ko if:$data != $parent.currentPage() -->
+          <li class="page-item"><a class="page-link" data-bind="attr: { href: './Athletes.html?search='+ $parent.pesquisado() + '&page=' + $data, title:'Goto Page ' + $data }, text:$data"></a></li>
+          <!-- /ko -->
+          <!-- /ko -->
+          <!-- ko if: currentPage() < totalPages() - 4 && totalPages() > 9 -->
+          <li class="page-item"><a class="page-link" title="Next Page" data-bind="attr: { href: './Athletes.html?search='+ pesquisado() + '&page=' + nextPage(), rel:'next' }">→</a></li>
+          <li class="page-item"><a class="page-link" title="Last Page" data-bind="attr: { href: './Athletes.html?search='+ pesquisado() + '&page=' + totalPages() }">⇥</a></li>
+          <!-- /ko -->
+      </ul>
+  </div>
+  <!-- /ko -->
+  <!-- ko ifnot: pesquisado -->
+  <!-- Paginação_Athletes-->
+  <div class="col-lg-4 col-md-8 my-0 pt-3" style="text-align: center">
+      <ul class="pagination float-end">
+          <!-- ko if: currentPage() > 5 && totalPages() > 10 -->
+          <li class="page-item float-end">
+              <!-- ko ifnot: sortby -->
+              <a class="page-link"
+                 title="First Page"
+                 data-bind="attr: { href: './Athletes.html?page=' + '1',  rel:'prev'}">⇤</a>
+              <!-- /ko -->
+              <!-- ko if: sortby -->
+              <a class="page-link"
+                 title="First Page"
+                 data-bind="attr: { href: './Athletes.html?page=' + '1' + '&sortby=' + sortby(),  rel:'prev'}">⇤</a>
+              <!-- /ko -->
+          </li>
+          <li class="page-item float-end">
+              <!-- ko ifnot: sortby -->
+              <a class="page-link"
+                 title="Previous Page"
+                 data-bind="attr: { href: './Athletes.html?page=' + previousPage(),  rel:'prev'}">←</a>
+              <!-- /ko -->
+              <!-- ko if: sortby -->
+              <a class="page-link"
+                 title="Previous Page"
+                 data-bind="attr: { href: './Athletes.html?page=' + previousPage() + '&sortby=' + sortby(),  rel:'prev'}">←</a>
+              <!-- /ko -->
+          </li>
+          <!-- /ko -->
+          <!-- ko foreach: pageArray()-->
+          <!-- ko if:$data == $parent.currentPage() -->
+          <li class="active page-item">
+              <a class="page-link"
+                 data-bind="attr: { title:'Current Page ' + $data }, text: $data"></a>
+          </li>
+          <!-- /ko -->
+          <!-- ko if:$data != $parent.currentPage() -->
+          <li class="page-item">
+              <!-- ko ifnot:$parent.sortby() -->
+              <a class="page-link" data-bind="attr: { href: './Athletes.html?page=' + $data, title:'Goto Page ' + $data }, text:$data"></a>
+              <!-- /ko -->
+              <!-- ko if:$parent.sortby() -->
+              <a class="page-link" data-bind="attr: { href: './Athletes.html?page=' + $data + '&sortby=' + $parent.sortby(), title:'Goto Page ' + $data }, text:$data"></a>
+              <!-- /ko -->
+          </li>
+          <!-- /ko -->
+          <!-- /ko -->
+          <!-- ko if: currentPage() < totalPages() - 4 && totalPages() > 9 -->
+          <li class="page-item">
+              <!-- ko ifnot: sortby -->
+              <a class="page-link" title="Next Page" data-bind="attr: { href: './Athletes.html?page=' + nextPage(), rel:'next' }">→</a>
+              <!-- /ko -->
+              <!-- ko if: sortby -->
+              <a class="page-link"
+                 title="Next Page"
+                 data-bind="attr: { href: './Athletes.html?page=' + nextPage() + '&sortby=' + sortby(), rel:'next' }">→</a>
+              <!-- /ko -->
+          </li>
+          <li class="page-item">
+              <!-- ko ifnot: sortby -->
+              <a class="page-link"
+                 title="Last Page"
+                 data-bind="attr: { href: './Athletes.html?page=' + totalPages() }">⇥</a>
+              <!-- /ko -->
+              <!-- ko if: sortby -->
+              <a class="page-link"
+                 title="Last Page"
+                 data-bind="attr: { href: './Athletes.html?page=' + totalPages() + '&sortby=' + sortby()}">⇥</a>
+              <!-- /ko -->
+          </li>
+          <!-- /ko -->
+      </ul>
+  </div>
+  <!-- /ko -->
+</div>
+<!--/ko -->
+        <div class="row" data-bind="foreach:records">
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <div class="material-card Cyan">
+                        <h2>
+                           <span> <h6 data-bind="text: Name"></h6></span>
+                           <span class="medal-icon"> <img class="medalimg" data-bind="attr: {src:medal(BestPosition)}"></span>
+                        </h2>
+                        <div class="mc-content">
+                          <div class="img-container">
+                            <img class="img-responsive" data-bind="safeSrc:{src:Photo , fallback: 'img/user.jpg'}">
+                          </div>
+                          <div class="mc-description">
+                            <div class="card-info-title"><h5>Information</h5></div>
+                            <div class="card-info"><h5>Sex: <span data-bind="text: Sex"></span> </h5></div>
+                            <div class="card-info"><h5 id="medalName">Best Medal: <span data-bind="text: conv(BestPosition)"></span> </h5></div>
+                          </div>
+                        </div>
+                        <a class="mc-btn-action">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                          <h4>
+                            <a data-bind="attr: { href:'./athletesDetails.html?id=' + Id }" class="btn btn-primary">More details</a>
+                            <button class="btn btn-default btn-outline-danger btn-sm btn-favourite" data-bind="click: () => $parent.toggleFavourite(Id), attr : { 'id': 'favourite_' + Id }">
+                                <i data-bind="attr: {'class': $parent.favourites().includes(Id)? 'fa fa-heart' : 'fa fa-heart-o'}" class="fa fa-heart-o" title="Selecione para adicionar aos favoritos"></i>
+                          </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-
-  <footer class="footer-distributed row m-0 p-0">
-    <div class="footer-left col-12 col-md-6">
-      <p class="footer-links">
-        <a href="index.html">Home</a><br>
-        <a href="athletes.html">Athletes</a><br>
-        <a href="games.html">Games</a> |
-        <a href="gamesMap.html">Map</a> <br>
-        <a href="modalities.html">Modalities</a> |
-        <a href="competitions.html">Competitions</a><br>
-        <a href="countries.html">Countries</a> <br>
-        <a href="statisticsCountriesMedals.html">County Medals</a> |
-        <a href="statisticsGamesAthletes.html">Game Atheltes</a> |
-        <a href="statisticsGamesCompetitions.html">Game Competitions</a> |
-        <a href="statisticsGamesCountries.html">Game Countries</a> |
-        <a href="statisticsGamesModalities.html">Game Modalities</a><br>
-        <a href="favorites.html">Favorites</a><br>
-        <a href="contact.html">Contacts</a> <br>
-      </p>
-      <div class="footer-icons">
-        <a href="https://www.facebook.com/olympics/"><i class="fa-brands fa-facebook-f"></i></i></a>
-        <a href="https://www.instagram.com/olympics/"><i class="fa fab fa-instagram"></i></a>
-        <a href="https://twitter.com/olympics"><i class="fa fab fa-twitter"></i></a>
-        <a href="https://www.youtube.com/@Olympics"><i class="fa fab fa-youtube"></i></a>
-      </div>
-      <p class="footer-company-name">&copy; Introdução as Tecnologias Web - 2022/23</p>
-      <p class="footer-company-name"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></p>
+    <div class="row small">
+        <p class=" col-4 mr-auto pt-2">
+            
+        </p>
+        <div class="col-8 my-0 pt-3">
+            <ul class="pagination float-end">
+                <!-- ko if: currentPage() > 5 && totalPages() > 10 -->
+                <li class="page-item float-end"><a class="page-link" title="First Page" data-bind="attr: { href: './athletes.html?page=' + '1',  rel:'prev'}">⇤</a></li>
+                <li class="page-item float-end"><a class="page-link" title="Previous Page" data-bind="attr: { href: './athletes.html?page=' + previousPage(),  rel:'prev'}">←</a></li>
+                <!-- /ko -->
+                <!-- ko foreach: pageArray()-->
+                <!-- ko if:$data == $parent.currentPage() -->
+                <li class="active page-item"><a class="page-link" data-bind="attr: { title:'Current Page ' + $data }, text: $data"></a></li>
+                <!-- /ko -->
+                <!-- ko if:$data != $parent.currentPage() -->
+                <li class="page-item"><a class="page-link" data-bind="attr: { href: './athletes.html?page=' + $data, title:'Goto Page ' + $data }, text:$data"></a></li>
+                <!-- /ko -->
+                <!-- /ko -->
+                <!-- ko if: currentPage() < totalPages() - 4 && totalPages() > 9 -->
+                <li class="page-item"><a class="page-link" title="Next Page" data-bind="attr: { href: './athletes.html?page=' + nextPage(), rel:'next' }">→</a></li>
+                <li class="page-item"><a class="page-link" title="Last Page" data-bind="attr: { href: './athletes.html?page=' + totalPages() }">⇥</a></li>
+                <!-- /ko -->
+            </ul>
+        </div>
     </div>
-    <div class="footer-right col-12 col-md-6">
-      <p>Report to us</p>
-      <form class="col-12 row" action="#" method="post">
-        <input class="form-control" type="text" name="name" placeholder="Name">
-        <input type="text" name="email" placeholder="Email">
-
-        <select class="form-select" name="report">
-          <option value="0">Choose</option>
-          <option value="1">Bug</option>
-          <option value="2">Error</option>
-          <option value="3">Sugestion</option>
-        </select>
-
-        <textarea name="message" placeholder="Message"></textarea>
-        <button class="col-4">Send</button>
-      </form>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <img src="" height="30" /> Loading data...
+                    </h5>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="https://i.pinimg.com/originals/ad/a3/c7/ada3c7b0d94c2159e156adcbd2a8f9cd.gif" height="200" />
+                </div>
+            </div>
+        </div>
     </div>
-  </footer>
+</div>
+</div>
+<!-- End of Working Area -->
 
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
-    integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script src="js/main.js"> </script>
-  <script src="js/athletes.js"></script>
+<footer class="footer-distributed">
+    <div class="footer-left">
+        <p class="footer-links">
+            <a href="index.html">Home</a><br>
+            <a href="countries.html" >Countries</a> <br>
+            <a href="games.html" >Games</a> <br>
+            <a href="modalities.html">Modalities</a> | 
+            <a href="competitions.html">Competitions</a><br>
+            <a href="athletes.html">Athletes</a><br>
+            <a href="favorites.html">Favorites</a><br>
+            <a href="statisticsCountriesMedals.html">Statistics 1</a> | 
+            <a href="statisticsGamesAthletes.html">Statistics 2</a> | 
+            <a href="statisticsGamesCompetitions.html">Statistics 3</a> | 
+            <a href="statisticsGamesCountries.html">Statistics 4</a> | 
+            <a href="statisticsGamesModalities.html">Statistics 5</a><br>
+            <a href="contact.html">Contacts</a> <br>
+        </p>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com/olympics/"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/olympics/"><i class="fa fab fa-instagram"></i></a>
+            <a href="https://twitter.com/olympics"><i class="fa fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@Olympics"><i class="fa fab fa-youtube"></i></a>
+        </div>
+        <p class="footer-company-name">&copy;  Introdução as Tecnologias Web - 2022/23</p>
+        <p class="footer-company-name"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></p>
+    </div>
+    <div class="footer-right">
+        <p>Report</p>
+        <form action="#" method="post">
+          <input type="text" name="email" placeholder="Email">
+          <div class="row">
+            <select class="form-select" name="report" >
+              <option value="1">Bug</option>
+              <option value="2">Error</option>
+              <option value="3">Sugestion</option>
+            </select>
+          </div>
+          <textarea name="message" placeholder="Message"></textarea>
+          <button>Send</button>
+        </form>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>    
+<script src="js/athletes.js"></script>
 </body>
-
 </html>
