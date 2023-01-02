@@ -1,11 +1,9 @@
-.container:first-of-type{
-    padding-top: 80px;
-}
+
 .carousel-control-prev,.carousel-control-next{
     width: 50px;
 }
 #carousel {
-    margin-top: 350px;
+    margin-top: 300px;
     display: block;
     position: relative;
     height: 400px;

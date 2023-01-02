@@ -112,11 +112,11 @@
         <!-- /ko -->
         <!-- ko if:records().length > 0 -->
         <div class="row">
-            <p class=" col-4 mr-auto pt-2">
+            <p class="col-12 col-md-4 mr-auto pt-2">
                 <span data-bind="html: 'Page: ' + currentPage() + ' of ' + totalPages()"></span><br />
                 <span data-bind="html: 'Competitions: '+ fromRecord() + '-' + toRecord() + ' of ' + totalRecords()"></span>
             </p>
-            <div class="col-8 my-0 pt-3">
+            <div class="col-12 col-md-8 my-0 pt-3">
                 <ul class="pagination float-end">
                     <!-- ko if: currentPage() > 5 && totalPages() > 10 -->
                     <li class="page-item float-end"><a class="page-link" title="First Page" data-bind="attr: { href: './competitions.html?page=' + '1',  rel:'prev'}">⇤</a></li>

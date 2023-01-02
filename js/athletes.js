@@ -225,12 +225,12 @@ function conv(BestPosition){
 
 function medal(BestPosition){
     if (BestPosition == 1)
-        return "img/goldMedal.png";  
+        return "images/goldMedal.png";  
     else if (BestPosition == 2)
-        return "img/silverMedal.png";
+        return "images/silverMedal.png";
     else if (BestPosition == 3)
-        return "img/bronzeMedal.png";
-    else return "img/noMedal.png"
+        return "images/bronzeMedal.png";
+    else return "images/noMedal.png"
 };
 
 $(document).ready(function () {
