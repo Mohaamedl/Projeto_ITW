@@ -110,6 +110,7 @@ $(document).ready(function () {
                         <td class="align-middle">${data.Name}</td>
                         <td class="align-middle">${data.Sex}</td>
                         <td class="text-end">
+                            <a class="btn btn-default btn-light btn-xs" onclick="info(${i})"><i class="fa fa-eye" title="Selecione para ver detalhes"></i></a>
                             <a class="btn btn-default btn-outline-danger btn-sm btn-favourite" onclick="removeFav(${i})"><i class="fa fa-heart" title="Selecione para remover dos favoritos"></i></a>
                         </td>
                     </tr>`
@@ -142,6 +143,7 @@ for (const i of fav3) {
                         <td class="align-middle">${i}</td>
                         <td class="align-middle">${data.Name}</td>
                         <td class="text-end">
+                            <a class="btn btn-default btn-light btn-xs" onclick="info2(${i})"><i class="fa fa-eye" title="Selecione para ver detalhes"></i></a>
                             <a class="btn btn-default btn-outline-danger btn-sm btn-favourite" onclick="removeFav3(${i})"><i class="fa fa-heart" title="Selecione para remover dos favoritos"></i></a>
                         </td>
                     </tr>`
@@ -171,6 +173,7 @@ console.log(fav4);
                             <td class="align-middle">${data.Name}</td>
                             <td class="align-middle">${data.Modality}</td>
                             <td class="text-end">
+                                <a class="btn btn-default btn-light btn-xs" onclick="info3(${i})"><i class="fa fa-eye" title="Selecione para ver detalhes"></i></a>
                                 <a class="btn btn-default btn-outline-danger btn-sm btn-favourite" onclick="removeFav4(${i})"><i class="fa fa-heart" title="Selecione para remover dos favoritos"></i></a>
                             </td>
                         </tr>`
@@ -203,6 +206,7 @@ for (const i of fav2) {
                         <td class="align-middle">${data.City}</td>
                         <td class="align-middle">${data.CountryName}</td>
                         <td class="text-end">
+                            <a class="btn btn-default btn-light btn-xs" onclick="info4(${i})"><i class="fa fa-eye" title="Selecione para ver detalhes"></i></a>
                             <a class="btn btn-default btn-outline-danger btn-sm btn-favourite" onclick="removeFav2(${i})"><i class="fa fa-heart" title="Selecione para remover dos favoritos"></i></a>
                         </td>
                     </tr>`
@@ -211,4 +215,17 @@ for (const i of fav2) {
         }
     });
     sleep(50);
+}
+
+function info(Id) {
+    window.location.href = "./AthletesDetails.html?id=" + Id
+}
+function info2(Id) {
+    window.location.href = "./modalityDetails.html?id=" + Id
+}
+function info3(Id) {
+    window.location.href = "./competitionsDetails.html?id=" + Id
+}
+function info4(Id) {
+    window.location.href = "./gameDetails.html?id=" + Id
 }

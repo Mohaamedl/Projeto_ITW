@@ -12,6 +12,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/main.css" />
 </head>
+<style>
+  a {
+    color: black
+  }
+  a:hover {
+    color:steelblue;
+    font-weight: bold
+  }
+</style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light p-3 bg-danger fixed-top" id="headerNav">
     <div class="container-fluid">
@@ -121,27 +130,73 @@
                 <i class="fa fa-link"></i> [<a class="link-dark text-decoration-none" data-bind="attr: { href: Photo }, text : Photo" target="_blank"></a>]
             </div>
         </div>
-        <h3 style="color:rgb(33, 104, 154)">Games</h3><br>
-        <div class="row" data-bind="foreach: Games">
-          <h5 data-bind="text: Name" ></h5> <h5 data-bind="text: CityName"></h5>
+
+        <div class="container">
+          <div class="accordion w-100" id="accordionExample" style="margin-bottom: 50px">
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button collapsed btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Games
+                      </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="row" data-bind="foreach: Games">
+                          <a  data-bind="text: Name + ' - '+CityName+' ('+Year+')', attr: { href: './gameDetails.html?id=' + Id }"></a>
+                      </div>
+                    </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Modalities
+              </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="row" data-bind="foreach: Modalities">
+                          <a  data-bind="text: Name, attr: { href: './modalityDetails.html?id=' + Id }"></a>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item" >
+                  <h2 class="accordion-header" id="headingThree" >
+                      <button class="accordion-button collapsed btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Competitions
+                      </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="row" data-bind="foreach: Competitions">
+                          <a  data-bind="text: Name +' - '+Modality,  attr: { href: './competitionsDetails.html?id=' + Id }"></a>
+                        </div>
+                      <div>
+                  </div>
+                  </div>
+              </div>
+              </div>
+              <div class="accordion-item" >
+                <h2 class="accordion-header" id="headingFour" >
+                    <button class="accordion-button collapsed btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Medals
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="row" data-bind="foreach: Medals">
+                        <h6  data-bind="text: MedalName +' - '+Counter"></h6>
+                      </div>
+                    <div>
+                </div>
+            </div>
+          </div>
         </div>
-        <hr>
-        <h3 style="color: rgb(220, 222, 72)">Modalities</h3>
-        <div class="row" data-bind="foreach: Modalities">
-          <h5 data-bind="text: Name" ></h5>
-        </div>
-        <hr>
-        <h3 style="color:rgb(12, 133, 66)">Competitions</h3><br>
-        <div class="row" data-bind="foreach: Competitions">
-          <h5 data-bind="text: Name" ></h5>
-        </div>
-        <hr>
-        <h3 style="color:rgb(206, 21, 21)">Medals</h3><br>
-        <div class="row" data-bind="foreach: Medals">
-          <h5 data-bind="text: Counter"></h5><span data-bind="text: MedalName"></span>
-        </div>
-        <hr>
-        <!-- /ko -->
+      </div>
+    </div>
+    </div>
+    <!-- /ko -->
+
         <a href="./athletes.html" class="btn btn-outline-secondary btn-sm small"><i class="fa fa-list"></i> Back to List</a>
     </div>
     <!-- Modal -->
