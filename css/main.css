@@ -383,3 +383,25 @@ body{
   
 
   
+  .accordion-button:not(.collapsed){
+    color:inherit;
+    background: rgb(0, 0, 0);
+    color:aliceblue;
+}
+.accordion-button{
+    color:inherit;
+    background: rgb(23, 29, 36);
+    color:aliceblue;
+}
+.accordion-collapse:not(.collapsed){
+    color:inherit;
+    background: rgb(57, 68, 79);
+    color:aliceblue;
+    
+}
+.accordion-collapse:not(.collapsed) a{
+  color:inherit;
+  background: rgb(57, 68, 79);
+  color:aliceblue;
+  
+}

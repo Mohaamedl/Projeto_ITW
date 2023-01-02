@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Athlete Details</title>
-  <link rel="icon" href="images/icons/siteIcon.jpg" type="image/jpg">
+  <link rel="icon" href="images/siteIcon.jpg" type="image/jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
@@ -17,7 +16,15 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/main.css">
 </head>
-
+<style>
+  a {
+    color: black
+  }
+  a:hover {
+    color:steelblue;
+    font-weight: bold
+  }
+</style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light p-3 bg-danger fixed-top" id="headerNav">
     <div class="container-fluid">
@@ -72,173 +79,202 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="statisticsCountriesMedals.html">County Medals</a></li>
               <li><a class="dropdown-item" href="statisticsGamesAthletes.html">Game Atheltes</a></li>
-              <li><a class="dropdown-item" href="statisticsGamesCompetitions.html">Game Competitions</a>
-              </li>
+              <li><a class="dropdown-item" href="statisticsGamesCompetitions.html">Game Competitions</a></li>
               <li><a class="dropdown-item" href="statisticsGamesCountries.html">Game Countries</a></li>
               <li><a class="dropdown-item" href="statisticsGamesModalities.html">Game Modalities</a></li>
             </ul>
           </li>
           <li class="nav-item ">
-            <a class="nav-link mx-2 active" aria-current="page" href="favorites.html">Fav<i
+            <a class="nav-link mx-2 active" aria-current="page" href="index.html">Fav<i
                 class="fa fa-heart fa-2xs"></i>rites</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mx-2" href="contact.html">Contacts</a>
           </li>
-
         </ul>
       </div>
     </div>
   </nav>
-  <!-- Work Area-->
-  <div class="container">
-    <div class="py-2 border-bottom mb-3">
-      <h2 data-bind="text:Name() +' [' + Id() + ']'"></h2>
-    </div>
-    <!-- ko if:Name().length > 0 -->
-    <div class="row border-bottom mx-0 my-1">
-      <div class="col-2">Athlete Id</div>
-      <div class="col-10" data-bind="text:Id"></div>
-    </div>
-    <div class="row border-bottom mx-0  my-1">
-      <div class="col-2">Name</div>
-      <div class="col-10" data-bind="text:Name"></div>
-    </div>
-    <div class="row border-bottom mx-0  my-1">
-      <div class="col-2">Sex</div>
-      <div class="col-10" data-bind="text:Sex"></div>
-    </div>
-    <div class="row border-bottom mx-0  my-1">
-      <div class="col-2">Height</div>
-      <div class="col-10" data-bind="text:Height"></div>
-    </div>
-    <div class="row border-bottom mx-0  my-1">
-      <div class="col-2">Weight</div>
-      <div class="col-10" data-bind="text:Weight"></div>
-    </div>
-    <div class="row border-bottom mx-0  my-1">
-      <div class="col-2">Born Date</div>
-      <div class="col-10" data-bind="text:BornDate"></div>
-    </div>
-    <div class="row border-bottom mx-0  my-1">
-      <div class="col-2">Born Place</div>
-      <div class="col-10" data-bind="text:BornPlace"></div>
-    </div>
-    <div class="row border-bottom mx-0  my-1">
-      <div class="col-2">Died Date</div>
-      <div class="col-10" data-bind="text:DiedDate"></div>
-    </div>
-    <div class="row border-bottom mx-0  my-1">
-      <div class="col-2">Died Place</div>
-      <div class="col-10" data-bind="text:DiedPlace"></div>
-    </div>
-    <div class="row border-bottom mx-0  my-1">
-      <div class="col-2">OlympediaLink</div><a class="col-10"
-        data-bind="attr: { href: OlympediaLink }, text: OlympediaLink "></a>
-    </div>
-    <div class="row border-bottom mx-0  my-1" data-bind="visible: Photo() != '' && Photo() != null">
-      <div class="col-2">Photo</div>
-      <div class="small col-10">
-        <img class="img" data-bind="attr:{src: Photo}"><br />
-        <i class="fa fa-link"></i> [<a class="link-dark text-decoration-none"
-          data-bind="attr: { href: Photo }, text : Photo" target="_blank"></a>]
+    <!-- Work Area-->
+    <div class="container">
+        <div class="py-2 border-bottom mb-3">
+            <h2  data-bind="text:Name() +' [' + Id() + ']'"></h2>
+        </div>
+        <!-- ko if:Name().length > 0 -->
+        <div class="row border-bottom mx-0 my-1">
+            <div class="col-2">Athlete Id</div><div class="col-10" data-bind="text:Id"></div>
+        </div>
+        <div class="row border-bottom mx-0  my-1">
+            <div class="col-2">Name</div><div class="col-10" data-bind="text:Name"></div>
+        </div>
+        <div class="row border-bottom mx-0  my-1">
+            <div class="col-2">Sex</div><div class="col-10" data-bind="text:Sex"></div>
+        </div>
+        <div class="row border-bottom mx-0  my-1">
+            <div class="col-2">Height</div><div class="col-10" data-bind="text:Height"></div>
+        </div>
+        <div class="row border-bottom mx-0  my-1">
+            <div class="col-2">Weight</div><div class="col-10" data-bind="text:Weight"></div>
+        </div>
+        <div class="row border-bottom mx-0  my-1">
+            <div class="col-2">Born Date</div><div class="col-10" data-bind="text:BornDate"></div>
+        </div>
+        <div class="row border-bottom mx-0  my-1">
+            <div class="col-2">Born Place</div><div class="col-10" data-bind="text:BornPlace"></div>
+        </div>
+         <div class="row border-bottom mx-0  my-1">
+            <div class="col-2">Died Date</div><div class="col-10" data-bind="text:DiedDate"></div>
+        </div>
+        <div class="row border-bottom mx-0  my-1">
+            <div class="col-2">Died Place</div><div class="col-10" data-bind="text:DiedPlace"></div>
+        </div>
+        <div class="row border-bottom mx-0  my-1">
+            <div class="col-2">OlympediaLink</div><a class="col-10" data-bind="attr: { href: OlympediaLink }, text: OlympediaLink "></a>
+        </div>
+        <div class="row border-bottom mx-0  my-1" data-bind="visible: Photo() != '' && Photo() != null">
+            <div class="col-2">Photo</div><div class="small col-10">
+                <img class="img" data-bind="attr:{src: Photo}"><br />
+                <i class="fa fa-link"></i> [<a class="link-dark text-decoration-none" data-bind="attr: { href: Photo }, text : Photo" target="_blank"></a>]
+            </div>
+        </div>
+
+        <div class="container">
+          <div class="accordion w-100" id="accordionExample" style="margin-bottom: 50px">
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button collapsed btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Games
+                      </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="row" data-bind="foreach: Games">
+                          <a  data-bind="text: Name + ' - '+CityName+' ('+Year+')', attr: { href: './gameDetails.html?id=' + Id }"></a>
+                      </div>
+                    </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Modalities
+              </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="row" data-bind="foreach: Modalities">
+                          <a  data-bind="text: Name, attr: { href: './modalityDetails.html?id=' + Id }"></a>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item" >
+                  <h2 class="accordion-header" id="headingThree" >
+                      <button class="accordion-button collapsed btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Competitions
+                      </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="row" data-bind="foreach: Competitions">
+                          <a  data-bind="text: Name +' - '+Modality,  attr: { href: './competitionsDetails.html?id=' + Id }"></a>
+                        </div>
+                      <div>
+                  </div>
+                  </div>
+              </div>
+              </div>
+              <div class="accordion-item" >
+                <h2 class="accordion-header" id="headingFour" >
+                    <button class="accordion-button collapsed btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Medals
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="row" data-bind="foreach: Medals">
+                        <h6  data-bind="text: MedalName +' - '+Counter"></h6>
+                      </div>
+                    <div>
+                </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <h3 style="color:rgb(33, 104, 154)">Games</h3><br>
-    <div class="row" data-bind="foreach: Games">
-      <h5 data-bind="text: Name"></h5>
-      <h5 data-bind="text: CityName"></h5>
     </div>
-    <hr>
-    <h3 style="color: rgb(220, 222, 72)">Modalities</h3>
-    <div class="row" data-bind="foreach: Modalities">
-      <h5 data-bind="text: Name"></h5>
-    </div>
-    <hr>
-    <h3 style="color:rgb(12, 133, 66)">Competitions</h3><br>
-    <div class="row" data-bind="foreach: Competitions">
-      <h5 data-bind="text: Name"></h5>
-    </div>
-    <hr>
-    <h3 style="color:rgb(206, 21, 21)">Medals</h3><br>
-    <div class="row" data-bind="foreach: Medals">
-      <h5 data-bind="text: Counter"></h5><span data-bind="text: MedalName"></span>
-    </div>
-    <hr>
     <!-- /ko -->
-    <a href="./athletes.html" class="btn btn-outline-secondary btn-sm small"><i class="fa fa-list"></i> Back to List</a>
-  </div>
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            <img src="" height="30" /> Loading data...
-          </h5>
-        </div>
-        <div class="modal-body text-center">
-          <img src="images/gifs/loading.gif" style="height: 230px;border-radius: 1rem;" />
+
+        <a href="./athletes.html" class="btn btn-outline-secondary btn-sm small"><i class="fa fa-list"></i> Back to List</a>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <img src="" height="30" /> Loading data...
+            </h5>
+          </div>
+          <div class="modal-body text-center">
+            <img src="images/gifs/loading.gif" style="height: 230px;border-radius: 1rem;" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- End of Work Area -->
-  <footer class="footer-distributed row p-0 m-0">
-    <div class="footer-left col-12 col-md-6">
-      <p class="footer-links">
-        <a href="index.html">Home</a><br>
-        <a href="athletes.html">Athletes</a><br>
-        <a href="games.html">Games</a> |
-        <a href="gamesMap.html">Map</a> <br>
-        <a href="modalities.html">Modalities</a> |
-        <a href="competitions.html">Competitions</a><br>
-        <a href="countries.html">Countries</a> <br>
-        <a href="statisticsCountriesMedals.html">County Medals</a> |
-        <a href="statisticsGamesAthletes.html">Game Atheltes</a> |
-        <a href="statisticsGamesCompetitions.html">Game Competitions</a> |
-        <a href="statisticsGamesCountries.html">Game Countries</a> |
-        <a href="statisticsGamesModalities.html">Game Modalities</a><br>
-        <a href="favorites.html">Favorites</a><br>
-        <a href="contact.html">Contacts</a> <br>
-      </p>
-      <div class="footer-icons">
-        <a href="https://www.facebook.com/olympics/"><i class="fa-brands fa-facebook-f"></i></i></a>
-        <a href="https://www.instagram.com/olympics/"><i class="fa fab fa-instagram"></i></a>
-        <a href="https://twitter.com/olympics"><i class="fa fab fa-twitter"></i></a>
-        <a href="https://www.youtube.com/@Olympics"><i class="fa fab fa-youtube"></i></a>
+    <!-- End of Work Area -->
+    <footer class="footer-distributed row">
+      <div class="footer-left col-12 col-md-6">
+        <p class="footer-links">
+          <a href="index.html">Home</a><br>
+          <a href="athletes.html">Athletes</a><br>
+          <a href="games.html">Games</a> |
+          <a href="gamesMap.html">Map</a> <br>
+          <a href="modalities.html">Modalities</a> |
+          <a href="competitions.html">Competitions</a><br>
+          <a href="countries.html">Countries</a> <br>
+          <a href="statisticsCountriesMedals.html">County Medals</a> |
+          <a href="statisticsGamesAthletes.html">Game Atheltes</a> |
+          <a href="statisticsGamesCompetitions.html">Game Competitions</a> |
+          <a href="statisticsGamesCountries.html">Game Countries</a> |
+          <a href="statisticsGamesModalities.html">Game Modalities</a><br>
+          <a href="favorites.html">Favorites</a><br>
+          <a href="contact.html">Contacts</a> <br>
+        </p>
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/olympics/"><i class="fa-brands fa-facebook-f"></i></i></a>
+          <a href="https://www.instagram.com/olympics/"><i class="fa fab fa-instagram"></i></a>
+          <a href="https://twitter.com/olympics"><i class="fa fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com/@Olympics"><i class="fa fab fa-youtube"></i></a>
+        </div>
+        <p class="footer-company-name">&copy; Introdução as Tecnologias Web - 2022/23</p>
+        <p class="footer-company-name"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></p>
       </div>
-      <p class="footer-company-name">&copy; Introdução as Tecnologias Web - 2022/23</p>
-      <p class="footer-company-name"><a href="https://www.ua.pt" class="nav-link">Universidade de Aveiro</a></p>
-    </div>
-    <div class="footer-right col-12 col-md-6">
-      <p>Report to us</p>
-      <form class=" row" action="#" method="post">
-        <input class="form-control" type="text" name="name" placeholder="Name">
-        <input type="text" name="email" placeholder="Email">
-
-        <select class="form-select" name="report">
-          <option value="0">Choose</option>
-          <option value="1">Bug</option>
-          <option value="2">Error</option>
-          <option value="3">Sugestion</option>
-        </select>
-
-        <textarea name="message" placeholder="Message"></textarea>
-        <button class="col-6">Send</button>
-      </form>
-    </div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
-    integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script src="js/main.js"> </script>
-  <script src="js/athleteDetails.js"></script>
+      <div class="footer-right col-12 col-md-6">
+        <p>Report to us</p>
+        <form class="col-12 row" action="#" method="post">
+          <input class="form-control" type="text" name="name" placeholder="Name">
+          <input type="text" name="email" placeholder="Email">
+  
+          <select class="form-select" name="report">
+            <option value="0">Choose</option>
+            <option value="1">Bug</option>
+            <option value="2">Error</option>
+            <option value="3">Sugestion</option>
+          </select>
+  
+          <textarea name="message" placeholder="Message"></textarea>
+          <button class="col-4">Send</button>
+        </form>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+      integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="js/main.js"> </script>
+    <script src="js/athleteDetails.js"></script>
 </body>
-
-</html>
+</html> 
