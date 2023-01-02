@@ -401,7 +401,7 @@ body{
 }
 .accordion-collapse:not(.collapsed) a,.accordion-collapse:not(.collapsed) td{
   color:inherit;
-  background: rgb(57, 68, 79);
+  background: rgba(57, 68, 79, 0.371);
   color:aliceblue !important;
   
 }
