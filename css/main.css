@@ -431,3 +431,6 @@ li.nav-item:first-of-type{
   color:inherit;
   color:aliceblue !important;
 }
+canvas {
+  margin-bottom: 40px;
+}
