@@ -50,9 +50,11 @@
     left: 15%;
     transform: translateY(50%) translateX(-50%);
     opacity: 0.7;
+    
   }
   #carousel div.prevLeftSecond img {
     width: 300px;
+    border-radius: 1rem;
   }
   #carousel div.selected {
     display: flex;
@@ -78,6 +80,7 @@
   }
   #carousel div.nextRightSecond img {
     width: 300px;
+    border-radius: 1rem;
   }
 .selected .text{
     display: block;
