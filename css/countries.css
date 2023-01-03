@@ -113,3 +113,6 @@
     text-decoration: none;
     color: #151313;
 }
+li.nav-item:first-of-type {
+    margin-left:0px;
+}
