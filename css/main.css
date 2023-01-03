@@ -127,6 +127,11 @@ body{
 li.nav-item:first-of-type{
   margin-left: 100px;
 }
+@media (max-width:992px){
+.nav-item:first-of-type{
+  margin: 0 !important;
+}}
+
 #forms1{
   padding: 0;
   max-width: 200px;
