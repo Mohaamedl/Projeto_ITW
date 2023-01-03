@@ -39,3 +39,6 @@ th{
         rgba(123, 110, 161, 0.75) 79.4%,
         rgba(70, 105, 188, 0.75) 84.3%);
 }
+li.nav-item:first-of-type {
+    margin-left:0px;
+}
