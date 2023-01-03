@@ -116,105 +116,115 @@
         <hr style="border-top: 20px solid black">
       </div>
 
-      <div class="row">
-        <div class="col-12 col-ms-12 col-md-6 col-lg-4">
-          <hr style="border-top: 6px double black">
-          <h2 class="text-center">Competitions</h2>
-          <hr style="border-top: 6px double black">
-          <table class="table table-striped" border="8">
-            <thead class="table-dark">
-              <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Results</th>
-                <th>Details</th>
-              </tr>
-            </thead>
-            <tbody data-bind="foreach : Events">
-              <tr>
-                <th data-bind="text:Id"></th>
-                <th data-bind="text:Name"></th>
-                <th data-bind="text:Results"></th>
-                <th> <a class="btn btn-default btn-light btn-xs"
-                    data-bind="attr: { href:'./competitionsDetails.html?id=' + Id }">
-                    <i class="fa fa-eye" title="Selecione para ver detalhes"></i>
-                  </a></th>
-
-
-              </tr>
-
-            </tbody>
-
-          </table>
-
+      
+      <div class="d-flex align-items-start bg-dark">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+            type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+            <hr style="border-top: 6px double black">
+            <h5 class="text-center">Competitions</h5>
+            <hr style="border-top: 6px double black">
+          </button>
+          <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
+            type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+            <hr style="border-top: 6px double black">
+            <h5 class="text-center">Participations</h5>
+            <hr style="border-top: 6px double black">
+          </button>
+          <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings"
+            type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+            <hr style="border-top: 6px double black">
+            <h5 class="text-center">Organizer</h5>
+            <hr style="border-top: 6px double black">
+          </button>
         </div>
-        <div class="col-12 col-ms-12 col-md-6 col-lg-4">
-          <hr style="border-top: 6px double black">
-          <h2 class="text-center">Participations</h2>
-          <hr style="border-top: 6px double black">
-          <table class="table table-striped" border="8">
-            <thead class="table-dark">
-              <tr>
-                <th>Id</th>
-                <th>Year and Season</th>
-                <th>Logo</th>
-                <th>Details</th>
-              </tr>
-            </thead>
-            <tbody data-bind="foreach : Participant">
-              <tr>
-                <th data-bind="text:Id"></th>
-                <th data-bind="text:Name"></th>
-                <th height="80px" width="80px"><img data-bind="safeSrc:{src: Logo , fallback: 'images/default.png'}">
-                </th>
-                <th> <a class="btn btn-default btn-light btn-xs"
-                    data-bind="attr: { href:'./gameDetails.html?id=' + Id }">
-                    <i class="fa fa-eye" title="Selecione para ver detalhes"></i>
-                  </a></th>
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"
+            tabindex="0">
+            <table class="table table-striped" border="8">
+              <thead class="table-dark">
+                <tr>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Results</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody data-bind="foreach : Events">
+                <tr>
+                  <th data-bind="text:Id"></th>
+                  <th data-bind="text:Name"></th>
+                  <th data-bind="text:Results"></th>
+                  <th> <a class="btn btn-default btn-light btn-xs"
+                      data-bind="attr: { href:'./competitionsDetails.html?id=' + Id }">
+                      <i class="fa fa-eye" title="Selecione para ver detalhes"></i>
+                    </a></th>
 
 
-              </tr>
+                </tr>
 
-            </tbody>
+              </tbody>
 
-          </table>
+            </table>
+          </div>
+          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
+            tabindex="0">
+            <table class="table table-striped" border="8">
+              <thead class="table-dark">
+                <tr>
+                  <th>Id</th>
+                  <th>Year and Season</th>
+                  <th>Logo</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody data-bind="foreach : Participant">
+                <tr>
+                  <th data-bind="text:Id"></th>
+                  <th data-bind="text:Name"></th>
+                  <th height="80px" width="80px"><img data-bind="safeSrc:{src: Logo , fallback: 'images/default.png'}">
+                  </th>
+                  <th> <a class="btn btn-default btn-light btn-xs"
+                      data-bind="attr: { href:'./gameDetails.html?id=' + Id }">
+                      <i class="fa fa-eye" title="Selecione para ver detalhes"></i>
+                    </a></th>
 
+
+                </tr>
+
+              </tbody>
+
+            </table>
+          </div>
+          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"
+            tabindex="0">
+            <table class="table table-striped tabl" border="8">
+              <thead class="table-dark">
+                <tr>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Logo</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody data-bind="foreach : Organizer">
+                <tr>
+                  <th data-bind="text:Id"></th>
+                  <th data-bind="text:Name"></th>
+                  <th height="80px" width="80px"><img data-bind="safeSrc:{src: Logo , fallback: 'images/default.png'}"
+                      height="50px" width="50px"></th>
+                  <th> <a class="btn btn-default btn-light btn-xs"
+                      data-bind="attr: { href:'./gameDetails.html?id=' + Id }">
+                      <i class="fa fa-eye" title="Selecione para ver detalhes"></i>
+                    </a></th>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+          </div>
         </div>
-        <div class="col-12 col-ms-12 col-md-6 col-lg-4">
-          <hr style="border-top: 6px double black">
-          <h2 class="text-center">Organizer</h2>
-          <hr style="border-top: 6px double black">
-          <table class="table table-striped" border="8">
-            <thead class="table-dark">
-              <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Logo</th>
-                <th>Details</th>
-              </tr>
-            </thead>
-            <tbody data-bind="foreach : Organizer">
-              <tr>
-                <th data-bind="text:Id"></th>
-                <th data-bind="text:Name"></th>
-                <th height="80px" width="80px"><img data-bind="safeSrc:{src: Logo , fallback: 'images/default.png'}"
-                    height="50px" width="50px"></th>
-                <th> <a class="btn btn-default btn-light btn-xs"
-                    data-bind="attr: { href:'./gameDetails.html?id=' + Id }">
-                    <i class="fa fa-eye" title="Selecione para ver detalhes"></i>
-                  </a></th>
-
-              </tr>
-
-            </tbody>
-
-          </table>
-
-        </div>
-
-
-
-
       </div>
 
       <a href="./countries.html" class="btn btn-outline-secondary btn-sm small"><i class="fa fa-list"></i> Back to

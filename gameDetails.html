@@ -124,53 +124,80 @@
     </div>
   </div>
   <div class="container p-2">
-    <div class="row ">
-      <hr size="8px">
-      <div class="col-md-6 text-center">
-        <h1>Modalities</h1>
-        <hr size="8px">
-        <table class="table table-striped" border="6">
-          <thead class="table-dark">
-            <tr>
-              <th>Id</th>
-              <th>Name</th>
-              <th>Photo</th>
-            </tr>
-          </thead>
-          <tbody data-bind="foreach:Modalities">
-            <tr>
-              <th data-bind="text:Id"></th>
-              <th data-bind="text:Name"></th>
-              <th> <img data-bind="safeSrc:{src:Photo , fallback: 'images/default.png'}" height="50px"></th>
-            </tr>
-
-          </tbody>
-        </table>
+    <div class="d-flex align-items-start bg-dark">
+      <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+          type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+          <hr style="border-top: 6px double black">
+          <h5 class="text-center">Competitions</h5>
+          <hr style="border-top: 6px double black">
+        </button>
+        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
+          type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+          <hr style="border-top: 6px double black">
+          <h5 class="text-center">Modalities</h5>
+          <hr style="border-top: 6px double black">
+        </button>
       </div>
-      <div class="col-md-6 text-center">
-        <h1>Competitions</h1>
-        <hr size="8px">
-        <table class="table table-striped" border="6">
-          <thead class="table-dark">
-            <tr>
-              <th>Id</th>
-              <th>Modality</th>
-              <th>Name</th>
-              <th>Photo</th>
-            </tr>
-          </thead>
-          <tbody data-bind="foreach: Competitions">
-            <tr>
-              <th data-bind="text:Id"></th>
-              <th data-bind="text:Modality"></th>
-              <th data-bind="text:Name"></th>
-              <th><img data-bind="safeSrc:{src:Photo , fallback: 'images/ImageNotFound.png'}" height="50px"></th>
-            </tr>
-
-          </tbody>
-        </table>
+      <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"
+          tabindex="0">
+          <table class="table table-striped" border="6">
+            <thead class="table-dark">
+              <tr>
+                <th>Id</th>
+                <th>Modality</th>
+                <th>Name</th>
+                <th>Photo</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody data-bind="foreach: Competitions">
+              <tr>
+                <th data-bind="text:Id"></th>
+                <th data-bind="text:Modality"></th>
+                <th data-bind="text:Name"></th>
+                <th><img data-bind="safeSrc:{src:Photo , fallback: 'images/ImageNotFound.png'}" height="50px"></th>
+                <th>
+                  <a class="btn btn-default btn-light btn-xs"
+                      data-bind="attr: { href:'./competitionsDetails.html?id=' + Id }">
+                      <i class="fa fa-mouse-pointer" title="Selec to see more details"></i>
+                    </a>
+                </th>
+              </tr>
+  
+            </tbody>
+          </table>
+        </div>
+        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
+          tabindex="0">
+          <table class="table table-striped" border="6">
+            <thead class="table-dark">
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Photo</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody data-bind="foreach:Modalities">
+              <tr>
+                <th data-bind="text:Id"></th>
+                <th data-bind="text:Name"></th>
+                <th> <img data-bind="safeSrc:{src:Photo , fallback: 'images/default.png'}" height="50px"></th>
+                <th>
+                  <a class="btn btn-default btn-light btn-xs"
+                      data-bind="attr: { href:'./modalityDetails.html?id=' + Id }">
+                      <i class="fa fa-mouse-pointer" title="Select to see more details"></i>
+                    </a>
+                </th>
+              </tr>
+  
+            </tbody>
+          </table>
+        </div>
+        
       </div>
-      <hr size="8px">
     </div>
     <a href="./games.html" class="btn btn-outline-secondary btn-sm small"><i class="fa fa-list"></i> Back to List</a>
   </div>

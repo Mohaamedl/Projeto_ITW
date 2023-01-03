@@ -124,12 +124,25 @@
       <div class="col-md-4"></div>
     </div>
     <div class="row">
-      <div class="col-3"></div>
-      <div class="col-6 text-md-center align-self-center">
-        <hr style="border-top: 8px double black">
-        <h2>Participation in the olympics</h2>
-        <hr style="border-top: 8px double black">
-        <table class="table table-striped" border="6">
+      
+      <div class="col-12 text-md-center align-self-center">
+
+        
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseOne">
+                <hr style="border-top: 8px double black">
+                <h2>Participation in the olympics</h2>
+                <hr style="border-top: 8px double black">
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+              aria-labelledby="panelsStayOpen-headingOne">
+              <div class="accordion-body">
+                <table class="table table-striped" border="6">
           <thead class="table-dark">
             <tr>
               <th> Id number</th>
@@ -159,24 +172,28 @@
                 <h6 data-bind="text :CityName"></h6>
               </th>
               <th>
-                <a class="btn btn-default btn-light btn-xs" data-bind="attr: { href:'./gameDetails.html?id=' + Id }">
-                  <i class="fa fa-eye" title="Selecione para ver detalhes"></i>
+                <a class="btn btn-default btn-light btn-xs" title="Selec to see more details" data-bind="attr: { href:'./gameDetails.html?id=' + Id }">
+                  <i class="fa fa-eye" ></i>
                 </a>
               </th>
               <th>
-                <a href="gamesMap.html" class=""> <i class="fa fa-map-pin fa-xl" style="color:brown"></i></a>
+                <a href="gamesMap.html" > <i class="fa fa-map-pin fa-xl" title="Selec to see the map" style="color:brown"></i></a>
               </th>
             </tr>
           </tbody>
         </table>
-        <a href="./competitions.html" class="btn btn-outline-secondary btn-sm small"><i class="fa fa-list"></i> Back to
-          List</a>
+              </div>
+            </div>
+          </div>
+          <a href="./competitions.html" class="btn btn-outline-secondary btn-sm small"><i class="fa fa-list"></i> Back
+            to
+            List</a>
+        </div>
+
+
+
+
       </div>
-    
-
-
-
-  </div>
 
     </div>
     <!-- Modal -->
@@ -227,14 +244,14 @@
         <form class=" row" action="#" method="post">
           <input class="form-control" type="text" name="name" placeholder="Name">
           <input type="text" name="email" placeholder="Email">
-  
+
           <select class="form-select" name="report">
             <option value="0">Choose</option>
             <option value="1">Bug</option>
             <option value="2">Error</option>
             <option value="3">Sugestion</option>
           </select>
-  
+
           <textarea name="message" placeholder="Message"></textarea>
           <button class="col-6">Send</button>
         </form>

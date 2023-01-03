@@ -63,7 +63,7 @@ body{
   backdrop-filter: blur(5rem);
 }
 .navbar a:hover{
-  color:#000000;
+  color:#ffffff;
   font-weight: 600;
 }
 .dropdown-menu {
@@ -399,9 +399,23 @@ body{
     color:aliceblue;
     
 }
-.accordion-collapse:not(.collapsed) a,.accordion-collapse:not(.collapsed) td{
+.accordion-collapse:not(.collapsed) a,.accordion-collapse:not(.collapsed) th ,.accordion-collapse:not(.collapsed) td{
   color:inherit;
   background: rgba(57, 68, 79, 0.371);
   color:aliceblue !important;
   
+}
+
+
+.nav-pills .nav-link.active{
+  background-color: #4a6271;
+  color:aliceblue
+}
+.nav-pills .nav-link{
+  color:aliceblue
+}
+.tab-pane th{
+  background-color: #4a6271;
+  color:inherit;
+  color:aliceblue !important;
 }
