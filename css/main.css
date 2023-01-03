@@ -61,6 +61,8 @@ body{
   margin: 0 5px 0 5px;
   background-color: rgba(130, 126, 122, 0.306) !important;
   backdrop-filter: blur(5rem);
+  display: flex;
+  justify-content: space-between;
 }
 .navbar a:hover{
   color:#ffffff;
@@ -118,6 +120,16 @@ body{
   background-color: rgba(22, 22, 22, 0.75) !important;
   backdrop-filter: blur(8rem);
   border-radius: 0.5rem;/* hg*i* j */
+}
+.nav-item{
+  width:100px
+}
+li.nav-item:first-of-type{
+  margin-left: 100px;
+}
+#forms1{
+  padding: 0;
+  max-width: 200px;
 }
 /* search bar animation*/
 /*

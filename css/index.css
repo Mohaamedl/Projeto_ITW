@@ -138,3 +138,9 @@
 .card{
     border-radius: 2rem;
 }
+
+/* para fixar a logo na nav*/
+li.nav-item:first-of-type{
+  margin-left: 0px;
+}
+
